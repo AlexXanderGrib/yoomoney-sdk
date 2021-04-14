@@ -1,5 +1,5 @@
+import { FormBuilder } from "redirect-form-builder";
 import { fetch } from "./fetch";
-import { FormBuilder } from "./form-builder";
 
 type AuthScope =
   | "account-info"

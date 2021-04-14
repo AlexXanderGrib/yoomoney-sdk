@@ -1,5 +1,5 @@
+import { FormBuilder } from "redirect-form-builder";
 import type { URL } from "url";
-import { FormBuilder } from "./form-builder";
 
 /* eslint-disable no-useless-constructor */
 export type FormConfig = {

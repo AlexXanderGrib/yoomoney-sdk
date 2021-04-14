@@ -1,18 +1,22 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "YooMoney typed SDK",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "typings": "./dist/index.d.ts",
+  "type": "commonjs",
   "scripts": {
     "test": "jest",
-    "build": "tsc",
+    "build": "tsc --project tsconfig.json",
     "prepack": "npm run build",
     "prepublishOnly": "npm run generate-lock-files",
     "generate-lock-files": "npm i && yarn install",
     "glf": "npm run generate-lock-files"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexXanderGrib/yoomoney-sdk.git"
@@ -56,6 +60,7 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "redirect-form-builder": "^1.0.0"
   }
 }

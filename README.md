@@ -5,7 +5,7 @@
 1. Есть поддержка TypeScript
 2. Покрывает большую часть https://yoomoney.ru/docs/wallet
 3. Документация прямо в коде
-4. Всего 1 зависимость: `node-fetch`
+4. Всего 2 зависимости: `node-fetch` и `redirect-form-builder` (для генерации html форм)
 5. Есть API генерации frontend форм перенаправления для [Авторизации](https://yoomoney.ru/docs/wallet/using-api/authorization/basics) и [Оплаты](https://yoomoney.ru/docs/payment-buttons/using-api/forms)
 
 ## Работа с API
