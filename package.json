@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "YooMoney typed SDK",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,12 +9,13 @@
     "test": "jest",
     "build": "tsc",
     "prepack": "npm run build",
+    "prepublishOnly": "npm run generate-lock-files",
     "generate-lock-files": "npm i && yarn install",
     "glf": "npm run generate-lock-files"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexXanderGrib/yoomoney-node-sdk.git"
+    "url": "git+https://github.com/AlexXanderGrib/yoomoney-sdk.git"
   },
   "keywords": [
     "yandex",
@@ -33,9 +34,9 @@
   "author": "AlexXanderGrib <me@alexxgrib.me> (https://alexxgrib.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlexXanderGrib/yoomoney-node-sdk/issues"
+    "url": "https://github.com/AlexXanderGrib/yoomoney-sdk/issues"
   },
-  "homepage": "https://github.com/AlexXanderGrib/yoomoney-node-sdk#readme",
+  "homepage": "https://github.com/AlexXanderGrib/yoomoney-sdk#readme",
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "@types/node-fetch": "^2.5.10",
