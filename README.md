@@ -1,5 +1,9 @@
 # YooMoney NodeJS SDK
 
+<center>
+  <img src="docs/assets/logo.svg" alt="YooMoney SDK" />
+</center>
+
 ## Почему именно эта библиотека?
 
 1. Есть поддержка TypeScript
@@ -42,3 +46,7 @@ api.accountInfo().then(console.log);
 
 - `code` - Значение поля `error` в ответе
 - `response` - Ответ полностью
+
+### Интересует приём и отправка P2P платежей по РФ на NodeJS?
+
+У нас есть точно такое-же типизированное SDK для QIWI 👉 [github.com/AlexXanderGrib/node-qiwi-sdk](https://github.com/AlexXanderGrib/node-qiwi-sdk)
