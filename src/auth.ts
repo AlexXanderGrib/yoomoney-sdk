@@ -50,8 +50,6 @@ export class Auth {
 
     const json = await response.json();
 
-    console.log({ json });
-
     if (json.error) throw new YMAuthError(json.error);
 
     return json.access_token;
