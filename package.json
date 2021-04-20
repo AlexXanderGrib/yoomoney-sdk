@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "YooMoney typed SDK",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,7 +15,8 @@
     "glf": "npm run generate-lock-files"
   },
   "files": [
-    "dist"
+    "dist",
+    "docs"
   ],
   "repository": {
     "type": "git",
