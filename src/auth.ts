@@ -1,5 +1,5 @@
 import { FormBuilder } from "redirect-form-builder";
-import { fetch } from "./fetch";
+import { Agent, fetch } from "./fetch";
 
 type AuthScope =
   | "account-info"
@@ -35,13 +35,14 @@ export class Auth {
    * @param {string} clientId ID приложения
    * @param {string} redirectUrl URL-перенаправления
    * @param {string=} clientSecret Секретное Слово
-   * @param {string=} endpoint
+   * @param {string=} endpoint По умолчанию `https://yoomoney.ru/oauth`
    */
   constructor(
-    public readonly clientId: string,
-    public readonly redirectUrl: string,
-    public readonly clientSecret?: string,
-    public readonly endpoint: string = "https://yoomoney.ru/oauth"
+    public clientId: string,
+    public redirectUrl: string,
+    public clientSecret?: string,
+    public endpoint: string = "https://yoomoney.ru/oauth",
+    public agent?: Agent
   ) {}
 
   /**
@@ -71,13 +72,18 @@ export class Auth {
    * @return {Promise<string>} Токен авторизации
    */
   async exchangeCode2Token(code: string): Promise<string> {
-    const response = await fetch(`${this.endpoint}/token`, {
-      code,
-      client_id: this.clientId,
-      grant_type: "authorization_code",
-      redirect_uri: this.redirectUrl,
-      client_secret: this.clientSecret
-    });
+    const response = await fetch(
+      `${this.endpoint}/token`,
+      {
+        code,
+        client_id: this.clientId,
+        grant_type: "authorization_code",
+        redirect_uri: this.redirectUrl,
+        client_secret: this.clientSecret
+      },
+      {},
+      this.agent
+    );
 
     const json = await response.json();
 

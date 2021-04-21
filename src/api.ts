@@ -1,5 +1,5 @@
 import type * as t from "./api.types";
-import { fetch, QueryStringifiable } from "./fetch";
+import { Agent, fetch, QueryStringifiable } from "./fetch";
 import { AnyRecord } from "./shared.types";
 
 /**
@@ -27,11 +27,12 @@ export class API {
   /**
    *
    * @param {string} token Токен авторизации пользователя
-   * @param {string} endpoint
+   * @param {string} endpoint По умолчанию `https://yoomoney.ru/api`
    */
   constructor(
-    public readonly token: string,
-    public readonly endpoint = "https://yoomoney.ru/api"
+    public token: string,
+    public endpoint = "https://yoomoney.ru/api",
+    public agent?: Agent
   ) {}
 
   /**
@@ -44,9 +45,14 @@ export class API {
    * @return {Promise<T>}
    */
   async call<T = any>(method: string, parameters: QueryStringifiable): Promise<T> {
-    const response = await fetch(`${this.endpoint}/${method}`, parameters, {
-      Authorization: `Bearer ${this.token}`
-    });
+    const response = await fetch(
+      `${this.endpoint}/${method}`,
+      parameters,
+      {
+        Authorization: `Bearer ${this.token}`
+      },
+      this.agent
+    );
 
     const data = await response.json();
 
