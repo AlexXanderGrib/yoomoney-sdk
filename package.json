@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "YooMoney typed SDK",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -12,7 +12,9 @@
     "prepack": "npm run build",
     "prepublishOnly": "npm run generate-lock-files",
     "generate-lock-files": "npm i && yarn install",
-    "glf": "npm run generate-lock-files"
+    "glf": "npm run generate-lock-files",
+    "lint": "eslint src/*",
+    "prettify": "prettier --write src/**/*"
   },
   "files": [
     "dist",
@@ -39,7 +41,8 @@
   "author": "AlexXanderGrib <me@alexxgrib.me> (https://alexxgrib.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlexXanderGrib/yoomoney-sdk/issues"
+    "url": "https://github.com/AlexXanderGrib/yoomoney-sdk/issues",
+    "email": "me@alexxgrib.me"
   },
   "homepage": "https://github.com/AlexXanderGrib/yoomoney-sdk#readme",
   "devDependencies": {
@@ -48,14 +51,19 @@
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.2.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-unicorn": "^30.0.0",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.5.4",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
@@ -63,5 +71,11 @@
   "dependencies": {
     "node-fetch": "^2.6.1",
     "redirect-form-builder": "^1.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run prettify",
+      "pre-push": "npm test"
+    }
   }
 }

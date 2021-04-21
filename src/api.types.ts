@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prevent-abbreviations */
 /* eslint-disable camelcase */
 
 type AccountBalanceDetails = {

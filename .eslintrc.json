@@ -1,27 +1,47 @@
 {
-  "env": {
-    "es2021": true,
-    "node": true,
-    "jest": true
-  },
-  "extends": [
-    "standard"
-  ],
+  "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaVersion": 2021
   },
-  "plugins": [
+  "env": {
+    "browser": false,
+    "node": false,
+    "jest": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:security/recommended",
     "prettier",
-    "@typescript-eslint"
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "unicorn",
+    "security",
+    "prettier",
+    "import",
+    "promise"
   ],
   "rules": {
-    "prettier/prettier": "warn",
-    "quotes": "off",
-    "no-useless-constructor": "off",
-    "comma-dangle": "off",
-    "space-before-function-paren": "off",
-    "semi": "off"
-  }
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": "off",
+    "new-cap": "off",
+    "security/detect-object-injection": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/tests/*"
+      ],
+      "rules": {
+        "require-jsdoc": "off"
+      }
+    }
+  ]
 }

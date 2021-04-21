@@ -1,3 +1,4 @@
+/* eslint-disable no-invalid-this */
 import { FormBuilder } from "redirect-form-builder";
 import type { URL } from "url";
 
@@ -82,6 +83,11 @@ type FormQueryObject = Record<
     >
   >;
 
+/**
+ *
+ * @param {FormConfig} config
+ * @return {FormQueryObject}
+ */
 function convert(config: FormConfig): FormQueryObject {
   return {
     "quickpay-form": config.quickPayForm,
@@ -97,20 +103,34 @@ function convert(config: FormConfig): FormQueryObject {
     comment: config.comment,
     formcomment: config.formComment,
     label: config.label,
-    successURL: config.successURL,
+    successURL: config.successURL
   };
 }
+
+/**
+ * Генерирует HTML формы для переводов
+ */
 export class PaymentFromBuilder {
+  /**
+   *
+   * @param {FormConfig=} config Изначальные настройки формы
+   */
   constructor(
     public readonly config: FormConfig = {
       paymentType: "PC",
       receiver: "",
       sum: 100,
       quickPayForm: "shop",
-      targets: "",
+      targets: ""
     }
   ) {}
 
+  /**
+   * Генерирует стандартные сеттеры
+   *
+   * @param {string} field
+   * @return {Function}
+   */
   private _makeSetter<T extends keyof FormConfig>(field: T) {
     return (value: FormConfig[T]) => {
       this.config[field] = value;
@@ -118,17 +138,35 @@ export class PaymentFromBuilder {
     };
   }
 
-  setAmount(amount: number | string) {
-    this.config.sum = parseFloat(amount.toString());
+  /**
+   * Задаёт сумму платежа
+   *
+   * @param {string | number} amount Сумма
+   * @return {this}
+   */
+  setAmount(amount: number | string): this {
+    this.config.sum = Number.parseFloat(amount.toString());
     return this;
   }
 
-  setReceiver(receiver: number | string) {
+  /**
+   * Задаёт получателя платежа
+   *
+   * @param {string | number} receiver Получатель
+   * @return {this}
+   */
+  setReceiver(receiver: number | string): this {
     this.config.receiver = receiver.toString();
     return this;
   }
 
-  setSuccessURL(url: string | URL) {
+  /**
+   * Задаёт URL перенаправления после успешного платежа
+   *
+   * @param {string | URL} url URL
+   * @return {this}
+   */
+  setSuccessURL(url: string | URL): this {
     this.config.successURL = url.toString();
     return this;
   }
@@ -142,27 +180,51 @@ export class PaymentFromBuilder {
   readonly setLabel = this._makeSetter("label");
   readonly setComment = this._makeSetter("comment");
 
-  requireFio(doRequire = true) {
+  /**
+   *
+   * @param {boolean} doRequire
+   * @return {this}
+   */
+  requireFio(doRequire = true): this {
     this.config.needFio = doRequire;
     return this;
   }
 
-  requireAddress(doRequire = true) {
+  /**
+   *
+   * @param {boolean} doRequire
+   * @return {this}
+   */
+  requireAddress(doRequire = true): this {
     this.config.needAddress = doRequire;
     return this;
   }
 
-  requireEmail(doRequire = true) {
+  /**
+   *
+   * @param {boolean} doRequire
+   * @return {this}
+   */
+  requireEmail(doRequire = true): this {
     this.config.needEmail = doRequire;
     return this;
   }
 
-  requirePhone(doRequire = true) {
+  /**
+   *
+   * @param {boolean} doRequire
+   * @return {this}
+   */
+  requirePhone(doRequire = true): this {
     this.config.needPhone = doRequire;
     return this;
   }
 
-  buildHtml() {
+  /**
+   * Генерирует HTML на основе заданных параметров
+   * @return {string}
+   */
+  buildHtml(): string {
     return new FormBuilder(
       "https://yoomoney.ru/quickpay/confirm.xml",
       "POST",

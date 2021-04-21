@@ -4,9 +4,9 @@ export { Auth as YMAuth, YMAuthError } from "./auth";
 export {
   NotificationChecker as YMNotificationChecker,
   NotificationDTO as YMNotificationDTO,
-  YMNotificationError,
+  YMNotificationError
 } from "./notifications";
 export {
   FormConfig as YMFormConfig,
-  PaymentFromBuilder as YMPaymentFromBuilder,
+  PaymentFromBuilder as YMPaymentFromBuilder
 } from "./payment-form-builder";

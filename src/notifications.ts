@@ -27,15 +27,33 @@ export type NotificationDTO = {
   flat?: string;
   zip?: string;
 };
+
+/**
+ * Ошибка проверки уведомления от YooMoney
+ */
 export class YMNotificationError extends Error {}
 
+/**
+ * Класс, который реализует [механизм проверки уведомлений от YooMoney](https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security)
+ *
+ * @see {@link https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security|Описание механизма}
+ */
 export class NotificationChecker {
+  /**
+   *
+   * @param {string} secret Секретное слово
+   */
   constructor(private readonly secret: string) {}
 
+  /**
+   *
+   * @param {*} notification Объект уведомления
+   * @return {*}
+   */
   check(notification: Record<keyof NotificationDTO, string>): NotificationDTO {
     const notificationWithSecret = {
       ...notification,
-      notification_secret: this.secret,
+      notification_secret: this.secret
     };
 
     const pattern =
@@ -43,13 +61,13 @@ export class NotificationChecker {
     const signature = pattern
       .split("&")
       .map(
-        key =>
-          notificationWithSecret[key as keyof typeof notificationWithSecret]
+        (key) => notificationWithSecret[key as keyof typeof notificationWithSecret]
       )
       .join("&");
 
     const hash = createHash("sha1").update(signature).digest("hex");
 
+    // eslint-disable-next-line security/detect-possible-timing-attacks
     if (hash !== notification.sha1_hash) {
       throw new YMNotificationError(
         `Hash sum not matched: ${hash} !== ${notification.sha1_hash}`
@@ -58,13 +76,13 @@ export class NotificationChecker {
 
     return {
       ...notification,
-      amount: parseFloat(notification.amount),
+      amount: Number.parseFloat(notification.amount),
       notification_type: notification.notification_type as NotificationDTO["notification_type"],
-      withdraw_amount: parseFloat(notification.withdraw_amount) || 0,
+      withdraw_amount: Number.parseFloat(notification.withdraw_amount) || 0,
       currency: notification.currency as NotificationDTO["currency"],
       codepro: Boolean(notification.codepro),
       test_notification: Boolean(notification.test_notification),
-      unaccepted: Boolean(notification.unaccepted),
+      unaccepted: Boolean(notification.unaccepted)
     };
   }
 }
