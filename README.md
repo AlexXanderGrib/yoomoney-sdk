@@ -1,5 +1,10 @@
 # YooMoney NodeJS SDK
 
+[![license MIT](https://img.shields.io/npm/l/yoomoney-sdk?style=flat-square)](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/v/yoomoney-sdk?style=flat-square)](https://npmjs.com/package/yoomoney-sdk)
+[![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/yoomoney-sdk?style=flat-square)](https://github.com/AlexXanderGrib/yoomoney-sdk)
+[![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/yoomoney-sdk?style=flat-square)](https://github.com/AlexXanderGrib/yoomoney-sdk)
+
 <center>
   <img src="docs/assets/logo.svg" alt="YooMoney SDK" />
 </center>
