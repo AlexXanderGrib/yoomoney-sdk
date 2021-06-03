@@ -77,7 +77,8 @@ export class NotificationChecker {
     return {
       ...notification,
       amount: Number.parseFloat(notification.amount),
-      notification_type: notification.notification_type as NotificationDTO["notification_type"],
+      notification_type:
+        notification.notification_type as NotificationDTO["notification_type"],
       withdraw_amount: Number.parseFloat(notification.withdraw_amount) || 0,
       currency: notification.currency as NotificationDTO["currency"],
       codepro: Boolean(notification.codepro),

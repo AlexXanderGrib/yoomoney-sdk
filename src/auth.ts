@@ -60,9 +60,8 @@ export class Auth {
       .setField("redirect_uri", this.redirectUrl)
       .setField("scope", scopes.join(" "));
 
-    return (instanceName
-      ? builder.setField("instance_name", instanceName)
-      : builder
+    return (
+      instanceName ? builder.setField("instance_name", instanceName) : builder
     ).buildHtml();
   }
 

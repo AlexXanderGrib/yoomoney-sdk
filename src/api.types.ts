@@ -1,6 +1,8 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 /* eslint-disable camelcase */
 
+import { CardType } from "./shared.types";
+
 type AccountBalanceDetails = {
   /**
    * Общий баланс счета.
@@ -40,7 +42,7 @@ type AccountLinkedCard = {
    * - `AmericanExpress`
    * - `JCB`
    */
-  type: "VISA" | "Mastercard" | "AmericanExpress" | "JCB";
+  type: CardType;
 };
 
 export type AccountInfoResponse = {
