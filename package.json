@@ -1,11 +1,18 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "YooMoney typed SDK",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "typings": "./dist/index.d.ts",
   "type": "commonjs",
+  "engines": {
+    "node": ">=10"
+  },
+  "directories": {
+    "lib": "./dist",
+    "doc": "./docs"
+  },
   "scripts": {
     "test": "jest",
     "build": "tsc --project tsconfig.json",
@@ -74,8 +81,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run prettify",
-      "pre-push": "npm test"
+      "pre-commit": "npm run lint && npm run prettify"
     }
   }
 }
