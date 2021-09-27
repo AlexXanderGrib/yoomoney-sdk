@@ -53,16 +53,18 @@ export class Auth {
    * @return {string}
    */
   getAuthForm(scopes: AuthScope[], instanceName?: string): string {
-    const builder = new FormBuilder()
-      .setURL(`${this.endpoint}/authorize`)
-      .setField("client_id", this.clientId)
-      .setField("response_type", "code")
-      .setField("redirect_uri", this.redirectUrl)
-      .setField("scope", scopes.join(" "));
+    const builder = new FormBuilder(`${this.endpoint}/authorize`, "POST", {
+      client_id: this.clientId,
+      response_type: "code",
+      redirect_uri: this.redirectUrl,
+      scope: scopes.join(" ")
+    });
 
-    return (
-      instanceName ? builder.setField("instance_name", instanceName) : builder
-    ).buildHtml();
+    if (instanceName) {
+      builder.setField("instance_name", instanceName);
+    }
+
+    return builder.buildHtml();
   }
 
   /**

@@ -2,6 +2,12 @@
 import { FormBuilder } from "redirect-form-builder";
 import type { URL } from "url";
 
+export const PaymentType = {
+  FromCard: "AC",
+  FromWallet: "PC",
+  FromMobileBalance: "MC"
+} as const;
+
 /* eslint-disable no-useless-constructor */
 export type FormConfig = {
   /**
@@ -222,13 +228,14 @@ export class PaymentFromBuilder {
 
   /**
    * Генерирует HTML на основе заданных параметров
+   * @param {boolean} fullPage
    * @return {string}
    */
-  buildHtml(): string {
+  buildHtml(fullPage = false): string {
     return new FormBuilder(
       "https://yoomoney.ru/quickpay/confirm.xml",
       "POST",
       convert(this.config)
-    ).buildHtml();
+    ).buildHtml(fullPage);
   }
 }

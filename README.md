@@ -151,7 +151,7 @@ sendPayment("yoomoney", "410016348581848", 100);
 // ♂️Gachi♂️ магазинчик на Express
 const express = require("express");
 const app = express();
-const { YMPaymentFromBuilder } = require("yoomoney-sdk");
+const { YMPaymentFromBuilder, YMFormPaymentType } = require("yoomoney-sdk");
 
 const port = parseInt(process.env.PORT);
 
@@ -161,7 +161,7 @@ app.get("/pay", (_req, res) => {
     .setAmount((300 * 74.3).toFixed(2)) // 300 баксов
     .requirePhone() // Требуем с плательщика ввести телефон
     .setSuccessURL(`http://localhost:${port}/success`)
-    .setPaymentType("AC") // Просим деньги с карты
+    .setPaymentType(YMFormPaymentType.FromCard) // Просим деньги с карты
     .setReceiver("410016348581848") // Номер кошелька получателя (ваш)
     .setLabel("payment-001") // Чтобы потом вычленить в уведомлении
     .setComment("За ♂️Fisting♂️");
@@ -170,7 +170,7 @@ app.get("/pay", (_req, res) => {
     "Content-Type": "text/html; charset=utf-8"
   });
 
-  res.end(builder.buildHtml());
+  res.end(builder.buildHtml(true)); // true = делаем полную страничку, а не только форму
 });
 
 app.get("/success", (_req, res) => {

@@ -8,5 +8,6 @@ export {
 } from "./notifications";
 export {
   FormConfig as YMFormConfig,
+  PaymentType as YMFormPaymentType,
   PaymentFromBuilder as YMPaymentFromBuilder
 } from "./payment-form-builder";

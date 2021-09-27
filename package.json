@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "YooMoney typed SDK",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
