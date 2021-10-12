@@ -15,6 +15,7 @@
 ### Methods
 
 - [check](YMNotificationChecker.md#check)
+- [middleware](YMNotificationChecker.md#middleware)
 
 ## Constructors
 
@@ -30,7 +31,7 @@
 
 #### Defined in
 
-[src/notifications.ts:46](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5dd1b63/src/notifications.ts#L46)
+[src/notifications.ts:71](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/notifications.ts#L71)
 
 ## Methods
 
@@ -50,4 +51,55 @@
 
 #### Defined in
 
-[src/notifications.ts:53](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5dd1b63/src/notifications.ts#L53)
+[src/notifications.ts:78](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/notifications.ts#L78)
+
+___
+
+### middleware
+
+▸ **middleware**(`options?`, `actualHandler?`): `RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
+
+`[Экспериментально]` Упрощает интеграцию с `express`
+
+#### Это middleware кидает ошибки, позаботьтесь об их обработке
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | `Object` |
+| `options.memo?` | `boolean` |
+| `actualHandler` | `RequestHandler`<`Record`<`string`, `string`\>, `any`, [`YMNotificationDTO`](../modules.md#ymnotificationdto), `ParsedQs`, `Record`<`string`, `any`\>\> |
+
+#### Returns
+
+`RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
+
+##### Пример:
+**В начале файла**
+```js
+const nc = new YMNotificationChecker(process.env.YM_SECRET);
+
+// Повторяю
+// Это middleware кидает ошибки, позаботьтесь об их обработке
+app.use(errorHandling())
+```
+*`Вариант 1 - Классический`*
+
+```js
+app.post('/webhook/yoomoney', nc.middleware(), (req, res) => {
+ req.body // Это `NotificationDTO`
+})
+```
+
+*`Вариант 2 - Если нужны подсказки типов`*
+
+```js
+app.post('/webhook/yoomoney', nc.middleware({}, (req, res) => {
+ req.body // Это `NotificationDTO`
+}))
+```
+
+#### Defined in
+
+[src/notifications.ts:152](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/notifications.ts#L152)

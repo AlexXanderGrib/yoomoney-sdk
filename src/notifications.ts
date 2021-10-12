@@ -1,6 +1,7 @@
-import { createHash } from "crypto";
-
 /* eslint-disable camelcase */
+import { createHash } from "crypto";
+import { parse } from "querystring";
+import type { RequestHandler } from "express";
 
 export type NotificationDTO = {
   notification_type: "p2p-incoming" | "card-incoming";
@@ -32,6 +33,30 @@ export type NotificationDTO = {
  * Ошибка проверки уведомления от YooMoney
  */
 export class YMNotificationError extends Error {}
+
+/**
+ * @template {CallableFunction} T
+ *
+ * @param {T} function_
+ * @return {T}
+ */
+function promise<T extends (...parameters: any) => any>(function_: T) {
+  const wrapper = (...parameters: any[]): any => {
+    try {
+      const result = function_(...parameters);
+
+      if (result instanceof Promise) return result;
+
+      return Promise.resolve(result);
+    } catch (error) {
+      return Promise.reject(error);
+    }
+  };
+
+  return wrapper as (
+    ...arguments_: Parameters<T>
+  ) => ReturnType<T> extends Promise<any> ? ReturnType<T> : Promise<ReturnType<T>>;
+}
 
 /**
  * Класс, который реализует [механизм проверки уведомлений от YooMoney](https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security)
@@ -84,6 +109,87 @@ export class NotificationChecker {
       codepro: Boolean(notification.codepro),
       test_notification: Boolean(notification.test_notification),
       unaccepted: Boolean(notification.unaccepted)
+    };
+  }
+
+  /**
+   *
+   * `[Экспериментально]` Упрощает интеграцию с `express`
+   *
+   * #### Это middleware кидает ошибки, позаботьтесь об их обработке
+   *
+   * @param {Object} [options={}] Параметры обработки запроса
+   * @param {boolean} [options.memo=true] Флаг для включения/отключения пропуска повторяющихся запросов, если один из них был успешно обработан
+   *
+   * @param {RequestHandler<Record<string, string>, any, NotificationDTO>=} actualHandler
+   * @return {RequestHandler}
+   *
+   * ##### Пример:
+   * **В начале файла**
+   * ```js
+   * const nc = new YMNotificationChecker(process.env.YM_SECRET);
+   *
+   * // Повторяю
+   * // Это middleware кидает ошибки, позаботьтесь об их обработке
+   * app.use(errorHandling())
+   * ```
+   * *`Вариант 1 - Классический`*
+   *
+   * ```js
+   * app.post('/webhook/yoomoney', nc.middleware(), (req, res) => {
+   *  req.body // Это `NotificationDTO`
+   * })
+   * ```
+   *
+   * *`Вариант 2 - Если нужны подсказки типов`*
+   *
+   * ```js
+   * app.post('/webhook/yoomoney', nc.middleware({}, (req, res) => {
+   *  req.body // Это `NotificationDTO`
+   * }))
+   * ```
+   */
+  middleware(
+    options: { memo?: boolean } = {},
+    actualHandler: RequestHandler<Record<string, string>, any, NotificationDTO> = (
+      _request,
+      _response,
+      next
+    ) => next()
+  ): RequestHandler {
+    const calls = new Set<string>();
+    const { memo = true } = options;
+
+    return async (request, response, next) => {
+      let body: Record<keyof NotificationDTO, string> = {} as any;
+
+      if (!request.body) {
+        const text = await new Promise<string>((resolve, reject) => {
+          let accumulated = "";
+
+          request.on("error", (error) => reject(error));
+          request.on("data", (data) => (accumulated += String(data)));
+          request.on("end", () => resolve(accumulated));
+        });
+
+        body = parse(text) as any;
+      }
+
+      if (typeof request.body === "object") {
+        body = request.body;
+      }
+
+      const key = body.sha1_hash;
+
+      if (memo && calls.has(key)) return;
+
+      const notification = this.check(body);
+      request.body = notification;
+
+      if (!memo) return actualHandler(request, response, next);
+      await promise(actualHandler)(request, response, next);
+
+      calls.add(key);
     };
   }
 }

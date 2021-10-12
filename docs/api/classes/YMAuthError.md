@@ -22,12 +22,12 @@
 - [message](YMAuthError.md#message)
 - [name](YMAuthError.md#name)
 - [stack](YMAuthError.md#stack)
+- [prepareStackTrace](YMAuthError.md#preparestacktrace)
 - [stackTraceLimit](YMAuthError.md#stacktracelimit)
 
 ### Methods
 
 - [captureStackTrace](YMAuthError.md#capturestacktrace)
-- [prepareStackTrace](YMAuthError.md#preparestacktrace)
 
 ## Constructors
 
@@ -47,7 +47,7 @@ Error.constructor
 
 #### Defined in
 
-[src/auth.ts:22](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5dd1b63/src/auth.ts#L22)
+[src/auth.ts:22](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/auth.ts#L22)
 
 ## Properties
 
@@ -99,6 +99,37 @@ node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
+### prepareStackTrace
+
+▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
+
+#### Type declaration
+
+▸ (`err`, `stackTraces`): `any`
+
+Optional override for formatting stack traces
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `err` | `Error` |
+| `stackTraces` | `CallSite`[] |
+
+##### Returns
+
+`any`
+
+#### Inherited from
+
+Error.prepareStackTrace
+
+#### Defined in
+
+node_modules/@types/node/globals.d.ts:11
+
+___
+
 ### stackTraceLimit
 
 ▪ `Static` **stackTraceLimit**: `number`
@@ -137,32 +168,3 @@ Error.captureStackTrace
 #### Defined in
 
 node_modules/@types/node/globals.d.ts:4
-
-___
-
-### prepareStackTrace
-
-▸ `Static` `Optional` **prepareStackTrace**(`err`, `stackTraces`): `any`
-
-Optional override for formatting stack traces
-
-**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `err` | `Error` |
-| `stackTraces` | `CallSite`[] |
-
-#### Returns
-
-`any`
-
-#### Inherited from
-
-Error.prepareStackTrace
-
-#### Defined in
-
-node_modules/@types/node/globals.d.ts:11

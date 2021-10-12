@@ -62,16 +62,16 @@ app.get("/success", (_req, res) => {
 // Пример PROD: https://myshop.ru/yoomoney/secret-path/notification
 app.post(
   "/yoomoney/secret-path/notification",
-  bodyParser.urlencoded({ extended: true }),
-  (req, res) => {
-    // Если хеш в уведомлении не совпадает, выкинет ошибку YMNotificationError
-    const notification = notificationChecker.check(req.query);
-
-    console.log(notification.label); // => payment-001, см. строку 36
+  // Параметр `memo=false` отключает запоминание обработанных уведомлений
+  // Он по умолчанию включён, но для тестирования на localhost'е
+  // где вы можете кидать одно и то же уведомление несколько раз
+  // лучше выключить
+  notificationChecker.middleware({ memo: false }, (req, res) => {
+    console.log(req.body.label);
 
     res.writeHead(200, "OK", { "Content-Type": "text/plain" });
     res.end("ok");
-  }
+  })
 );
 
 app.listen(port);
