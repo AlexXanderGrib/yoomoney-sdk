@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "YooMoney typed SDK",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -37,18 +37,11 @@
     "url": "git+https://github.com/AlexXanderGrib/yoomoney-sdk.git"
   },
   "keywords": [
-    "yandex",
-    "money",
     "yoomoney",
     "yandex",
     "money",
     "api",
-    "sdk",
-    "yoomoney",
-    "api",
-    "yoomoney",
-    "sdk",
-    "yandex-money-sdk"
+    "sdk"
   ],
   "author": "AlexXanderGrib <me@alexxgrib.me> (https://alexxgrib.me)",
   "license": "MIT",
