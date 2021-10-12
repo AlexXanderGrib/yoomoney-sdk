@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "YooMoney typed SDK",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -11,7 +11,8 @@
   },
   "directories": {
     "lib": "./dist",
-    "doc": "./docs"
+    "doc": "./docs",
+    "example": "./examples"
   },
   "scripts": {
     "test": "jest",
@@ -21,11 +22,15 @@
     "generate-lock-files": "npm i && yarn install",
     "glf": "npm run generate-lock-files",
     "lint": "eslint src/*",
-    "prettify": "prettier --write src/**/*"
+    "prettify": "prettier --write src/**/*",
+    "docs": "typedoc --out docs/api src/index.ts"
   },
   "files": [
     "dist",
-    "docs"
+    "docs",
+    "examples",
+    "README.md",
+    "CONTRIBUTING.md"
   ],
   "repository": {
     "type": "git",
@@ -73,6 +78,8 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.2",
     "ts-node": "^10.0.0",
+    "typedoc": "^0.22.5",
+    "typedoc-plugin-markdown": "^3.11.3",
     "typescript": "^4.3.2"
   },
   "dependencies": {
