@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[src/api.ts:32](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/api.ts#L32)
+[src/api.ts:32](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.ts#L32)
 
 ## Properties
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:71](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/api.ts#L71)
+[src/api.ts:71](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.ts#L71)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:47](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/api.ts#L47)
+[src/api.ts:47](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.ts#L47)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:141](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/api.ts#L141)
+[src/api.ts:141](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.ts#L141)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:155](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/api.ts#L155)
+[src/api.ts:155](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.ts#L155)
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:97](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/api.ts#L97)
+[src/api.ts:97](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.ts#L97)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:83](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/api.ts#L83)
+[src/api.ts:83](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.ts#L83)
 
 ___
 
@@ -230,7 +230,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:125](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/api.ts#L125)
+[src/api.ts:125](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.ts#L125)
 
 ___
 
@@ -256,4 +256,4 @@ ___
 
 #### Defined in
 
-[src/api.ts:113](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/api.ts#L113)
+[src/api.ts:113](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.ts#L113)

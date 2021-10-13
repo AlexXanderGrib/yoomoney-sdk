@@ -94,9 +94,7 @@ export class NotificationChecker {
 
     // eslint-disable-next-line security/detect-possible-timing-attacks
     if (hash !== notification.sha1_hash) {
-      throw new YMNotificationError(
-        `Hash sum not matched: ${hash} !== ${notification.sha1_hash}`
-      );
+      throw new YMNotificationError(`Notification hash mismatch`);
     }
 
     return {
@@ -129,9 +127,6 @@ export class NotificationChecker {
    * ```js
    * const nc = new YMNotificationChecker(process.env.YM_SECRET);
    *
-   * // Повторяю
-   * // Это middleware кидает ошибки, позаботьтесь об их обработке
-   * app.use(errorHandling())
    * ```
    * *`Вариант 1 - Классический`*
    *
@@ -147,6 +142,13 @@ export class NotificationChecker {
    * app.post('/webhook/yoomoney', nc.middleware({}, (req, res) => {
    *  req.body // Это `NotificationDTO`
    * }))
+   * ```
+   *
+   *  **Обработка ошибок**
+   * ```js
+   * app.use((error, request, response, next) => {
+   *  console.log(error); // [YMNotificationError: Notification hash mismatch]
+   * })
    * ```
    */
   middleware(
@@ -181,11 +183,14 @@ export class NotificationChecker {
 
       const key = body.sha1_hash;
 
-      if (memo && calls.has(key)) return;
+      if (memo && calls.has(key)) return next();
 
-      const notification = this.check(body);
-      request.body = notification;
-
+      try {
+        const notification = this.check(body);
+        request.body = notification;
+      } catch (error) {
+        return next(error);
+      }
       if (!memo) return actualHandler(request, response, next);
       await promise(actualHandler)(request, response, next);
 

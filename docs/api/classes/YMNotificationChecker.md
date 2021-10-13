@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/notifications.ts:71](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/notifications.ts#L71)
+[src/notifications.ts:71](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/notifications.ts#L71)
 
 ## Methods
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[src/notifications.ts:78](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/notifications.ts#L78)
+[src/notifications.ts:78](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/notifications.ts#L78)
 
 ___
 
@@ -80,9 +80,6 @@ ___
 ```js
 const nc = new YMNotificationChecker(process.env.YM_SECRET);
 
-// Повторяю
-// Это middleware кидает ошибки, позаботьтесь об их обработке
-app.use(errorHandling())
 ```
 *`Вариант 1 - Классический`*
 
@@ -100,6 +97,13 @@ app.post('/webhook/yoomoney', nc.middleware({}, (req, res) => {
 }))
 ```
 
+ **Обработка ошибок**
+```js
+app.use((error, request, response, next) => {
+ console.log(error); // [YMNotificationError: Notification hash mismatch]
+})
+```
+
 #### Defined in
 
-[src/notifications.ts:152](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/234db16/src/notifications.ts#L152)
+[src/notifications.ts:154](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/notifications.ts#L154)

@@ -4,11 +4,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
-// const { YMPaymentFromBuilder, YMFormPaymentType, YMNotificationChecker } = require("yoomoney-sdk");
+// const { YMPaymentFromBuilder, YMFormPaymentType, YMNotificationChecker, YMNotificationError } = require("yoomoney-sdk");
 const {
   YMPaymentFromBuilder,
   YMFormPaymentType,
-  YMNotificationChecker
+  YMNotificationChecker,
+  YMNotificationError
 } = require("..");
 
 // YOOMONEY_SECRET - Секрет для проверки подлинности из настроек уведомлений
@@ -73,5 +74,14 @@ app.post(
     res.end("ok");
   })
 );
+
+app.use((error, req, res, next) => {
+  if (error instanceof YMNotificationError) {
+    // Кто-то попытался отправить фальшивое уведомление об оплате
+    console.log(error);
+  }
+
+  return next();
+});
 
 app.listen(port);
