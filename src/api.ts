@@ -13,8 +13,8 @@ export class YMApiError extends Error {
    * @param {AnyRecord} response
    */
   constructor(public response: AnyRecord) {
-    super(`API returned error code: ${response["error"]}`);
-    this.code = response["error"];
+    super(`API returned error code: ${response.error}`);
+    this.code = response.error;
   }
 }
 
@@ -97,7 +97,7 @@ export class API {
   async operationDetails(
     parameters: t.OperationDetailsParams
   ): Promise<t.Operation> {
-    return await this.call("operation-history", parameters);
+    return await this.call("operation-details", parameters);
   }
 
   /**

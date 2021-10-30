@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[src/api.types.ts:48](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L48)
+[src/api.types.ts:48](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L48)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:551](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L551)
+[src/api.types.ts:551](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L551)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:563](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L563)
+[src/api.types.ts:563](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L563)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:576](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L576)
+[src/api.types.ts:576](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L576)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:584](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L584)
+[src/api.types.ts:584](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L584)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:159](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L159)
+[src/api.types.ts:159](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L159)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:280](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L280)
+[src/api.types.ts:280](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L280)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:95](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L95)
+[src/api.types.ts:95](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L95)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:274](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L274)
+[src/api.types.ts:274](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L274)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:291](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L291)
+[src/api.types.ts:291](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L291)
 
 ___
 
@@ -252,7 +252,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:324](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L324)
+[src/api.types.ts:324](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L324)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:442](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L442)
+[src/api.types.ts:442](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L442)
 
 ___
 
@@ -308,7 +308,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:475](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L475)
+[src/api.types.ts:475](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L475)
 
 ___
 
@@ -329,7 +329,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:348](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L348)
+[src/api.types.ts:348](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L348)
 
 ___
 
@@ -339,7 +339,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:343](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L343)
+[src/api.types.ts:343](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L343)
 
 ___
 
@@ -349,4 +349,4 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:389](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/4b6add2/src/api.types.ts#L389)
+[src/api.types.ts:389](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/api.types.ts#L389)
