@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/notifications.ts:71](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/notifications.ts#L71)
+[src/notifications.ts:71](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/c1a7b0f/src/notifications.ts#L71)
 
 ## Methods
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[src/notifications.ts:78](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/notifications.ts#L78)
+[src/notifications.ts:78](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/c1a7b0f/src/notifications.ts#L78)
 
 ___
 
@@ -106,4 +106,4 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[src/notifications.ts:154](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/8dc6f0c/src/notifications.ts#L154)
+[src/notifications.ts:154](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/c1a7b0f/src/notifications.ts#L154)
