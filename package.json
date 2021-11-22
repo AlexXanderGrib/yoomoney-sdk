@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "YooMoney typed SDK",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -67,6 +67,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-unicorn": "^33.0.0",
+    "express": "^4.17.1",
     "husky": "^6.0.0",
     "jest": "^27.0.3",
     "prettier": "^2.3.0",
