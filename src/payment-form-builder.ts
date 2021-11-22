@@ -139,6 +139,7 @@ export class PaymentFromBuilder {
    */
   private _makeSetter<T extends keyof FormConfig>(field: T) {
     return (value: FormConfig[T]) => {
+      // eslint-disable-next-line security/detect-object-injection
       this.config[field] = value;
       return this;
     };

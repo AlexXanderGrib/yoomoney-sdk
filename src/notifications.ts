@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { createHash } from "crypto";
+import { createHash, timingSafeEqual } from "crypto";
 import { parse } from "querystring";
 import type { RequestHandler } from "express";
 
@@ -72,8 +72,8 @@ export class NotificationChecker {
 
   /**
    *
-   * @param {*} notification Объект уведомления
-   * @return {*}
+   * @param {Object} notification Объект уведомления
+   * @return {NotificationDTO}
    */
   check(notification: Record<keyof NotificationDTO, string>): NotificationDTO {
     const notificationWithSecret = {
@@ -90,10 +90,9 @@ export class NotificationChecker {
       )
       .join("&");
 
-    const hash = createHash("sha1").update(signature).digest("hex");
+    const hash = createHash("sha1").update(signature).digest();
 
-    // eslint-disable-next-line security/detect-possible-timing-attacks
-    if (hash !== notification.sha1_hash) {
+    if (timingSafeEqual(hash, Buffer.from(notification.sha1_hash, "hex"))) {
       throw new YMNotificationError(`Notification hash mismatch`);
     }
 
