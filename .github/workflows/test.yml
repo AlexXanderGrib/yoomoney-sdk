@@ -1,0 +1,36 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Create empty .env
+        run: touch .env
+
+      - name: Run jest
+        run: npm test -- --coverage
+        env:
+          QIWI_TOKEN: ${{ secrets.QIWI_TOKEN }}
+          QIWI_WALLET: ${{ secrets.QIWI_WALLET }}
+          QIWI_SECRET_KEY: ${{ secrets.QIWI_PK }}
+          QIWI_PUBLIC_KEY: ${{ secrets.QIWI_PUBK }}
+
+
+      - name: Upload coverage
+        run: npx codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

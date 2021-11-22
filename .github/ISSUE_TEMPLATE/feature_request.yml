@@ -1,0 +1,13 @@
+name: 🌟 Feature request
+description: Suggest an idea for this project
+title: "🌟 Предложение: "
+labels: ["enhancement"]
+assignees: "@AlexXanderGrib"
+
+body:
+  - type: textarea
+    id: text
+    attributes:
+      label: Идея
+      description: Опишите тут что хотите видеть в библиотеке
+      render: markdown

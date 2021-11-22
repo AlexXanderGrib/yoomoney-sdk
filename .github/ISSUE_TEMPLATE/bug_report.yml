@@ -1,0 +1,38 @@
+name: 🐛 Bug report
+description: Create a report to help us improve
+title: "🐛 Баг: "
+labels: ["bug"]
+assignees: "@AlexXanderGrib"
+
+body:
+  - type: textarea
+    id: text
+    attributes:
+      label: Контекст
+      description: Опишите тут что случилось
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия библиотеки
+      placeholder: "2.0.0"
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Язык
+      options:
+        - JavaScript
+        - TypeScript
+        - Другой, компилируемый в JS
+
+  - type: dropdown
+    id: apis
+    attributes:
+      label: Затронутые секции API
+      multiple: true
+      options:
+        - Auth
+        - API
+        - Notifications
+        - Form Builder
