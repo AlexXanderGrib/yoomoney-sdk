@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[src/payment-form-builder.ts:12](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/e2ac32a/src/payment-form-builder.ts#L12)
+[src/payment-form-builder.ts:12](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L12)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/notifications.ts:6](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/e2ac32a/src/notifications.ts#L6)
+[src/notifications.ts:6](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/notifications.ts#L6)
 
 ## Variables
 
@@ -110,4 +110,4 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/e2ac32a/src/payment-form-builder.ts#L5)
+[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L5)

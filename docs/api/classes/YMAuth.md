@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[src/auth.ts:40](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/e2ac32a/src/auth.ts#L40)
+[src/auth.ts:40](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/auth.ts#L40)
 
 ## Properties
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/auth.ts:75](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/e2ac32a/src/auth.ts#L75)
+[src/auth.ts:75](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/auth.ts#L75)
 
 ___
 
@@ -118,4 +118,4 @@ ___
 
 #### Defined in
 
-[src/auth.ts:55](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/e2ac32a/src/auth.ts#L55)
+[src/auth.ts:55](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/auth.ts#L55)

@@ -92,7 +92,7 @@ export class NotificationChecker {
 
     const hash = createHash("sha1").update(signature).digest();
 
-    if (timingSafeEqual(hash, Buffer.from(notification.sha1_hash, "hex"))) {
+    if (!timingSafeEqual(hash, Buffer.from(notification.sha1_hash, "hex"))) {
       throw new YMNotificationError(`Notification hash mismatch`);
     }
 

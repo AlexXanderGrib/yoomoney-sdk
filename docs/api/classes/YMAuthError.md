@@ -47,7 +47,7 @@ Error.constructor
 
 #### Defined in
 
-[src/auth.ts:22](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/e2ac32a/src/auth.ts#L22)
+[src/auth.ts:22](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/auth.ts#L22)
 
 ## Properties
 
