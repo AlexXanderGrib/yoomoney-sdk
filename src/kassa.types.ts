@@ -1,5 +1,3 @@
-/* eslint-disable camelcase */
-
 import { CountryCode, Currency } from "./shared.types";
 
 export type PaymentStatus =

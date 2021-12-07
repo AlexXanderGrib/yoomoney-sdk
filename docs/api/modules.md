@@ -4,8 +4,21 @@
 
 ## Table of contents
 
+### References
+
+- [API](modules.md#api)
+- [Auth](modules.md#auth)
+- [FormConfig](modules.md#formconfig)
+- [FormPaymentType](modules.md#formpaymenttype)
+- [NotificationChecker](modules.md#notificationchecker)
+- [NotificationDTO](modules.md#notificationdto)
+- [PaymentFormBuilder](modules.md#paymentformbuilder)
+- [PaymentType](modules.md#paymenttype)
+- [YMPaymentFormBuilder](modules.md#ympaymentformbuilder)
+
 ### Namespaces
 
+- [vendor](modules/vendor.md)
 - [ymTypes](modules/ymTypes.md)
 
 ### Classes
@@ -26,6 +39,60 @@
 ### Variables
 
 - [YMFormPaymentType](modules.md#ymformpaymenttype)
+
+## References
+
+### API
+
+Renames and re-exports [YMApi](classes/YMApi.md)
+
+___
+
+### Auth
+
+Renames and re-exports [YMAuth](classes/YMAuth.md)
+
+___
+
+### FormConfig
+
+Renames and re-exports [YMFormConfig](modules.md#ymformconfig)
+
+___
+
+### FormPaymentType
+
+Renames and re-exports [YMFormPaymentType](modules.md#ymformpaymenttype)
+
+___
+
+### NotificationChecker
+
+Renames and re-exports [YMNotificationChecker](classes/YMNotificationChecker.md)
+
+___
+
+### NotificationDTO
+
+Renames and re-exports [YMNotificationDTO](modules.md#ymnotificationdto)
+
+___
+
+### PaymentFormBuilder
+
+Renames and re-exports [YMPaymentFromBuilder](classes/YMPaymentFromBuilder.md)
+
+___
+
+### PaymentType
+
+Renames and re-exports [YMFormPaymentType](modules.md#ymformpaymenttype)
+
+___
+
+### YMPaymentFormBuilder
+
+Renames and re-exports [YMPaymentFromBuilder](classes/YMPaymentFromBuilder.md)
 
 ## Type aliases
 
@@ -54,7 +121,7 @@
 
 #### Defined in
 
-[src/payment-form-builder.ts:12](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L12)
+[src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L11)
 
 ___
 
@@ -64,35 +131,35 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `amount` | `number` |
-| `building?` | `string` |
-| `city?` | `string` |
-| `codepro` | `boolean` |
-| `currency` | ``"643"`` |
-| `datetime` | `string` |
-| `email?` | `string` |
-| `fathersname?` | `string` |
-| `firstname?` | `string` |
-| `flat?` | `string` |
-| `label` | `string` |
-| `lastname?` | `string` |
-| `notification_type` | ``"p2p-incoming"`` \| ``"card-incoming"`` |
-| `operation_id` | `string` |
-| `phone?` | `string` |
-| `sender` | `string` |
-| `sha1_hash` | `string` |
-| `street?` | `string` |
-| `suite?` | `string` |
-| `test_notification` | `boolean` |
-| `unaccepted` | `boolean` |
-| `withdraw_amount` | `number` |
-| `zip?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `amount` | `number` | Сумма, которая зачислена на счет получателя. |
+| `building?` | `string` | Дом. |
+| `city?` | `string` | Город. |
+| `codepro` | `boolean` | Для переводов из кошелька — перевод защищен кодом протекции.  Для переводов с произвольной карты — всегда `false`. |
+| `currency` | ``"643"`` | Код валюты — всегда `643` (рубль РФ согласно ISO 4217). |
+| `datetime` | `string` | Дата и время совершения перевода. |
+| `email?` | `string` | Адрес электронной почты отправителя перевода. Если почта не запрашивалась, параметр содержит пустую строку. |
+| `fathersname?` | `string` | Отчество. |
+| `firstname?` | `string` | Имя. |
+| `flat?` | `string` | Квартира. |
+| `label` | `string` | Метка платежа. Если ее нет, параметр содержит пустую строку. |
+| `lastname?` | `string` | Фамилия. |
+| `notification_type` | ``"p2p-incoming"`` \| ``"card-incoming"`` | Для переводов из кошелька — `p2p-incoming`.  Для переводов с произвольной карты — `card-incoming`. |
+| `operation_id` | `string` | Идентификатор операции в истории счета получателя. |
+| `phone?` | `string` | Телефон отправителя перевода. Если телефон не запрашивался, параметр содержит пустую строку. |
+| `sender` | `string` | Для переводов из кошелька — номер кошелька отправителя.  Для переводов с произвольной карты — параметр содержит пустую строку. |
+| `sha1_hash` | `string` | SHA-1 hash параметров уведомления. |
+| `street?` | `string` | Улица. |
+| `suite?` | `string` | Корпус. |
+| `test_notification` | `boolean` | - |
+| `unaccepted` | `boolean` | Перевод еще не зачислен. Получателю нужно освободить место в кошельке или использовать код протекции (если `codepro=true`). |
+| `withdraw_amount` | `number` | Сумма, которая списана со счета отправителя. |
+| `zip?` | `string` | Индекс. |
 
 #### Defined in
 
-[src/notifications.ts:6](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/notifications.ts#L6)
+[src/notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/notifications.ts#L5)
 
 ## Variables
 
@@ -110,4 +177,4 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L5)
+[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L5)

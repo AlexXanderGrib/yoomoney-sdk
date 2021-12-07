@@ -1,31 +1,98 @@
-/* eslint-disable camelcase */
 import { createHash, timingSafeEqual } from "crypto";
 import { parse } from "querystring";
 import type { RequestHandler } from "express";
 
 export type NotificationDTO = {
+  /**
+   * Для переводов из кошелька — `p2p-incoming`.
+   *
+   * Для переводов с произвольной карты — `card-incoming`.
+   */
   notification_type: "p2p-incoming" | "card-incoming";
+
+  /** Идентификатор операции в истории счета получателя. */
   operation_id: string;
+
+  /** Сумма, которая зачислена на счет получателя. */
   amount: number;
+
+  /** Сумма, которая списана со счета отправителя. */
   withdraw_amount: number;
+
+  /** Код валюты — всегда `643` (рубль РФ согласно ISO 4217). */
   currency: "643";
+
+  /** Дата и время совершения перевода. */
   datetime: string;
+
+  /**
+   * Для переводов из кошелька — номер кошелька отправителя.
+   *
+   * Для переводов с произвольной карты — параметр содержит пустую
+   * строку.
+   */
   sender: string;
+
+  /**
+   * Для переводов из кошелька — перевод защищен кодом протекции.
+   *
+   * Для переводов с произвольной карты — всегда `false`.
+   */
   codepro: boolean;
+
+  /**
+   * Метка платежа. Если ее нет, параметр содержит пустую строку.
+   */
   label: string;
+
+  /** SHA-1 hash параметров уведомления. */
   sha1_hash: string;
+
   test_notification: boolean;
+
+  /**
+   * Перевод еще не зачислен. Получателю нужно освободить место
+   * в кошельке или использовать код протекции (если `codepro=true`).
+   */
   unaccepted: boolean;
+
+  /** Фамилия. */
   lastname?: string;
+
+  /** Имя. */
   firstname?: string;
+
+  /** Отчество. */
   fathersname?: string;
+
+  /**
+   * Адрес электронной почты отправителя перевода. Если почта не
+   * запрашивалась, параметр содержит пустую строку.
+   */
   email?: string;
+
+  /**
+   * Телефон отправителя перевода. Если телефон не запрашивался,
+   * параметр содержит пустую строку.
+   */
   phone?: string;
+
+  /** Город. */
   city?: string;
+
+  /** Улица. */
   street?: string;
+
+  /** Дом. */
   building?: string;
+
+  /** Корпус. */
   suite?: string;
+
+  /** Квартира. */
   flat?: string;
+
+  /** Индекс. */
   zip?: string;
 };
 
@@ -62,18 +129,24 @@ function promise<T extends (...parameters: any) => any>(function_: T) {
  * Класс, который реализует [механизм проверки уведомлений от YooMoney](https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security)
  *
  * @see {@link https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security|Описание механизма}
+ * @export
+ * @class NotificationChecker
  */
 export class NotificationChecker {
   /**
-   *
+   * Creates an instance of NotificationChecker.
    * @param {string} secret Секретное слово
+   * @memberof NotificationChecker
    */
   constructor(private readonly secret: string) {}
 
   /**
+   * Проверяет полученное уведомление и возвращает типизированную версию
    *
+   * @throws {YMNotificationError} Если хеш уведомления не совпадает
    * @param {Object} notification Объект уведомления
    * @return {NotificationDTO}
+   * @memberof NotificationChecker
    */
   check(notification: Record<keyof NotificationDTO, string>): NotificationDTO {
     const notificationWithSecret = {
@@ -117,7 +190,7 @@ export class NotificationChecker {
    *
    * @param {Object} [options={}] Параметры обработки запроса
    * @param {boolean} [options.memo=true] Флаг для включения/отключения пропуска повторяющихся запросов, если один из них был успешно обработан
-   *
+   * @memberof NotificationChecker
    * @param {RequestHandler<Record<string, string>, any, NotificationDTO>=} actualHandler
    * @return {RequestHandler}
    *

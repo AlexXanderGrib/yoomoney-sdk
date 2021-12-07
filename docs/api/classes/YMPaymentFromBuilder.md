@@ -4,6 +4,8 @@
 
 Генерирует HTML формы для переводов
 
+**`export`**
+
 ## Table of contents
 
 ### Constructors
@@ -40,15 +42,19 @@
 
 • **new YMPaymentFromBuilder**(`config?`)
 
+Creates an instance of PaymentFormBuilder.
+
+**`memberof`** PaymentFormBuilder
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `config` | [`YMFormConfig`](../modules.md#ymformconfig) | Изначальные настройки формы |
+| Name | Type |
+| :------ | :------ |
+| `config` | [`YMFormConfig`](../modules.md#ymformconfig) |
 
 #### Defined in
 
-[src/payment-form-builder.ts:124](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L124)
+[src/payment-form-builder.ts:133](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L133)
 
 ## Properties
 
@@ -64,7 +70,11 @@ ___
 
 #### Type declaration
 
-▸ (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+▸ `Private` (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+
+Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 ##### Parameters
 
@@ -78,7 +88,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:188](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L188)
+[src/payment-form-builder.ts:200](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L200)
 
 ___
 
@@ -88,7 +98,11 @@ ___
 
 #### Type declaration
 
-▸ (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+▸ `Private` (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+
+Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 ##### Parameters
 
@@ -102,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:185](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L185)
+[src/payment-form-builder.ts:197](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L197)
 
 ___
 
@@ -112,7 +126,11 @@ ___
 
 #### Type declaration
 
-▸ (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+▸ `Private` (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+
+Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 ##### Parameters
 
@@ -126,7 +144,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:187](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L187)
+[src/payment-form-builder.ts:199](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L199)
 
 ___
 
@@ -136,7 +154,11 @@ ___
 
 #### Type declaration
 
-▸ (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+▸ `Private` (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+
+Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 ##### Parameters
 
@@ -150,7 +172,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:182](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L182)
+[src/payment-form-builder.ts:194](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L194)
 
 ___
 
@@ -160,7 +182,11 @@ ___
 
 #### Type declaration
 
-▸ (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+▸ `Private` (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+
+Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 ##### Parameters
 
@@ -174,7 +200,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:183](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L183)
+[src/payment-form-builder.ts:195](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L195)
 
 ___
 
@@ -184,7 +210,11 @@ ___
 
 #### Type declaration
 
-▸ (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+▸ `Private` (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+
+Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 ##### Parameters
 
@@ -198,7 +228,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:186](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L186)
+[src/payment-form-builder.ts:198](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L198)
 
 ___
 
@@ -208,7 +238,11 @@ ___
 
 #### Type declaration
 
-▸ (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+▸ `Private` (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+
+Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 ##### Parameters
 
@@ -222,7 +256,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:181](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L181)
+[src/payment-form-builder.ts:193](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L193)
 
 ___
 
@@ -232,7 +266,11 @@ ___
 
 #### Type declaration
 
-▸ (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+▸ `Private` (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+
+Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 ##### Parameters
 
@@ -246,7 +284,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:184](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L184)
+[src/payment-form-builder.ts:196](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L196)
 
 ## Methods
 
@@ -255,6 +293,8 @@ ___
 ▸ `Private` **_makeSetter**<`T`\>(`field`): (`value`: [`YMFormConfig`](../modules.md#ymformconfig)[`T`]) => [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
 
 Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 #### Type parameters
 
@@ -272,7 +312,11 @@ ___
 
 `fn`
 
-▸ (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+▸ `Private` (`value`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
+
+Генерирует стандартные сеттеры
+
+**`memberof`** PaymentFromBuilder
 
 ##### Parameters
 
@@ -286,7 +330,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:140](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L140)
+[src/payment-form-builder.ts:151](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L151)
 
 ___
 
@@ -295,6 +339,8 @@ ___
 ▸ **buildHtml**(`fullPage?`): `string`
 
 Генерирует HTML на основе заданных параметров
+
+**`memberof`** PaymentFromBuilder
 
 #### Parameters
 
@@ -308,7 +354,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:235](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L235)
+[src/payment-form-builder.ts:251](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L251)
 
 ___
 
@@ -316,6 +362,8 @@ ___
 
 ▸ **requireAddress**(`doRequire?`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
 
+**`memberof`** PaymentFromBuilder
+
 #### Parameters
 
 | Name | Type | Default value |
@@ -328,7 +376,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:205](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L205)
+[src/payment-form-builder.ts:219](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L219)
 
 ___
 
@@ -336,6 +384,8 @@ ___
 
 ▸ **requireEmail**(`doRequire?`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
 
+**`memberof`** PaymentFromBuilder
+
 #### Parameters
 
 | Name | Type | Default value |
@@ -348,7 +398,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:215](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L215)
+[src/payment-form-builder.ts:230](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L230)
 
 ___
 
@@ -356,6 +406,8 @@ ___
 
 ▸ **requireFio**(`doRequire?`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
 
+**`memberof`** PaymentFromBuilder
+
 #### Parameters
 
 | Name | Type | Default value |
@@ -368,7 +420,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:195](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L195)
+[src/payment-form-builder.ts:208](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L208)
 
 ___
 
@@ -376,6 +428,8 @@ ___
 
 ▸ **requirePhone**(`doRequire?`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
 
+**`memberof`** PaymentFromBuilder
+
 #### Parameters
 
 | Name | Type | Default value |
@@ -388,7 +442,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:225](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L225)
+[src/payment-form-builder.ts:240](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L240)
 
 ___
 
@@ -397,6 +451,8 @@ ___
 ▸ **setAmount**(`amount`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
 
 Задаёт сумму платежа
+
+**`memberof`** PaymentFromBuilder
 
 #### Parameters
 
@@ -410,7 +466,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:154](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L154)
+[src/payment-form-builder.ts:164](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L164)
 
 ___
 
@@ -419,6 +475,8 @@ ___
 ▸ **setReceiver**(`receiver`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
 
 Задаёт получателя платежа
+
+**`memberof`** PaymentFromBuilder
 
 #### Parameters
 
@@ -432,7 +490,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:165](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L165)
+[src/payment-form-builder.ts:176](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L176)
 
 ___
 
@@ -441,6 +499,8 @@ ___
 ▸ **setSuccessURL**(`url`): [`YMPaymentFromBuilder`](YMPaymentFromBuilder.md)
 
 Задаёт URL перенаправления после успешного платежа
+
+**`memberof`** PaymentFromBuilder
 
 #### Parameters
 
@@ -454,4 +514,4 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:176](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/payment-form-builder.ts#L176)
+[src/payment-form-builder.ts:188](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L188)

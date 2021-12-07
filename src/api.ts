@@ -22,16 +22,20 @@ export class YMApiError extends Error {
  * Имплементирует [основное API YooMoney](https://yoomoney.ru/docs/wallet)
  *
  * @see {@link https://yoomoney.ru/docs/wallet|Описание}
+ * @export
+ * @class API
  */
 export class API {
   /**
-   *
+   * Creates an instance of API.
    * @param {string} token Токен авторизации пользователя
-   * @param {string} endpoint По умолчанию `https://yoomoney.ru/api`
+   * @param {string=} [endpoint="https://yoomoney.ru/api"] По умолчанию `https://yoomoney.ru/api`
+   * @param {Agent=} [agent]
+   * @memberof API
    */
   constructor(
     public token: string,
-    public endpoint = "https://yoomoney.ru/api",
+    public endpoint: string = "https://yoomoney.ru/api",
     public agent?: Agent
   ) {}
 
@@ -41,6 +45,7 @@ export class API {
    * @template T
    * @param {string} method Название метода
    * @param {QueryStringifiable} parameters Параметры метода
+   * @throws {YMApiError}
    *
    * @return {Promise<T>}
    */
@@ -66,6 +71,7 @@ export class API {
    *
    * Требуемые права токена: `account-info`.
    *
+   * @throws {YMApiError}
    * @return {t.AccountInfoResponse}
    */
   async accountInfo(): Promise<t.AccountInfoResponse> {
@@ -77,11 +83,12 @@ export class API {
    *
    * Требуемые права токена: `operation-history`.
    *
-   * @param {t.OperationHistoryParams=} parameters Параметры вызова
+   * @throws {YMApiError}
+   * @param {t.OperationHistoryParameters=} [parameters={}] Параметры вызова
    * @return {Promise<t.OperationHistoryResponse>}
    */
   async operationHistory(
-    parameters: t.OperationHistoryParams = {}
+    parameters: t.OperationHistoryParameters = {}
   ): Promise<t.OperationHistoryResponse> {
     return await this.call("operation-history", parameters);
   }
@@ -91,69 +98,87 @@ export class API {
    *
    * Требуемые права токена: `operation-details`.
    *
-   * @param {t.OperationDetailsParams=} parameters Параметры вызова
+   * @throws {YMApiError}
+   * @param {t.OperationDetailsParameters} parameters Параметры вызова
    * @return {Promise<t.Operation>}
    */
   async operationDetails(
-    parameters: t.OperationDetailsParams
+    parameters: t.OperationDetailsParameters
   ): Promise<t.Operation> {
     return await this.call("operation-details", parameters);
   }
 
   /**
-   * Создание платежа, проверка параметров и возможности приема платежа магазином или перевода средств на счет пользователя ЮMoney.
+   * Создание платежа, проверка параметров и возможности приема
+   * платежа магазином или перевода средств на счет пользователя
+   * ЮMoney.
    *
    * Требуемые права токена:
-   * - для платежа в магазин: `payment.to-pattern` («шаблон платежа») или `payment-shop`.
-   * - для перевода средств на счета других пользователей: `payment.to-account` («идентификатор получателя», «тип идентификатора») или `payment-p2p`.
+   * - для платежа в магазин: `payment.to-pattern`
+   * («шаблон платежа») или `payment-shop`.
    *
-   * @param {t.RequestPaymentParams=} parameters Параметры вызова
+   * - для перевода средств на счета других пользователей:
+   *  `payment.to-account` («идентификатор получателя»,
+   * «тип идентификатора») или `payment-p2p`.
+   *
+   * @throws {YMApiError}
+   * @param {t.RequestPaymentParameters} parameters Параметры вызова
    * @return {Promise<t.RequestPaymentResponse>}
    */
   async requestPayment(
-    parameters: t.RequestPaymentParams
+    parameters: t.RequestPaymentParameters
   ): Promise<t.RequestPaymentResponse> {
     return await this.call("request-payment", parameters);
   }
 
   /**
-   * Подтверждение платежа, ранее созданного методом [request-payment](https://yoomoney.ru/docs/wallet/process-payments/request-payment). Указание метода проведения платежа.
+   * Подтверждение платежа, ранее созданного методом
+   * [request-payment](https://yoomoney.ru/docs/wallet/process-payments/request-payment).
+   * Указание метода проведения платежа.
    *
-   * @param {t.ProcessPaymentParams=} parameters Параметры вызова
+   * @throws {YMApiError}
+   * @param {t.ProcessPaymentParameters} parameters Параметры вызова
    * @return {Promise<t.ProcessPaymentResponse>}
    */
   async processPayment(
-    parameters: t.ProcessPaymentParams
+    parameters: t.ProcessPaymentParameters
   ): Promise<t.ProcessPaymentResponse> {
     return await this.call("process-payment", parameters);
   }
 
   /**
-   * Прием входящих переводов, защищенных кодом протекции, и переводов до востребования.
+   * Прием входящих переводов, защищенных кодом протекции, и
+   * переводов до востребования.
    *
-   * Количество попыток приема входящего перевода с кодом протекции ограничено. При исчерпании количества попыток, перевод автоматически отвергается (перевод возвращается отправителю).
+   * Количество попыток приема входящего перевода с кодом протекции
+   * ограничено. При исчерпании количества попыток, перевод
+   * автоматически отвергается (перевод возвращается отправителю).
    *
    * Требуемые права токена: `incoming-transfers`
    *
-   * @param {t.IncomingTransferAcceptParams=} parameters Параметры вызова
+   * @throws {YMApiError}
+   * @param {t.IncomingTransferAcceptParameters} parameters Параметры вызова
    * @return {Promise<t.IncomingTransferAcceptResponse>}
    */
   async incomingTransferAccept(
-    parameters: t.IncomingTransferAcceptParams
+    parameters: t.IncomingTransferAcceptParameters
   ): Promise<t.IncomingTransferAcceptResponse> {
     return await this.call("incoming-transfer-accept", parameters);
   }
 
   /**
-   * Отмена входящих переводов, защищенных кодом протекции, и переводов до востребования. При отмене перевода он возвращается отправителю.
+   * Отмена входящих переводов, защищенных кодом протекции, и
+   * переводов до востребования. При отмене перевода он возвращается
+   * отправителю.
    *
    * Требуемые права токена: `incoming-transfers`
    *
-   * @param {t.IncomingTransferRejectParams=} parameters Параметры вызова
+   * @throws {YMApiError}
+   * @param {t.IncomingTransferRejectParameters} parameters Параметры вызова
    * @return {Promise<t.IncomingTransferRejectResponse>}
    */
   async incomingTransferReject(
-    parameters: t.IncomingTransferRejectParams
+    parameters: t.IncomingTransferRejectParameters
   ): Promise<t.IncomingTransferRejectResponse> {
     return await this.call("incoming-transfer-accept", parameters);
   }

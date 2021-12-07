@@ -7,20 +7,20 @@
 ### Type aliases
 
 - [AccountInfoResponse](ymTypes.md#accountinforesponse)
-- [IncomingTransferAcceptParams](ymTypes.md#incomingtransferacceptparams)
+- [IncomingTransferAcceptParameters](ymTypes.md#incomingtransferacceptparameters)
 - [IncomingTransferAcceptResponse](ymTypes.md#incomingtransferacceptresponse)
-- [IncomingTransferRejectParams](ymTypes.md#incomingtransferrejectparams)
+- [IncomingTransferRejectParameters](ymTypes.md#incomingtransferrejectparameters)
 - [IncomingTransferRejectResponse](ymTypes.md#incomingtransferrejectresponse)
 - [Operation](ymTypes.md#operation)
-- [OperationDetailsParams](ymTypes.md#operationdetailsparams)
-- [OperationHistoryParams](ymTypes.md#operationhistoryparams)
+- [OperationDetailsParameters](ymTypes.md#operationdetailsparameters)
+- [OperationHistoryParameters](ymTypes.md#operationhistoryparameters)
 - [OperationHistoryResponse](ymTypes.md#operationhistoryresponse)
 - [P2PPaymentRequest](ymTypes.md#p2ppaymentrequest)
 - [PhoneProviderPaymentRequest](ymTypes.md#phoneproviderpaymentrequest)
-- [ProcessPaymentParams](ymTypes.md#processpaymentparams)
+- [ProcessPaymentParameters](ymTypes.md#processpaymentparameters)
 - [ProcessPaymentResponse](ymTypes.md#processpaymentresponse)
 - [RequestPaymentMoneySource](ymTypes.md#requestpaymentmoneysource)
-- [RequestPaymentParams](ymTypes.md#requestpaymentparams)
+- [RequestPaymentParameters](ymTypes.md#requestpaymentparameters)
 - [RequestPaymentResponse](ymTypes.md#requestpaymentresponse)
 
 ## Type aliases
@@ -47,13 +47,13 @@
 
 #### Defined in
 
-[src/api.types.ts:48](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L48)
+[src/api.types.ts:45](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L45)
 
 ___
 
-### IncomingTransferAcceptParams
+### IncomingTransferAcceptParameters
 
-Ƭ **IncomingTransferAcceptParams**: `Object`
+Ƭ **IncomingTransferAcceptParameters**: `Object`
 
 #### Index signature
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:551](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L551)
+[src/api.types.ts:548](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L548)
 
 ___
 
@@ -78,13 +78,13 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:563](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L563)
+[src/api.types.ts:560](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L560)
 
 ___
 
-### IncomingTransferRejectParams
+### IncomingTransferRejectParameters
 
-Ƭ **IncomingTransferRejectParams**: `Object`
+Ƭ **IncomingTransferRejectParameters**: `Object`
 
 #### Index signature
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:576](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L576)
+[src/api.types.ts:573](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L573)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:584](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L584)
+[src/api.types.ts:581](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L581)
 
 ___
 
@@ -149,13 +149,13 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:159](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L159)
+[src/api.types.ts:156](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L156)
 
 ___
 
-### OperationDetailsParams
+### OperationDetailsParameters
 
-Ƭ **OperationDetailsParams**: `Object`
+Ƭ **OperationDetailsParameters**: `Object`
 
 #### Index signature
 
@@ -169,13 +169,13 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:280](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L280)
+[src/api.types.ts:277](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L277)
 
 ___
 
-### OperationHistoryParams
+### OperationHistoryParameters
 
-Ƭ **OperationHistoryParams**: `Object`
+Ƭ **OperationHistoryParameters**: `Object`
 
 #### Index signature
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:95](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L95)
+[src/api.types.ts:92](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L92)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:274](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L274)
+[src/api.types.ts:271](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L271)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:291](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L291)
+[src/api.types.ts:288](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L288)
 
 ___
 
@@ -252,13 +252,13 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:324](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L324)
+[src/api.types.ts:321](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L321)
 
 ___
 
-### ProcessPaymentParams
+### ProcessPaymentParameters
 
-Ƭ **ProcessPaymentParams**: `Object`
+Ƭ **ProcessPaymentParameters**: `Object`
 
 #### Index signature
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:442](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L442)
+[src/api.types.ts:439](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L439)
 
 ___
 
@@ -308,7 +308,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:475](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L475)
+[src/api.types.ts:472](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L472)
 
 ___
 
@@ -329,17 +329,17 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:348](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L348)
+[src/api.types.ts:345](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L345)
 
 ___
 
-### RequestPaymentParams
+### RequestPaymentParameters
 
-Ƭ **RequestPaymentParams**: [`P2PPaymentRequest`](ymTypes.md#p2ppaymentrequest) \| [`PhoneProviderPaymentRequest`](ymTypes.md#phoneproviderpaymentrequest) \| { [key: string]: `string`; `pattern_id`: `string`  }
+Ƭ **RequestPaymentParameters**: [`P2PPaymentRequest`](ymTypes.md#p2ppaymentrequest) \| [`PhoneProviderPaymentRequest`](ymTypes.md#phoneproviderpaymentrequest) \| { [key: string]: `string`; `pattern_id`: `string`  }
 
 #### Defined in
 
-[src/api.types.ts:343](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L343)
+[src/api.types.ts:340](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L340)
 
 ___
 
@@ -349,4 +349,4 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:389](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.types.ts#L389)
+[src/api.types.ts:386](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.types.ts#L386)

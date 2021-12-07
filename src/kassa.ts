@@ -10,13 +10,13 @@ export class Kassa {
    *
    * @param {string} merchantId
    * @param {string} secretKey
-   * @param {string} endpoint
-   * @param {Agent} agent
+   * @param {string} [endpoint="https://api.yookassa.ru/v3"]
+   * @param {Agent} [agent]
    */
   constructor(
     public merchantId: string,
     public secretKey: string,
-    public readonly endpoint = "https://api.yookassa.ru/v3",
+    public readonly endpoint: string = "https://api.yookassa.ru/v3",
     public agent?: Agent
   ) {}
 }

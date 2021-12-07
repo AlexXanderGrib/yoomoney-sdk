@@ -6,6 +6,8 @@
 
 **`see`** [Описание протокола](https://yoomoney.ru/docs/wallet/using-api/authorization/basics)
 
+**`export`**
+
 ## Table of contents
 
 ### Constructors
@@ -31,19 +33,23 @@
 
 • **new YMAuth**(`clientId`, `redirectUrl`, `clientSecret?`, `endpoint?`, `agent?`)
 
+Creates an instance of Auth.
+
+**`memberof`** Auth
+
 #### Parameters
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `clientId` | `string` | `undefined` | ID приложения |
 | `redirectUrl` | `string` | `undefined` | URL-перенаправления |
-| `clientSecret?` | `string` | `undefined` | Секретное Слово |
-| `endpoint` | `string` | `"https://yoomoney.ru/oauth"` | По умолчанию `https://yoomoney.ru/oauth` |
+| `clientSecret?` | `string` | `undefined` | - |
+| `endpoint` | `string` | `"https://yoomoney.ru/oauth"` | - |
 | `agent?` | `Agent` \| (`parsedUrl`: `URL`) => `Agent` | `undefined` | - |
 
 #### Defined in
 
-[src/auth.ts:40](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/auth.ts#L40)
+[src/auth.ts:46](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/auth.ts#L46)
 
 ## Properties
 
@@ -81,11 +87,17 @@ ___
 
 ▸ **exchangeCode2Token**(`code`): `Promise`<`string`\>
 
+Обменивает временный токен на постоянный токен авторизации
+
+**`memberof`** Auth
+
+**`throws`** {YMAuthError}
+
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `code` | `string` | Временный токен (authorization code), подлежащий обмену на постоянный токен авторизации |
+| `code` | `string` | Временный токен (authorization code) |
 
 #### Returns
 
@@ -95,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/auth.ts:75](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/auth.ts#L75)
+[src/auth.ts:85](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/auth.ts#L85)
 
 ___
 
@@ -104,6 +116,8 @@ ___
 ▸ **getAuthForm**(`scopes`, `instanceName?`): `string`
 
 Генерирует html-форму перенаправления пользователя на авторизацию
+
+**`memberof`** Auth
 
 #### Parameters
 
@@ -118,4 +132,4 @@ ___
 
 #### Defined in
 
-[src/auth.ts:55](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/auth.ts#L55)
+[src/auth.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/auth.ts#L62)

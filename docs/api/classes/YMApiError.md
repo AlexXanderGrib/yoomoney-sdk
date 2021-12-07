@@ -50,7 +50,7 @@ Error.constructor
 
 #### Defined in
 
-[src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.ts#L15)
+[src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L15)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Error.constructor
 
 #### Defined in
 
-[src/api.ts:9](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/api.ts#L9)
+[src/api.ts:9](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L9)
 
 ___
 

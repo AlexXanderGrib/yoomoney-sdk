@@ -18,8 +18,8 @@ export type Agent = RequestInit["agent"];
  *
  * @param {string} url URL адрес запроса
  * @param {QueryStringifiable} parameters Параметры запроса
- * @param {Record<string, string>=} headers Заголовки запроса
- * @param {*} agent Агент запроса
+ * @param {Record<string, string>=} [headers={}] Заголовки запроса
+ * @param {Agent} [agent] Агент запроса
  *
  * @return {Promise<Response>} Ответ
  */

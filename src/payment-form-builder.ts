@@ -8,7 +8,6 @@ export const PaymentType = {
   FromMobileBalance: "MC"
 } as const;
 
-/* eslint-disable no-useless-constructor */
 export type FormConfig = {
   /**
    * Номер кошелька ЮMoney, на который нужно зачислять деньги отправителей.
@@ -115,11 +114,21 @@ function convert(config: FormConfig): FormQueryObject {
 
 /**
  * Генерирует HTML формы для переводов
+ * @export
+ * @class PaymentFormBuilder
  */
-export class PaymentFromBuilder {
+export class PaymentFormBuilder {
   /**
    *
-   * @param {FormConfig=} config Изначальные настройки формы
+   * Creates an instance of PaymentFormBuilder.
+   * @param {FormConfig} [config={
+   *   paymentType: "PC",
+   *   receiver: "",
+   *   sum: 100,
+   *   quickPayForm: "shop",
+   *   targets: ""
+   * }] Изначальные настройки формы
+   * @memberof PaymentFormBuilder
    */
   constructor(
     public readonly config: FormConfig = {
@@ -136,18 +145,19 @@ export class PaymentFromBuilder {
    *
    * @param {string} field
    * @return {Function}
+   * @private
+   * @memberof PaymentFromBuilder
    */
-  private _makeSetter<T extends keyof FormConfig>(field: T) {
-    return (value: FormConfig[T]) => {
-      // eslint-disable-next-line security/detect-object-injection
-      this.config[field] = value;
-      return this;
-    };
+  private _makeSetter<T extends keyof FormConfig>(
+    field: T
+  ): (value: FormConfig[T]) => this {
+    return (value: FormConfig[T]) => Object.defineProperty(this, field, { value });
   }
 
   /**
    * Задаёт сумму платежа
    *
+   * @memberof PaymentFromBuilder
    * @param {string | number} amount Сумма
    * @return {this}
    */
@@ -159,6 +169,7 @@ export class PaymentFromBuilder {
   /**
    * Задаёт получателя платежа
    *
+   * @memberof PaymentFromBuilder
    * @param {string | number} receiver Получатель
    * @return {this}
    */
@@ -170,6 +181,7 @@ export class PaymentFromBuilder {
   /**
    * Задаёт URL перенаправления после успешного платежа
    *
+   * @memberof PaymentFromBuilder
    * @param {string | URL} url URL
    * @return {this}
    */
@@ -189,7 +201,8 @@ export class PaymentFromBuilder {
 
   /**
    *
-   * @param {boolean} doRequire
+   * @memberof PaymentFromBuilder
+   * @param {boolean} [doRequire=true]
    * @return {this}
    */
   requireFio(doRequire = true): this {
@@ -199,7 +212,8 @@ export class PaymentFromBuilder {
 
   /**
    *
-   * @param {boolean} doRequire
+   * @memberof PaymentFromBuilder
+   * @param {boolean} [doRequire=true]
    * @return {this}
    */
   requireAddress(doRequire = true): this {
@@ -209,7 +223,8 @@ export class PaymentFromBuilder {
 
   /**
    *
-   * @param {boolean} doRequire
+   * @memberof PaymentFromBuilder
+   * @param {boolean} [doRequire=true]
    * @return {this}
    */
   requireEmail(doRequire = true): this {
@@ -218,8 +233,8 @@ export class PaymentFromBuilder {
   }
 
   /**
-   *
-   * @param {boolean} doRequire
+   * @memberof PaymentFromBuilder
+   * @param {boolean} [doRequire=true]
    * @return {this}
    */
   requirePhone(doRequire = true): this {
@@ -229,7 +244,8 @@ export class PaymentFromBuilder {
 
   /**
    * Генерирует HTML на основе заданных параметров
-   * @param {boolean} fullPage
+   * @memberof PaymentFromBuilder
+   * @param {boolean} [fullPage=false]
    * @return {string}
    */
   buildHtml(fullPage = false): string {

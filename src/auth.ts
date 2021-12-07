@@ -13,6 +13,8 @@ type AuthScope =
 
 /**
  * Ошибка в процессе авторизации
+ * @export
+ * @class YMAuthError
  */
 export class YMAuthError extends Error {
   /**
@@ -28,14 +30,18 @@ export class YMAuthError extends Error {
  * Реализует всё необходимое для [авторизации через YooMoney](https://yoomoney.ru/docs/wallet/using-api/authorization/basics)
  *
  * @see {@link https://yoomoney.ru/docs/wallet/using-api/authorization/basics|Описание протокола}
+ * @export
+ * @class Auth
  */
 export class Auth {
   /**
-   *
+   * Creates an instance of Auth.
+   * @memberof Auth
    * @param {string} clientId ID приложения
    * @param {string} redirectUrl URL-перенаправления
-   * @param {string=} clientSecret Секретное Слово
-   * @param {string=} endpoint По умолчанию `https://yoomoney.ru/oauth`
+   * @param {string=} [clientSecret] Секретное Слово
+   * @param {string} [endpoint="https://yoomoney.ru/oauth"] По умолчанию `https://yoomoney.ru/oauth`
+   * @param {Agent=} [agent] HTTP Agent для использования с Proxy
    */
   constructor(
     public clientId: string,
@@ -48,6 +54,7 @@ export class Auth {
   /**
    * Генерирует html-форму перенаправления пользователя на авторизацию
    *
+   * @memberof Auth
    * @param {AuthScope[]} scopes
    * @param {string=} instanceName
    * @return {string}
@@ -68,8 +75,11 @@ export class Auth {
   }
 
   /**
+   * Обменивает временный токен на постоянный токен авторизации
    *
-   * @param {string} code Временный токен (authorization code), подлежащий обмену на постоянный токен авторизации
+   * @memberof Auth
+   * @throws {YMAuthError}
+   * @param {string} code Временный токен (authorization code)
    * @return {Promise<string>} Токен авторизации
    */
   async exchangeCode2Token(code: string): Promise<string> {

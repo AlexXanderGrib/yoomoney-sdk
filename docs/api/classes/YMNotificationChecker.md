@@ -6,6 +6,8 @@
 
 **`see`** [Описание механизма](https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security)
 
+**`export`**
+
 ## Table of contents
 
 ### Constructors
@@ -23,6 +25,10 @@
 
 • **new YMNotificationChecker**(`secret`)
 
+Creates an instance of NotificationChecker.
+
+**`memberof`** NotificationChecker
+
 #### Parameters
 
 | Name | Type | Description |
@@ -31,13 +37,19 @@
 
 #### Defined in
 
-[src/notifications.ts:71](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/notifications.ts#L71)
+[src/notifications.ts:141](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/notifications.ts#L141)
 
 ## Methods
 
 ### check
 
 ▸ **check**(`notification`): [`YMNotificationDTO`](../modules.md#ymnotificationdto)
+
+Проверяет полученное уведомление и возвращает типизированную версию
+
+**`throws`** {YMNotificationError} Если хеш уведомления не совпадает
+
+**`memberof`** NotificationChecker
 
 #### Parameters
 
@@ -51,7 +63,7 @@
 
 #### Defined in
 
-[src/notifications.ts:78](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/notifications.ts#L78)
+[src/notifications.ts:151](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/notifications.ts#L151)
 
 ___
 
@@ -62,6 +74,8 @@ ___
 `[Экспериментально]` Упрощает интеграцию с `express`
 
 #### Это middleware кидает ошибки, позаботьтесь об их обработке
+
+**`memberof`** NotificationChecker
 
 #### Parameters
 
@@ -106,4 +120,4 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[src/notifications.ts:153](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/notifications.ts#L153)
+[src/notifications.ts:226](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/notifications.ts#L226)

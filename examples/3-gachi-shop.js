@@ -1,7 +1,6 @@
 // ♂️Gachi♂️ магазинчик на Express
 
 const express = require("express");
-const bodyParser = require("body-parser");
 
 const app = express();
 // const { YMPaymentFromBuilder, YMFormPaymentType, YMNotificationChecker, YMNotificationError } = require("yoomoney-sdk");

@@ -4,6 +4,8 @@
 
 Ошибка в процессе авторизации
 
+**`export`**
+
 ## Hierarchy
 
 - `Error`
@@ -47,7 +49,7 @@ Error.constructor
 
 #### Defined in
 
-[src/auth.ts:22](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ca8499d/src/auth.ts#L22)
+[src/auth.ts:24](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/auth.ts#L24)
 
 ## Properties
 

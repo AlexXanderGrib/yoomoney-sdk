@@ -1,6 +1,3 @@
-/* eslint-disable unicorn/prevent-abbreviations */
-/* eslint-disable camelcase */
-
 import { CardType } from "./shared.types";
 
 type AccountBalanceDetails = {
@@ -92,7 +89,7 @@ export type AccountInfoResponse = {
   [key: string]: any;
 };
 
-export type OperationHistoryParams = {
+export type OperationHistoryParameters = {
   /**
    * Перечень типов операций, которые требуется отобразить. Возможные значения:
    *
@@ -277,7 +274,7 @@ export type OperationHistoryResponse = {
   [key: string]: any;
 };
 
-export type OperationDetailsParams = {
+export type OperationDetailsParameters = {
   /**
    * Идентификатор операции. Значение параметра следует указывать как значение параметра `operation_id` ответа метода [operation-history](https://yoomoney.ru/docs/wallet/user-account/operation-history#response) или значение поля `payment_id` ответа метода [process-payment](https://yoomoney.ru/docs/wallet/process-payments/process-payment#response), если запрашивается история счета плательщика.
    */
@@ -340,7 +337,7 @@ export type PhoneProviderPaymentRequest = {
   amount: number;
   [key: string]: any;
 };
-export type RequestPaymentParams =
+export type RequestPaymentParameters =
   | P2PPaymentRequest
   | PhoneProviderPaymentRequest
   | { pattern_id: string; [key: string]: string };
@@ -439,7 +436,7 @@ export type RequestPaymentResponse = BaseApiErrors & {
   [key: string]: any;
 };
 
-export type ProcessPaymentParams = {
+export type ProcessPaymentParameters = {
   /**
    * Идентификатор запроса, полученный из ответа метода [request-payment](https://yoomoney.ru/docs/wallet/process-payments/request-payment#response).
    */
@@ -548,7 +545,7 @@ export type ProcessPaymentResponse = {
   [key: string]: any;
 };
 
-export type IncomingTransferAcceptParams = {
+export type IncomingTransferAcceptParameters = {
   /**
    * Идентификатор операции, значение параметра `operation_id` ответа метода [operation-history](https://yoomoney.ru/docs/wallet/user-account/operation-history).
    */
@@ -573,7 +570,7 @@ export type IncomingTransferAcceptResponse = BaseApiErrors & {
   [key: string]: any;
 };
 
-export type IncomingTransferRejectParams = {
+export type IncomingTransferRejectParameters = {
   /**
    * Идентификатор операции, значение параметра `operation_id` ответа метода [operation-history](https://yoomoney.ru/docs/wallet/user-account/operation-history).
    */
