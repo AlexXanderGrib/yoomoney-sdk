@@ -19,6 +19,14 @@ export class YMApiError extends Error {
 }
 
 /**
+ * Ошибка, если API возвращает пустую строку ответе
+ * Скорее всего это связано с отсутствием прав токена
+ *
+ * @see https://github.com/AlexXanderGrib/yoomoney-sdk/issues/4
+ */
+export class YMApiVoidResponseError extends Error {}
+
+/**
  * Имплементирует [основное API YooMoney](https://yoomoney.ru/docs/wallet)
  *
  * @see {@link https://yoomoney.ru/docs/wallet|Описание}
@@ -45,12 +53,14 @@ export class API {
    * @template T
    * @param {string} method Название метода
    * @param {QueryStringifiable} parameters Параметры метода
+   *
    * @throws {YMApiError}
+   * @throws {YMApiVoidResponseError}
    *
    * @return {Promise<T>}
    */
   async call<T = any>(method: string, parameters: QueryStringifiable): Promise<T> {
-    const response = await fetch(
+    const data = await fetch(
       `${this.endpoint}/${method}`,
       parameters,
       {
@@ -59,9 +69,11 @@ export class API {
       this.agent
     );
 
-    const data = await response.json();
-
     if (data.error) throw new YMApiError(data);
+
+    if (typeof data === "string" && data.trim() === "") {
+      throw new YMApiVoidResponseError();
+    }
 
     return data;
   }
@@ -72,6 +84,8 @@ export class API {
    * Требуемые права токена: `account-info`.
    *
    * @throws {YMApiError}
+   * @throws {YMApiVoidResponseError}
+   *
    * @return {t.AccountInfoResponse}
    */
   async accountInfo(): Promise<t.AccountInfoResponse> {
@@ -84,6 +98,8 @@ export class API {
    * Требуемые права токена: `operation-history`.
    *
    * @throws {YMApiError}
+   * @throws {YMApiVoidResponseError}
+   *
    * @param {t.OperationHistoryParameters=} [parameters={}] Параметры вызова
    * @return {Promise<t.OperationHistoryResponse>}
    */
@@ -99,6 +115,8 @@ export class API {
    * Требуемые права токена: `operation-details`.
    *
    * @throws {YMApiError}
+   * @throws {YMApiVoidResponseError}
+   *
    * @param {t.OperationDetailsParameters} parameters Параметры вызова
    * @return {Promise<t.Operation>}
    */
@@ -122,6 +140,8 @@ export class API {
    * «тип идентификатора») или `payment-p2p`.
    *
    * @throws {YMApiError}
+   * @throws {YMApiVoidResponseError}
+   *
    * @param {t.RequestPaymentParameters} parameters Параметры вызова
    * @return {Promise<t.RequestPaymentResponse>}
    */
@@ -137,6 +157,8 @@ export class API {
    * Указание метода проведения платежа.
    *
    * @throws {YMApiError}
+   * @throws {YMApiVoidResponseError}
+   *
    * @param {t.ProcessPaymentParameters} parameters Параметры вызова
    * @return {Promise<t.ProcessPaymentResponse>}
    */
@@ -157,6 +179,8 @@ export class API {
    * Требуемые права токена: `incoming-transfers`
    *
    * @throws {YMApiError}
+   * @throws {YMApiVoidResponseError}
+   *
    * @param {t.IncomingTransferAcceptParameters} parameters Параметры вызова
    * @return {Promise<t.IncomingTransferAcceptResponse>}
    */
@@ -174,6 +198,8 @@ export class API {
    * Требуемые права токена: `incoming-transfers`
    *
    * @throws {YMApiError}
+   * @throws {YMApiVoidResponseError}
+   *
    * @param {t.IncomingTransferRejectParameters} parameters Параметры вызова
    * @return {Promise<t.IncomingTransferRejectResponse>}
    */
