@@ -20,4 +20,4 @@ export {
 } from "./payment-form-builder";
 
 // Для создателя библиотеки
-export * as vendor from "./vendor";
+// export * as vendor from "./vendor";
