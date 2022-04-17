@@ -5,7 +5,7 @@ const token = "..."; // Где-то здесь берём oauth токен ко�
 
 const api = new API(token);
 
-api.accountInfo().then(console.log);
+api.accountInfo().then((info) => console.log(info));
 
 // В консоль выведет
 // {

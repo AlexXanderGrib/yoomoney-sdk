@@ -49,7 +49,7 @@ Error.constructor
 
 #### Defined in
 
-[src/auth.ts:24](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L24)
+[src/auth.ts:35](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L35)
 
 ## Properties
 

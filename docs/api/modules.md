@@ -33,11 +33,13 @@
 
 ### Type aliases
 
+- [AuthScope](modules.md#authscope)
 - [YMFormConfig](modules.md#ymformconfig)
 - [YMNotificationDTO](modules.md#ymnotificationdto)
 
 ### Variables
 
+- [AuthScope](modules.md#authscope)
 - [YMFormPaymentType](modules.md#ymformpaymenttype)
 
 ## References
@@ -96,6 +98,16 @@ Renames and re-exports [YMPaymentFromBuilder](classes/YMPaymentFromBuilder.md)
 
 ## Type aliases
 
+### AuthScope
+
+Ƭ **AuthScope**: ``"account-info"`` \| ``"operation-history"`` \| ``"operation-details"`` \| ``"incoming-transfers"`` \| ``"payment"`` \| ``"payment-shop"`` \| ``"payment-p2p"`` \| ``"money-source"``
+
+#### Defined in
+
+[src/auth.ts:4](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L4)
+
+___
+
 ### YMFormConfig
 
 Ƭ **YMFormConfig**: `Object`
@@ -121,7 +133,7 @@ Renames and re-exports [YMPaymentFromBuilder](classes/YMPaymentFromBuilder.md)
 
 #### Defined in
 
-[src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/payment-form-builder.ts#L11)
+[src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L11)
 
 ___
 
@@ -159,9 +171,19 @@ ___
 
 #### Defined in
 
-[src/notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/notifications.ts#L5)
+[src/notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/notifications.ts#L5)
 
 ## Variables
+
+### AuthScope
+
+• **AuthScope**: `Record`<`string`, [`AuthScope`](modules.md#authscope)\>
+
+#### Defined in
+
+[src/auth.ts:14](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L14)
+
+___
 
 ### YMFormPaymentType
 
@@ -177,4 +199,4 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/payment-form-builder.ts#L5)
+[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L5)

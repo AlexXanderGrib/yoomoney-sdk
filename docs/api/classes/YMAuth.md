@@ -45,12 +45,12 @@ Creates an instance of Auth.
 | `clientId` | `string` | `undefined` | ID приложения |
 | `redirectUrl` | `string` | `undefined` | URL-перенаправления |
 | `clientSecret?` | `string` | `undefined` | - |
-| `endpoint` | `string` | `"https://yoomoney.ru/oauth"` | - |
+| `endpoint` | `string` | `"https://yoomoney.ru/oauth/"` | - |
 | `agent?` | `any` | `undefined` | - |
 
 #### Defined in
 
-[src/auth.ts:49](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L49)
+[src/auth.ts:60](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L60)
 
 ## Properties
 
@@ -74,7 +74,7 @@ ___
 
 ### endpoint
 
-• **endpoint**: `string` = `"https://yoomoney.ru/oauth"`
+• **endpoint**: `string` = `"https://yoomoney.ru/oauth/"`
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/auth.ts:111](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L111)
+[src/auth.ts:122](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L122)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `scope` | `AuthScope`[] |
+| `scope` | [`AuthScope`](../modules.md#authscope)[] |
 | `instanceName?` | `string` |
 
 #### Returns
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[src/auth.ts:65](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L65)
+[src/auth.ts:76](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L76)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `scope` | `AuthScope`[] |
+| `scope` | [`AuthScope`](../modules.md#authscope)[] |
 | `instanceName?` | `string` |
 
 #### Returns
@@ -158,4 +158,4 @@ ___
 
 #### Defined in
 
-[src/auth.ts:88](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L88)
+[src/auth.ts:99](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L99)
