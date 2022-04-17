@@ -1,9 +1,9 @@
 // Платежи куда угодно 101
 
-// import { YMApi, ymTypes } from "yoomoney-sdk";
-import { YMApi, ymTypes } from "..";
+// import { API, ymTypes } from "yoomoney-sdk";
+import { API, ymTypes } from "..";
 
-const api = new YMApi(process.env.YM_TOKEN ?? "");
+const api = new API(process.env.YM_TOKEN ?? "");
 
 type PayoutMethod = "qiwi" | "yoomoney" | "card" | "mobile";
 
@@ -11,7 +11,7 @@ function getRequest(
   method: PayoutMethod,
   account: string,
   amount: number
-): ymTypes.RequestPaymentParams {
+): ymTypes.RequestPaymentParameters {
   switch (method) {
     case "yoomoney":
       return {

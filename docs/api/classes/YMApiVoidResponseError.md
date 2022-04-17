@@ -1,38 +1,41 @@
-[yoomoney-sdk](../README.md) / [Exports](../modules.md) / YMNotificationError
+[yoomoney-sdk](../README.md) / [Exports](../modules.md) / YMApiVoidResponseError
 
-# Class: YMNotificationError
+# Class: YMApiVoidResponseError
 
-Ошибка проверки уведомления от YooMoney
+Ошибка, если API возвращает пустую строку ответе
+Скорее всего это связано с отсутствием прав токена
+
+**`see`** https://github.com/AlexXanderGrib/yoomoney-sdk/issues/4
 
 ## Hierarchy
 
 - `Error`
 
-  ↳ **`YMNotificationError`**
+  ↳ **`YMApiVoidResponseError`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](YMNotificationError.md#constructor)
+- [constructor](YMApiVoidResponseError.md#constructor)
 
 ### Properties
 
-- [message](YMNotificationError.md#message)
-- [name](YMNotificationError.md#name)
-- [stack](YMNotificationError.md#stack)
-- [prepareStackTrace](YMNotificationError.md#preparestacktrace)
-- [stackTraceLimit](YMNotificationError.md#stacktracelimit)
+- [message](YMApiVoidResponseError.md#message)
+- [name](YMApiVoidResponseError.md#name)
+- [stack](YMApiVoidResponseError.md#stack)
+- [prepareStackTrace](YMApiVoidResponseError.md#preparestacktrace)
+- [stackTraceLimit](YMApiVoidResponseError.md#stacktracelimit)
 
 ### Methods
 
-- [captureStackTrace](YMNotificationError.md#capturestacktrace)
+- [captureStackTrace](YMApiVoidResponseError.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-• **new YMNotificationError**(`message?`)
+• **new YMApiVoidResponseError**(`message?`)
 
 #### Parameters
 

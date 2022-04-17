@@ -49,7 +49,7 @@ Error.constructor
 
 #### Defined in
 
-[src/auth.ts:24](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/auth.ts#L24)
+[src/auth.ts:24](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L24)
 
 ## Properties
 
@@ -69,7 +69,7 @@ Error.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:974
+node_modules/typescript/lib/lib.es5.d.ts:1023
 
 ___
 
@@ -83,7 +83,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:973
+node_modules/typescript/lib/lib.es5.d.ts:1022
 
 ___
 
@@ -97,7 +97,7 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:975
+node_modules/typescript/lib/lib.es5.d.ts:1024
 
 ___
 
@@ -110,6 +110,8 @@ ___
 ▸ (`err`, `stackTraces`): `any`
 
 Optional override for formatting stack traces
+
+**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 ##### Parameters
 

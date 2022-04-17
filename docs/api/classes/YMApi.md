@@ -47,17 +47,17 @@ Creates an instance of API.
 | :------ | :------ | :------ | :------ |
 | `token` | `string` | `undefined` | Токен авторизации пользователя |
 | `endpoint` | `string` | `"https://yoomoney.ru/api"` | - |
-| `agent?` | `Agent` \| (`parsedUrl`: `URL`) => `Agent` | `undefined` | - |
+| `agent?` | `any` | `undefined` | - |
 
 #### Defined in
 
-[src/api.ts:36](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L36)
+[src/api.ts:44](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L44)
 
 ## Properties
 
 ### agent
 
-• `Optional` **agent**: `Agent` \| (`parsedUrl`: `URL`) => `Agent`
+• `Optional` **agent**: `any`
 
 ___
 
@@ -83,13 +83,15 @@ ___
 
 **`throws`** {YMApiError}
 
+**`throws`** {YMApiVoidResponseError}
+
 #### Returns
 
 `Promise`<[`AccountInfoResponse`](../modules/ymTypes.md#accountinforesponse)\>
 
 #### Defined in
 
-[src/api.ts:77](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L77)
+[src/api.ts:91](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L91)
 
 ___
 
@@ -100,6 +102,8 @@ ___
 Позволяет совершить вызов произвольного метода API
 
 **`throws`** {YMApiError}
+
+**`throws`** {YMApiVoidResponseError}
 
 #### Type parameters
 
@@ -120,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:52](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L52)
+[src/api.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L62)
 
 ___
 
@@ -139,6 +143,8 @@ ___
 
 **`throws`** {YMApiError}
 
+**`throws`** {YMApiVoidResponseError}
+
 #### Parameters
 
 | Name | Type | Description |
@@ -151,7 +157,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:163](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L163)
+[src/api.ts:187](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L187)
 
 ___
 
@@ -167,6 +173,8 @@ ___
 
 **`throws`** {YMApiError}
 
+**`throws`** {YMApiVoidResponseError}
+
 #### Parameters
 
 | Name | Type | Description |
@@ -179,7 +187,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:180](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L180)
+[src/api.ts:206](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L206)
 
 ___
 
@@ -193,6 +201,8 @@ ___
 
 **`throws`** {YMApiError}
 
+**`throws`** {YMApiVoidResponseError}
+
 #### Parameters
 
 | Name | Type | Description |
@@ -205,7 +215,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:105](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L105)
+[src/api.ts:123](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L123)
 
 ___
 
@@ -219,6 +229,8 @@ ___
 
 **`throws`** {YMApiError}
 
+**`throws`** {YMApiVoidResponseError}
+
 #### Parameters
 
 | Name | Type |
@@ -231,7 +243,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:90](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L90)
+[src/api.ts:106](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L106)
 
 ___
 
@@ -245,6 +257,8 @@ ___
 
 **`throws`** {YMApiError}
 
+**`throws`** {YMApiVoidResponseError}
+
 #### Parameters
 
 | Name | Type | Description |
@@ -257,7 +271,7 @@ ___
 
 #### Defined in
 
-[src/api.ts:143](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L143)
+[src/api.ts:165](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L165)
 
 ___
 
@@ -279,6 +293,8 @@ ___
 
 **`throws`** {YMApiError}
 
+**`throws`** {YMApiVoidResponseError}
+
 #### Parameters
 
 | Name | Type | Description |
@@ -291,4 +307,4 @@ ___
 
 #### Defined in
 
-[src/api.ts:128](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L128)
+[src/api.ts:148](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L148)

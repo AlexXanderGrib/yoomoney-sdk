@@ -26,6 +26,7 @@
 
 - [exchangeCode2Token](YMAuth.md#exchangecode2token)
 - [getAuthForm](YMAuth.md#getauthform)
+- [getAuthUrl](YMAuth.md#getauthurl)
 
 ## Constructors
 
@@ -45,17 +46,17 @@ Creates an instance of Auth.
 | `redirectUrl` | `string` | `undefined` | URL-перенаправления |
 | `clientSecret?` | `string` | `undefined` | - |
 | `endpoint` | `string` | `"https://yoomoney.ru/oauth"` | - |
-| `agent?` | `Agent` \| (`parsedUrl`: `URL`) => `Agent` | `undefined` | - |
+| `agent?` | `any` | `undefined` | - |
 
 #### Defined in
 
-[src/auth.ts:46](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/auth.ts#L46)
+[src/auth.ts:49](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L49)
 
 ## Properties
 
 ### agent
 
-• `Optional` **agent**: `Agent` \| (`parsedUrl`: `URL`) => `Agent`
+• `Optional` **agent**: `any`
 
 ___
 
@@ -107,13 +108,13 @@ ___
 
 #### Defined in
 
-[src/auth.ts:85](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/auth.ts#L85)
+[src/auth.ts:111](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L111)
 
 ___
 
 ### getAuthForm
 
-▸ **getAuthForm**(`scopes`, `instanceName?`): `string`
+▸ **getAuthForm**(`scope`, `instanceName?`): `string`
 
 Генерирует html-форму перенаправления пользователя на авторизацию
 
@@ -123,7 +124,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `scopes` | `AuthScope`[] |
+| `scope` | `AuthScope`[] |
 | `instanceName?` | `string` |
 
 #### Returns
@@ -132,4 +133,29 @@ ___
 
 #### Defined in
 
-[src/auth.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/auth.ts#L62)
+[src/auth.ts:65](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L65)
+
+___
+
+### getAuthUrl
+
+▸ **getAuthUrl**(`scope`, `instanceName?`): `string`
+
+Генерирует URL для перенаправления пользователя на авторизацию
+
+**`memberof`** Auth
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `scope` | `AuthScope`[] |
+| `instanceName?` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/auth.ts:88](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/auth.ts#L88)

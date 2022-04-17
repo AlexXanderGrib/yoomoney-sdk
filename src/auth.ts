@@ -1,7 +1,7 @@
 import { FormBuilder } from "redirect-form-builder";
 import { Agent, fetch } from "./fetch";
 
-type AuthScope =
+export type AuthScope =
   | "account-info"
   | "operation-history"
   | "operation-details"
@@ -10,6 +10,17 @@ type AuthScope =
   | "payment-shop"
   | "payment-p2p"
   | "money-source";
+
+export const AuthScope: Record<string, AuthScope> = {
+  AccountInfo: "account-info",
+  OperationHistory: "operation-history",
+  OperationDetails: "operation-details",
+  IncomingTransfers: "incoming-transfers",
+  Payment: "payment",
+  PaymentShop: "payment-shop",
+  PaymentP2P: "payment-p2p",
+  MoneySource: "money-source"
+};
 
 /**
  * Ошибка в процессе авторизации
@@ -50,7 +61,7 @@ export class Auth {
     public clientId: string,
     public redirectUrl: string,
     public clientSecret?: string,
-    public endpoint: string = "https://yoomoney.ru/oauth",
+    public endpoint: string = "https://yoomoney.ru/oauth/",
     public agent?: Agent
   ) {}
 

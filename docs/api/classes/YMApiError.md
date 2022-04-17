@@ -50,7 +50,7 @@ Error.constructor
 
 #### Defined in
 
-[src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L15)
+[src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L15)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Error.constructor
 
 #### Defined in
 
-[src/api.ts:9](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/api.ts#L9)
+[src/api.ts:9](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/api.ts#L9)
 
 ___
 
@@ -74,7 +74,7 @@ Error.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:974
+node_modules/typescript/lib/lib.es5.d.ts:1023
 
 ___
 
@@ -88,7 +88,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:973
+node_modules/typescript/lib/lib.es5.d.ts:1022
 
 ___
 
@@ -108,7 +108,7 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:975
+node_modules/typescript/lib/lib.es5.d.ts:1024
 
 ___
 
@@ -121,6 +121,8 @@ ___
 ▸ (`err`, `stackTraces`): `any`
 
 Optional override for formatting stack traces
+
+**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 ##### Parameters
 

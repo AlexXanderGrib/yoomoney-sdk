@@ -18,13 +18,13 @@
 
 ### Namespaces
 
-- [vendor](modules/vendor.md)
 - [ymTypes](modules/ymTypes.md)
 
 ### Classes
 
 - [YMApi](classes/YMApi.md)
 - [YMApiError](classes/YMApiError.md)
+- [YMApiVoidResponseError](classes/YMApiVoidResponseError.md)
 - [YMAuth](classes/YMAuth.md)
 - [YMAuthError](classes/YMAuthError.md)
 - [YMNotificationChecker](classes/YMNotificationChecker.md)
@@ -121,7 +121,7 @@ Renames and re-exports [YMPaymentFromBuilder](classes/YMPaymentFromBuilder.md)
 
 #### Defined in
 
-[src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L11)
+[src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/payment-form-builder.ts#L11)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[src/notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/notifications.ts#L5)
+[src/notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/notifications.ts#L5)
 
 ## Variables
 
@@ -177,4 +177,4 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5f14ef9/src/payment-form-builder.ts#L5)
+[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/1af3086/src/payment-form-builder.ts#L5)

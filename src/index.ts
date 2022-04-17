@@ -1,6 +1,6 @@
 export { API as YMApi, API as API, YMApiError, YMApiVoidResponseError } from "./api";
 export * as ymTypes from "./api.types";
-export { Auth as YMAuth, Auth, YMAuthError } from "./auth";
+export { Auth as YMAuth, Auth, YMAuthError, AuthScope } from "./auth";
 export {
   NotificationChecker as YMNotificationChecker,
   NotificationChecker,

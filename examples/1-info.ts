@@ -1,9 +1,9 @@
-// import { YMApi } from "yoomoney-sdk";
-import { YMApi } from "..";
+// import { API } from "yoomoney-sdk";
+import { API } from "..";
 
 const token = "..."; // Где-то здесь берём oauth токен кошелька
 
-const api = new YMApi(token);
+const api = new API(token);
 
 api.accountInfo().then(console.log);
 
