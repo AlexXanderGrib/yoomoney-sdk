@@ -1,4 +1,5 @@
-import nodeFetch, { RequestInit, Response } from "node-fetch";
+// import nodeFetch, { RequestInit, Response } from "node-fetch";
+import axios from "axios";
 import { stringify } from "querystring";
 export type QueryStringifiable = Record<
   string,
@@ -12,7 +13,7 @@ export type QueryStringifiable = Record<
   | undefined
 >;
 
-export type Agent = RequestInit["agent"];
+export type Agent = any;
 
 /**
  *
@@ -21,23 +22,29 @@ export type Agent = RequestInit["agent"];
  * @param {Record<string, string>=} [headers={}] Заголовки запроса
  * @param {Agent} [agent] Агент запроса
  *
- * @return {Promise<Response>} Ответ
+ * @return {Promise<any>} JSON в ответе
  */
 export async function fetch(
   url: string,
   parameters: QueryStringifiable,
   headers: Record<string, string> = {},
   agent?: Agent
-): Promise<Response> {
-  return await nodeFetch(url, {
-    method: "POST",
-    body: stringify(parameters),
-    agent,
-    headers: {
-      ...headers,
-
-      "Content-Type": "application/x-www-form-urlencoded",
-      Accept: "application/json"
-    }
-  });
+): Promise<any> {
+  return await axios
+    .post(url, stringify(parameters), {
+      headers: {
+        ...headers,
+        "Content-Type": "application/x-www-form-urlencoded",
+        Accept: "application/json"
+      },
+      httpAgent: agent,
+      httpsAgent: agent,
+      responseType: "json"
+    })
+    .then((response) => response.data)
+    .catch((error) =>
+      axios.isAxiosError(error) && error.response
+        ? error.response
+        : Promise.reject(error)
+    );
 }

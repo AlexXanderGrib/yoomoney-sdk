@@ -1,4 +1,4 @@
-export { API as YMApi, API as API, YMApiError } from "./api";
+export { API as YMApi, API as API, YMApiError, YMApiVoidResponseError } from "./api";
 export * as ymTypes from "./api.types";
 export { Auth as YMAuth, Auth, YMAuthError } from "./auth";
 export {
@@ -19,4 +19,5 @@ export {
   PaymentFormBuilder as PaymentFormBuilder
 } from "./payment-form-builder";
 
+// Для создателя библиотеки
 export * as vendor from "./vendor";
