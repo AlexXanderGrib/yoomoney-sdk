@@ -26,6 +26,9 @@ export class YMAuthError extends Error {
   }
 }
 
+// Костыль, TypeScript не видит URL в global
+declare const URL: typeof import("url").URL;
+
 /**
  * Реализует всё необходимое для [авторизации через YooMoney](https://yoomoney.ru/docs/wallet/using-api/authorization/basics)
  *
@@ -55,16 +58,16 @@ export class Auth {
    * Генерирует html-форму перенаправления пользователя на авторизацию
    *
    * @memberof Auth
-   * @param {AuthScope[]} scopes
+   * @param {AuthScope[]} scope
    * @param {string=} instanceName
    * @return {string}
    */
-  getAuthForm(scopes: AuthScope[], instanceName?: string): string {
+  getAuthForm(scope: AuthScope[], instanceName?: string): string {
     const builder = new FormBuilder(`${this.endpoint}/authorize`, "POST", {
       client_id: this.clientId,
       response_type: "code",
       redirect_uri: this.redirectUrl,
-      scope: scopes.join(" ")
+      scope: scope.join(" ")
     });
 
     if (instanceName) {
@@ -72,6 +75,29 @@ export class Auth {
     }
 
     return builder.buildHtml();
+  }
+
+  /**
+   * Генерирует URL для перенаправления пользователя на авторизацию
+   *
+   * @memberof Auth
+   * @param {AuthScope[]} scope
+   * @param {string=} instanceName
+   * @return {string}
+   */
+  getAuthUrl(scope: AuthScope[], instanceName?: string): string {
+    const url = new URL("/authorize", this.endpoint);
+
+    url.searchParams.set("client_id", this.clientId);
+    url.searchParams.set("response_type", "code");
+    url.searchParams.set("redirect_uri", this.redirectUrl);
+    url.searchParams.set("scope", scope.join(" "));
+
+    if (instanceName) {
+      url.searchParams.set("instance_name", instanceName);
+    }
+
+    return url.toString();
   }
 
   /**
@@ -83,7 +109,7 @@ export class Auth {
    * @return {Promise<string>} Токен авторизации
    */
   async exchangeCode2Token(code: string): Promise<string> {
-    const response = await fetch(
+    const json = await fetch(
       `${this.endpoint}/token`,
       {
         code,
@@ -95,8 +121,6 @@ export class Auth {
       {},
       this.agent
     );
-
-    const json = await response.json();
 
     if (json.error) throw new YMAuthError(json.error);
 
