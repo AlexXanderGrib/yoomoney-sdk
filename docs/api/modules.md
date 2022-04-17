@@ -39,7 +39,7 @@
 
 ### Variables
 
-- [AuthScope](modules.md#authscope)
+- [AuthScope](modules.md#authscope-1)
 - [YMFormPaymentType](modules.md#ymformpaymenttype)
 
 ## References
@@ -104,7 +104,7 @@ Renames and re-exports [YMPaymentFromBuilder](classes/YMPaymentFromBuilder.md)
 
 #### Defined in
 
-[src/auth.ts:4](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L4)
+[src/auth.ts:4](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L4)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L11)
+[src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L11)
 
 ___
 
@@ -171,23 +171,23 @@ ___
 
 #### Defined in
 
-[src/notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/notifications.ts#L5)
+[src/notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/notifications.ts#L5)
 
 ## Variables
 
 ### AuthScope
 
-• **AuthScope**: `Record`<`string`, [`AuthScope`](modules.md#authscope)\>
+• **AuthScope**: `Record`<`string`, [`AuthScope`](modules.md#authscope-1)\>
 
 #### Defined in
 
-[src/auth.ts:14](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L14)
+[src/auth.ts:14](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L14)
 
 ___
 
 ### YMFormPaymentType
 
-• **YMFormPaymentType**: `Object`
+• `Const` **YMFormPaymentType**: `Object`
 
 #### Type declaration
 
@@ -199,4 +199,4 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L5)
+[src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L5)

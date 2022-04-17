@@ -37,7 +37,7 @@ Creates an instance of NotificationChecker.
 
 #### Defined in
 
-[src/notifications.ts:141](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/notifications.ts#L141)
+[src/notifications.ts:141](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/notifications.ts#L141)
 
 ## Methods
 
@@ -63,7 +63,7 @@ Creates an instance of NotificationChecker.
 
 #### Defined in
 
-[src/notifications.ts:151](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/notifications.ts#L151)
+[src/notifications.ts:151](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/notifications.ts#L151)
 
 ___
 
@@ -120,4 +120,4 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[src/notifications.ts:226](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/notifications.ts#L226)
+[src/notifications.ts:226](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/notifications.ts#L226)

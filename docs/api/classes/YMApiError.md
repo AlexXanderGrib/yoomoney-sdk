@@ -18,6 +18,7 @@
 
 ### Properties
 
+- [cause](YMApiError.md#cause)
 - [code](YMApiError.md#code)
 - [message](YMApiError.md#message)
 - [name](YMApiError.md#name)
@@ -50,9 +51,23 @@ Error.constructor
 
 #### Defined in
 
-[src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.ts#L15)
+[src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L15)
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+Error.cause
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+___
 
 ### code
 
@@ -60,7 +75,7 @@ Error.constructor
 
 #### Defined in
 
-[src/api.ts:9](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.ts#L9)
+[src/api.ts:9](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L9)
 
 ___
 

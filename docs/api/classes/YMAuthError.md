@@ -20,6 +20,7 @@
 
 ### Properties
 
+- [cause](YMAuthError.md#cause)
 - [code](YMAuthError.md#code)
 - [message](YMAuthError.md#message)
 - [name](YMAuthError.md#name)
@@ -49,9 +50,23 @@ Error.constructor
 
 #### Defined in
 
-[src/auth.ts:35](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L35)
+[src/auth.ts:35](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L35)
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+Error.cause
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+___
 
 ### code
 

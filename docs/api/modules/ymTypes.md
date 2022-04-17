@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[src/api.types.ts:45](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L45)
+[src/api.types.ts:45](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L45)
 
 ___
 
@@ -68,17 +68,17 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:548](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L548)
+[src/api.types.ts:548](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L548)
 
 ___
 
 ### IncomingTransferAcceptResponse
 
-Ƭ **IncomingTransferAcceptResponse**: `BaseApiErrors` & { [key: string]: `any`; `ext_action_uri?`: `string` ; `protection_code_attempts_available?`: `number`  }
+Ƭ **IncomingTransferAcceptResponse**: `BaseApiErrors` & { `[key: string]`: `any`; `ext_action_uri?`: `string` ; `protection_code_attempts_available?`: `number`  }
 
 #### Defined in
 
-[src/api.types.ts:560](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L560)
+[src/api.types.ts:560](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L560)
 
 ___
 
@@ -98,17 +98,17 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:573](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L573)
+[src/api.types.ts:573](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L573)
 
 ___
 
 ### IncomingTransferRejectResponse
 
-Ƭ **IncomingTransferRejectResponse**: `BaseApiErrors` & { [key: string]: `any`;  }
+Ƭ **IncomingTransferRejectResponse**: `BaseApiErrors` & { `[key: string]`: `any`;  }
 
 #### Defined in
 
-[src/api.types.ts:581](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L581)
+[src/api.types.ts:581](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L581)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:156](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L156)
+[src/api.types.ts:156](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L156)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:277](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L277)
+[src/api.types.ts:277](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L277)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:92](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L92)
+[src/api.types.ts:92](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L92)
 
 ___
 
@@ -216,19 +216,19 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:271](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L271)
+[src/api.types.ts:271](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L271)
 
 ___
 
 ### P2PPaymentRequest
 
-Ƭ **P2PPaymentRequest**: `Pick`<[`Operation`](ymTypes.md#operation), ``"amount"`` \| ``"amount_due"`` \| ``"comment"`` \| ``"message"`` \| ``"codepro"``\> & { [key: string]: `any`; `expire_period?`: `number` ; `label?`: `string` ; `pattern_id`: ``"p2p"`` ; `to`: `string`  }
+Ƭ **P2PPaymentRequest**: `Pick`<[`Operation`](ymTypes.md#operation), ``"amount"`` \| ``"amount_due"`` \| ``"comment"`` \| ``"message"`` \| ``"codepro"``\> & { `[key: string]`: `any`; `expire_period?`: `number` ; `label?`: `string` ; `pattern_id`: ``"p2p"`` ; `to`: `string`  }
 
 Перевод средств на счета других пользователей
 
 #### Defined in
 
-[src/api.types.ts:288](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L288)
+[src/api.types.ts:288](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L288)
 
 ___
 
@@ -252,7 +252,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:321](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L321)
+[src/api.types.ts:321](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L321)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:439](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L439)
+[src/api.types.ts:439](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L439)
 
 ___
 
@@ -308,7 +308,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:472](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L472)
+[src/api.types.ts:472](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L472)
 
 ___
 
@@ -329,24 +329,24 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:345](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L345)
+[src/api.types.ts:345](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L345)
 
 ___
 
 ### RequestPaymentParameters
 
-Ƭ **RequestPaymentParameters**: [`P2PPaymentRequest`](ymTypes.md#p2ppaymentrequest) \| [`PhoneProviderPaymentRequest`](ymTypes.md#phoneproviderpaymentrequest) \| { [key: string]: `string`; `pattern_id`: `string`  }
+Ƭ **RequestPaymentParameters**: [`P2PPaymentRequest`](ymTypes.md#p2ppaymentrequest) \| [`PhoneProviderPaymentRequest`](ymTypes.md#phoneproviderpaymentrequest) \| { `[key: string]`: `string`; `pattern_id`: `string`  }
 
 #### Defined in
 
-[src/api.types.ts:340](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L340)
+[src/api.types.ts:340](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L340)
 
 ___
 
 ### RequestPaymentResponse
 
-Ƭ **RequestPaymentResponse**: `BaseApiErrors` & { [key: string]: `any`; `account_unblock_uri?`: `string` ; `balance?`: `number` ; `contract_amount`: `number` ; `ext_action_uri?`: `string` ; `money_source`: [`RequestPaymentMoneySource`](ymTypes.md#requestpaymentmoneysource) ; `protection_code?`: `string` ; `recipient_account_status`: [`AccountInfoResponse`](ymTypes.md#accountinforesponse)[``"account_status"``] ; `recipient_account_type`: [`AccountInfoResponse`](ymTypes.md#accountinforesponse)[``"account_type"``] ; `request_id`: `string`  }
+Ƭ **RequestPaymentResponse**: `BaseApiErrors` & { `[key: string]`: `any`; `account_unblock_uri?`: `string` ; `balance?`: `number` ; `contract_amount`: `number` ; `ext_action_uri?`: `string` ; `money_source`: [`RequestPaymentMoneySource`](ymTypes.md#requestpaymentmoneysource) ; `protection_code?`: `string` ; `recipient_account_status`: [`AccountInfoResponse`](ymTypes.md#accountinforesponse)[``"account_status"``] ; `recipient_account_type`: [`AccountInfoResponse`](ymTypes.md#accountinforesponse)[``"account_type"``] ; `request_id`: `string`  }
 
 #### Defined in
 
-[src/api.types.ts:386](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/api.types.ts#L386)
+[src/api.types.ts:386](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L386)

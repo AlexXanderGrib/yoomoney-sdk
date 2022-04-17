@@ -54,7 +54,7 @@ Creates an instance of PaymentFormBuilder.
 
 #### Defined in
 
-[src/payment-form-builder.ts:133](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L133)
+[src/payment-form-builder.ts:133](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L133)
 
 ## Properties
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:200](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L200)
+[src/payment-form-builder.ts:200](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L200)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:197](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L197)
+[src/payment-form-builder.ts:197](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L197)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:199](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L199)
+[src/payment-form-builder.ts:199](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L199)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:194](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L194)
+[src/payment-form-builder.ts:194](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L194)
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:195](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L195)
+[src/payment-form-builder.ts:195](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L195)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:198](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L198)
+[src/payment-form-builder.ts:198](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L198)
 
 ___
 
@@ -256,7 +256,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:193](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L193)
+[src/payment-form-builder.ts:193](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L193)
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:196](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L196)
+[src/payment-form-builder.ts:196](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L196)
 
 ## Methods
 
@@ -330,7 +330,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:151](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L151)
+[src/payment-form-builder.ts:151](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L151)
 
 ___
 
@@ -354,7 +354,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:251](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L251)
+[src/payment-form-builder.ts:251](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L251)
 
 ___
 
@@ -376,7 +376,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:219](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L219)
+[src/payment-form-builder.ts:219](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L219)
 
 ___
 
@@ -398,7 +398,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:230](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L230)
+[src/payment-form-builder.ts:230](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L230)
 
 ___
 
@@ -420,7 +420,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:208](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L208)
+[src/payment-form-builder.ts:208](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L208)
 
 ___
 
@@ -442,7 +442,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:240](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L240)
+[src/payment-form-builder.ts:240](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L240)
 
 ___
 
@@ -466,7 +466,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:164](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L164)
+[src/payment-form-builder.ts:164](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L164)
 
 ___
 
@@ -490,7 +490,7 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:176](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L176)
+[src/payment-form-builder.ts:176](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L176)
 
 ___
 
@@ -514,4 +514,4 @@ ___
 
 #### Defined in
 
-[src/payment-form-builder.ts:188](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/payment-form-builder.ts#L188)
+[src/payment-form-builder.ts:188](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/payment-form-builder.ts#L188)

@@ -21,6 +21,7 @@
 
 ### Properties
 
+- [cause](YMApiVoidResponseError.md#cause)
 - [message](YMApiVoidResponseError.md#message)
 - [name](YMApiVoidResponseError.md#name)
 - [stack](YMApiVoidResponseError.md#stack)
@@ -51,7 +52,38 @@ Error.constructor
 
 node_modules/typescript/lib/lib.es5.d.ts:1028
 
+• **new YMApiVoidResponseError**(`message?`, `options?`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message?` | `string` |
+| `options?` | `ErrorOptions` |
+
+#### Inherited from
+
+Error.constructor
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:30
+
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+Error.cause
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+___
 
 ### message
 

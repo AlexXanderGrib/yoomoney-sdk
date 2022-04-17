@@ -50,7 +50,7 @@ Creates an instance of Auth.
 
 #### Defined in
 
-[src/auth.ts:60](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L60)
+[src/auth.ts:60](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L60)
 
 ## Properties
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/auth.ts:122](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L122)
+[src/auth.ts:122](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L122)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `scope` | [`AuthScope`](../modules.md#authscope)[] |
+| `scope` | [`AuthScope`](../modules.md#authscope-1)[] |
 | `instanceName?` | `string` |
 
 #### Returns
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[src/auth.ts:76](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L76)
+[src/auth.ts:76](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L76)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `scope` | [`AuthScope`](../modules.md#authscope)[] |
+| `scope` | [`AuthScope`](../modules.md#authscope-1)[] |
 | `instanceName?` | `string` |
 
 #### Returns
@@ -158,4 +158,4 @@ ___
 
 #### Defined in
 
-[src/auth.ts:99](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3b33398/src/auth.ts#L99)
+[src/auth.ts:99](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L99)
