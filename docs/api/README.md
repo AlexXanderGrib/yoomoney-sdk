@@ -1,44 +1,47 @@
-yoomoney-sdk / [Exports](modules.md)
+QIWI SDK / [Modules](modules.md)
 
 # YooMoney NodeJS SDK
-
-[![license MIT](https://img.shields.io/npm/l/yoomoney-sdk?style=flat-square)](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/main/LICENSE)
-[![npm](https://img.shields.io/npm/v/yoomoney-sdk?style=flat-square)](https://npmjs.com/package/yoomoney-sdk)
-[![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/yoomoney-sdk?style=flat-square)](https://github.com/AlexXanderGrib/yoomoney-sdk)
-[![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/yoomoney-sdk?style=flat-square)](https://github.com/AlexXanderGrib/yoomoney-sdk)
 
 <center>
   <img src="docs/assets/logo.svg" alt="YooMoney SDK" />
 </center>
 
+[![Downloads](https://img.shields.io/npm/dt/yoomoney-sdk.svg)](https://npmjs.com/package/yoomoney-sdk)
+[![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/yoomoney-sdk.svg)](https://github.com/AlexXanderGrib/yoomoney-sdk)
+[![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/yoomoney-sdk.svg)](https://github.com/AlexXanderGrib/yoomoney-sdk)
+[![yoomoney-sdk](https://snyk.io/advisor/npm-package/yoomoney-sdk/badge.svg)](https://snyk.io/advisor/npm-package/yoomoney-sdk)
+[![Known Vulnerabilities](https://snyk.io/test/npm/yoomoney-sdk/badge.svg)](https://snyk.io/test/npm/yoomoney-sdk)
+[![Quality](https://img.shields.io/npms-io/quality-score/yoomoney-sdk.svg?label=quality%20%28npms.io%29&)](https://npms.io/search?q=yoomoney-sdk)
+[![npm](https://img.shields.io/npm/v/yoomoney-sdk.svg)](https://npmjs.com/package/yoomoney-sdk)
+[![license MIT](https://img.shields.io/npm/l/yoomoney-sdk.svg)](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/main/LICENSE.txt)
+[![Size](https://img.shields.io/bundlephobia/minzip/yoomoney-sdk)](https://bundlephobia.com/package/yoomoney-sdk)
+
 ## 🍬 Почему именно эта библиотека?
 
-1. Есть поддержка TypeScript
-2. Покрывает большую часть https://yoomoney.ru/docs/wallet
-3. Документация прямо в коде (JSDoc)
-4. Всего 2 зависимости: `axios` и `redirect-form-builder` (для генерации html форм)
-5. Есть API генерации frontend форм перенаправления для [Авторизации](https://yoomoney.ru/docs/wallet/using-api/authorization/basics) и [Оплаты](https://yoomoney.ru/docs/payment-buttons/using-api/forms)
-6. [Безопасная](./SECURITY.md) (Относительно)
+1. **Полная.** Покрывает следующие API:
+   - [Авторизации приложения](https://yoomoney.ru/docs/wallet/using-api/authorization/basics)
+   - [API пользователя](https://yoomoney.ru/docs/wallet)
+   - [Создание форм оплаты](https://yoomoney.ru/docs/payment-buttons/using-api/forms)
+   - [Проверка уведомлений об оплате](https://yoomoney.ru/docs/payment-buttons/using-api/notifications)
+2. **Простая.** на каждое API всего 1 класс
+   - **Много [примеров](./examples/README.md)**.
+3. **Надёжная.** Библиотека написана на **TypeScript** и покрыта тестами.
+4. [**Безопасная.**](./SECURITY.md) У библиотеки всего 2 зависимости, и она постоянно сканируется Code QL и [Snyk](https://snyk.io/advisor/npm-package/yoomoney-sdk) на наличие уязвимостей.
 
 ## 📦 Установка
 
-**Используя `NPM`**
-
-```shell
-npm i yoomoney-sdk
-```
-
-**Используя `Yarn`**
-
-```shell
-yarn add yoomoney-sdk
-```
-
-**Используя `pnpm`**
-
-```shell
-pnpm add yoomoney-sdk
-```
+- **Используя `npm`**
+  ```shell
+  npm i qiwi-sdk
+  ```
+- **Используя `Yarn`**
+  ```shell
+  yarn add qiwi-sdk
+  ```
+- **Используя `pnpm`**
+  ```shell
+  pnpm add qiwi-sdk
+  ```
 
 ## 🛠️ Использование
 
@@ -61,6 +64,12 @@ git clone https://github.com/AlexXanderGrib/yoomoney-sdk.git
 
 # Заходим в папку
 cd yoomoney-sdk
+
+# Устанавливаем зависимости
+npm install
+
+# Собираем библиотеку
+npm run build
 
 # Запускаем скрипт
 node examples/4-get-token.js
@@ -86,7 +95,7 @@ const api = new API(process.env.YOOMONEY_TOKEN);
 api.accountInfo().then((info) => console.log(info));
 ```
 
-## ❤️ Контрибьютинг
+## ❤️ Содействие (Contributing)
 
 _Что делаем?_:
 

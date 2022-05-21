@@ -1,6 +1,8 @@
-[yoomoney-sdk](../README.md) / [Exports](../modules.md) / YMAuth
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / YMAuth
 
 # Class: YMAuth
+
+[index](../modules/index.md).YMAuth
 
 Реализует всё необходимое для [авторизации через YooMoney](https://yoomoney.ru/docs/wallet/using-api/authorization/basics)
 
@@ -12,21 +14,21 @@
 
 ### Constructors
 
-- [constructor](YMAuth.md#constructor)
+- [constructor](index.YMAuth.md#constructor)
 
 ### Properties
 
-- [agent](YMAuth.md#agent)
-- [clientId](YMAuth.md#clientid)
-- [clientSecret](YMAuth.md#clientsecret)
-- [endpoint](YMAuth.md#endpoint)
-- [redirectUrl](YMAuth.md#redirecturl)
+- [agent](index.YMAuth.md#agent)
+- [clientId](index.YMAuth.md#clientid)
+- [clientSecret](index.YMAuth.md#clientsecret)
+- [endpoint](index.YMAuth.md#endpoint)
+- [redirectUrl](index.YMAuth.md#redirecturl)
 
 ### Methods
 
-- [exchangeCode2Token](YMAuth.md#exchangecode2token)
-- [getAuthForm](YMAuth.md#getauthform)
-- [getAuthUrl](YMAuth.md#getauthurl)
+- [exchangeCode2Token](index.YMAuth.md#exchangecode2token)
+- [getAuthForm](index.YMAuth.md#getauthform)
+- [getAuthUrl](index.YMAuth.md#getauthurl)
 
 ## Constructors
 
@@ -40,17 +42,17 @@ Creates an instance of Auth.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `clientId` | `string` | `undefined` | ID приложения |
-| `redirectUrl` | `string` | `undefined` | URL-перенаправления |
-| `clientSecret?` | `string` | `undefined` | - |
-| `endpoint` | `string` | `"https://yoomoney.ru/oauth/"` | - |
-| `agent?` | `any` | `undefined` | - |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `clientId` | `string` | ID приложения |
+| `redirectUrl` | `string` | URL-перенаправления |
+| `clientSecret?` | `string` | - |
+| `endpoint?` | `string` | - |
+| `agent?` | `any` | - |
 
 #### Defined in
 
-[src/auth.ts:60](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L60)
+dist/cjs/auth.d.ts:38
 
 ## Properties
 
@@ -58,11 +60,19 @@ Creates an instance of Auth.
 
 • `Optional` **agent**: `any`
 
+#### Defined in
+
+dist/cjs/auth.d.ts:28
+
 ___
 
 ### clientId
 
 • **clientId**: `string`
+
+#### Defined in
+
+dist/cjs/auth.d.ts:24
 
 ___
 
@@ -70,17 +80,29 @@ ___
 
 • `Optional` **clientSecret**: `string`
 
+#### Defined in
+
+dist/cjs/auth.d.ts:26
+
 ___
 
 ### endpoint
 
-• **endpoint**: `string` = `"https://yoomoney.ru/oauth/"`
+• **endpoint**: `string`
+
+#### Defined in
+
+dist/cjs/auth.d.ts:27
 
 ___
 
 ### redirectUrl
 
 • **redirectUrl**: `string`
+
+#### Defined in
+
+dist/cjs/auth.d.ts:25
 
 ## Methods
 
@@ -108,7 +130,7 @@ ___
 
 #### Defined in
 
-[src/auth.ts:122](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L122)
+dist/cjs/auth.d.ts:65
 
 ___
 
@@ -124,7 +146,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `scope` | [`AuthScope`](../modules.md#authscope-1)[] |
+| `scope` | [`AuthScope`](../modules/index.md#authscope-1)[] |
 | `instanceName?` | `string` |
 
 #### Returns
@@ -133,7 +155,7 @@ ___
 
 #### Defined in
 
-[src/auth.ts:76](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L76)
+dist/cjs/auth.d.ts:47
 
 ___
 
@@ -149,7 +171,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `scope` | [`AuthScope`](../modules.md#authscope-1)[] |
+| `scope` | [`AuthScope`](../modules/index.md#authscope-1)[] |
 | `instanceName?` | `string` |
 
 #### Returns
@@ -158,4 +180,4 @@ ___
 
 #### Defined in
 
-[src/auth.ts:99](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/auth.ts#L99)
+dist/cjs/auth.d.ts:56

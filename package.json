@@ -1,12 +1,60 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.5.1",
-  "description": "YooMoney typed SDK",
-  "main": "./dist/cjs/index.js",
-  "types": "./dist/cjs/index.d.ts",
-  "typings": "./dist/cjs/index.d.ts",
-  "module": "./dist/esm/index.js",
+  "version": "1.5.2",
+  "description": "⭐ Typed YooMoney Wallet SDK for NodeJS. Supported API's: Auth, Wallet & Notifications",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "typings": "./index.d.ts",
+  "module": "./index.mjs",
   "type": "commonjs",
+  "sideEffects": false,
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": "./index.js",
+      "import": "./index.mjs",
+      "types": "./index.d.ts"
+    },
+    "./api": {
+      "require": "./api.js",
+      "import": "./api.mjs",
+      "types": "./api.d.ts"
+    },
+    "./auth": {
+      "require": "./auth.js",
+      "import": "./auth.mjs",
+      "types": "./auth.d.ts"
+    },
+    "./notifications": {
+      "require": "./notifications.js",
+      "import": "./notifications.mjs",
+      "types": "./notifications.d.ts"
+    },
+    "./forms": {
+      "require": "./forms.js",
+      "import": "./forms.mjs",
+      "types": "./forms.d.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "typesVersions": {
+    "*": {
+      "api": [
+        "./api.d.ts"
+      ],
+      "auth": [
+        "./auth.d.ts"
+      ],
+      "notifications": [
+        "./notifications.d.ts"
+      ],
+      "forms": [
+        "./forms.d.ts"
+      ]
+    }
+  },
   "engines": {
     "node": ">=10"
   },
@@ -18,7 +66,7 @@
   "scripts": {
     "test": "jest",
     "build:dist": "rimraf dist && rollup -c",
-    "build:docs": "typedoc --out docs/api src/index.ts",
+    "build:docs": "typedoc",
     "build": "npm run build:dist && npm run build:docs",
     "prepack": "npm run build",
     "prepublishOnly": "npm run generate-lock-files",
@@ -30,9 +78,24 @@
   "files": [
     "dist",
     "docs",
+    "src",
     "examples",
     "README.md",
-    "CONTRIBUTING.md"
+    "CONTRIBUTING.md",
+    "LICENSE.txt",
+    "SECURITY.md",
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "api.js",
+    "api.mjs",
+    "api.d.ts",
+    "auth.js",
+    "auth.mjs",
+    "auth.d.ts",
+    "notifications.js",
+    "notifications.mjs",
+    "notifications.d.ts"
   ],
   "repository": {
     "type": "git",
@@ -40,10 +103,20 @@
   },
   "keywords": [
     "yoomoney",
+    "yoo",
     "yandex",
     "money",
+    "wallet",
+    "auth",
+    "payments",
+    "rest",
     "api",
-    "sdk"
+    "sdk",
+    "typed",
+    "typescript",
+    "node",
+    "nodejs",
+    "backend"
   ],
   "author": "AlexXanderGrib <me@alexxgrib.me> (https://alexxgrib.me)",
   "license": "MIT",
@@ -53,40 +126,45 @@
   },
   "homepage": "https://github.com/AlexXanderGrib/yoomoney-sdk#readme",
   "devDependencies": {
+    "@rollup/plugin-replace": "^4.0.0",
     "@types/express": "^4.17.13",
     "@types/inquirer": "^8.2.1",
-    "@types/jest": "^27.4.1",
-    "@types/node": "^17.0.24",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^17.0.35",
     "@types/node-fetch": "^2.6.1",
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "@typescript-eslint/parser": "^5.19.0",
-    "eslint": "^8.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.16.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-security": "^1.5.0",
     "eslint-plugin-unicorn": "^42.0.0",
-    "express": "^4.17.3",
-    "husky": "^7.0.4",
-    "inquirer": "^8.2.2",
-    "jest": "^27.5.1",
+    "express": "^4.18.1",
+    "glob": "^8.0.3",
+    "husky": "^8.0.1",
+    "inquirer": "^8.2.4",
+    "jest": "^28.1.0",
     "ngrok": "^4.3.1",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.70.2",
+    "rollup": "^2.74.1",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-prettier": "^2.2.2",
     "rollup-plugin-typescript2": "^0.31.2",
-    "ts-jest": "^27.1.4",
-    "ts-node": "^10.7.0",
+    "ts-jest": "^28.0.2",
+    "ts-node": "^10.8.0",
     "typedoc": "^0.22.15",
-    "typedoc-plugin-markdown": "^3.12.0",
-    "typescript": "^4.6.3"
+    "typedoc-plugin-markdown": "^3.12.1",
+    "typedoc-plugin-missing-exports": "^0.22.6",
+    "typescript": "^4.6.4"
   },
   "dependencies": {
-    "axios": "^0.26.1",
+    "axios": "^0.27.2",
     "redirect-form-builder": "^1.0.0"
   },
   "husky": {

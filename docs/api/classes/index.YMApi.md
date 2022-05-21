@@ -1,6 +1,8 @@
-[yoomoney-sdk](../README.md) / [Exports](../modules.md) / YMApi
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / YMApi
 
 # Class: YMApi
+
+[index](../modules/index.md).YMApi
 
 Имплементирует [основное API YooMoney](https://yoomoney.ru/docs/wallet)
 
@@ -12,24 +14,24 @@
 
 ### Constructors
 
-- [constructor](YMApi.md#constructor)
+- [constructor](index.YMApi.md#constructor)
 
 ### Properties
 
-- [agent](YMApi.md#agent)
-- [endpoint](YMApi.md#endpoint)
-- [token](YMApi.md#token)
+- [agent](index.YMApi.md#agent)
+- [endpoint](index.YMApi.md#endpoint)
+- [token](index.YMApi.md#token)
 
 ### Methods
 
-- [accountInfo](YMApi.md#accountinfo)
-- [call](YMApi.md#call)
-- [incomingTransferAccept](YMApi.md#incomingtransferaccept)
-- [incomingTransferReject](YMApi.md#incomingtransferreject)
-- [operationDetails](YMApi.md#operationdetails)
-- [operationHistory](YMApi.md#operationhistory)
-- [processPayment](YMApi.md#processpayment)
-- [requestPayment](YMApi.md#requestpayment)
+- [accountInfo](index.YMApi.md#accountinfo)
+- [call](index.YMApi.md#call)
+- [incomingTransferAccept](index.YMApi.md#incomingtransferaccept)
+- [incomingTransferReject](index.YMApi.md#incomingtransferreject)
+- [operationDetails](index.YMApi.md#operationdetails)
+- [operationHistory](index.YMApi.md#operationhistory)
+- [processPayment](index.YMApi.md#processpayment)
+- [requestPayment](index.YMApi.md#requestpayment)
 
 ## Constructors
 
@@ -43,15 +45,15 @@ Creates an instance of API.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `token` | `string` | `undefined` | Токен авторизации пользователя |
-| `endpoint` | `string` | `"https://yoomoney.ru/api"` | - |
-| `agent?` | `any` | `undefined` | - |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `token` | `string` | Токен авторизации пользователя |
+| `endpoint?` | `string` | - |
+| `agent?` | `any` | - |
 
 #### Defined in
 
-[src/api.ts:44](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L44)
+dist/cjs/api.d.ts:42
 
 ## Properties
 
@@ -59,11 +61,19 @@ Creates an instance of API.
 
 • `Optional` **agent**: `any`
 
+#### Defined in
+
+dist/cjs/api.d.ts:34
+
 ___
 
 ### endpoint
 
-• **endpoint**: `string` = `"https://yoomoney.ru/api"`
+• **endpoint**: `string`
+
+#### Defined in
+
+dist/cjs/api.d.ts:33
 
 ___
 
@@ -71,11 +81,15 @@ ___
 
 • **token**: `string`
 
+#### Defined in
+
+dist/cjs/api.d.ts:32
+
 ## Methods
 
 ### accountInfo
 
-▸ **accountInfo**(): `Promise`<[`AccountInfoResponse`](../modules/ymTypes.md#accountinforesponse)\>
+▸ **accountInfo**(): `Promise`<[`AccountInfoResponse`](../modules/index.ymTypes.md#accountinforesponse)\>
 
 Получение информации о состоянии счета пользователя.
 
@@ -87,11 +101,11 @@ ___
 
 #### Returns
 
-`Promise`<[`AccountInfoResponse`](../modules/ymTypes.md#accountinforesponse)\>
+`Promise`<[`AccountInfoResponse`](../modules/index.ymTypes.md#accountinforesponse)\>
 
 #### Defined in
 
-[src/api.ts:91](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L91)
+dist/cjs/api.d.ts:66
 
 ___
 
@@ -116,7 +130,7 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `method` | `string` | Название метода |
-| `parameters` | `QueryStringifiable` | Параметры метода |
+| `parameters` | [`QueryStringifiable`](../modules/index._internal_.md#querystringifiable) | Параметры метода |
 
 #### Returns
 
@@ -124,13 +138,13 @@ ___
 
 #### Defined in
 
-[src/api.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L62)
+dist/cjs/api.d.ts:55
 
 ___
 
 ### incomingTransferAccept
 
-▸ **incomingTransferAccept**(`parameters`): `Promise`<[`IncomingTransferAcceptResponse`](../modules/ymTypes.md#incomingtransferacceptresponse)\>
+▸ **incomingTransferAccept**(`parameters`): `Promise`<[`IncomingTransferAcceptResponse`](../modules/index.ymTypes.md#incomingtransferacceptresponse)\>
 
 Прием входящих переводов, защищенных кодом протекции, и
 переводов до востребования.
@@ -149,21 +163,21 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`IncomingTransferAcceptParameters`](../modules/ymTypes.md#incomingtransferacceptparameters) | Параметры вызова |
+| `parameters` | [`IncomingTransferAcceptParameters`](../modules/index.ymTypes.md#incomingtransferacceptparameters) | Параметры вызова |
 
 #### Returns
 
-`Promise`<[`IncomingTransferAcceptResponse`](../modules/ymTypes.md#incomingtransferacceptresponse)\>
+`Promise`<[`IncomingTransferAcceptResponse`](../modules/index.ymTypes.md#incomingtransferacceptresponse)\>
 
 #### Defined in
 
-[src/api.ts:187](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L187)
+dist/cjs/api.d.ts:139
 
 ___
 
 ### incomingTransferReject
 
-▸ **incomingTransferReject**(`parameters`): `Promise`<[`IncomingTransferRejectResponse`](../modules/ymTypes.md#incomingtransferrejectresponse)\>
+▸ **incomingTransferReject**(`parameters`): `Promise`<[`IncomingTransferRejectResponse`](../modules/index.ymTypes.md#incomingtransferrejectresponse)\>
 
 Отмена входящих переводов, защищенных кодом протекции, и
 переводов до востребования. При отмене перевода он возвращается
@@ -179,21 +193,21 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`IncomingTransferRejectParameters`](../modules/ymTypes.md#incomingtransferrejectparameters) | Параметры вызова |
+| `parameters` | [`IncomingTransferRejectParameters`](../modules/index.ymTypes.md#incomingtransferrejectparameters) | Параметры вызова |
 
 #### Returns
 
-`Promise`<[`IncomingTransferRejectResponse`](../modules/ymTypes.md#incomingtransferrejectresponse)\>
+`Promise`<[`IncomingTransferRejectResponse`](../modules/index.ymTypes.md#incomingtransferrejectresponse)\>
 
 #### Defined in
 
-[src/api.ts:206](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L206)
+dist/cjs/api.d.ts:153
 
 ___
 
 ### operationDetails
 
-▸ **operationDetails**(`parameters`): `Promise`<[`Operation`](../modules/ymTypes.md#operation)\>
+▸ **operationDetails**(`parameters`): `Promise`<[`Operation`](../modules/index.ymTypes.md#operation)\>
 
 Позволяет получить детальную информацию об операции из истории.
 
@@ -207,21 +221,21 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`OperationDetailsParameters`](../modules/ymTypes.md#operationdetailsparameters) | Параметры вызова |
+| `parameters` | [`OperationDetailsParameters`](../modules/index.ymTypes.md#operationdetailsparameters) | Параметры вызова |
 
 #### Returns
 
-`Promise`<[`Operation`](../modules/ymTypes.md#operation)\>
+`Promise`<[`Operation`](../modules/index.ymTypes.md#operation)\>
 
 #### Defined in
 
-[src/api.ts:123](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L123)
+dist/cjs/api.d.ts:90
 
 ___
 
 ### operationHistory
 
-▸ **operationHistory**(`parameters?`): `Promise`<[`OperationHistoryResponse`](../modules/ymTypes.md#operationhistoryresponse)\>
+▸ **operationHistory**(`parameters?`): `Promise`<[`OperationHistoryResponse`](../modules/index.ymTypes.md#operationhistoryresponse)\>
 
 Метод позволяет просматривать историю операций (полностью или частично) в постраничном режиме. Записи истории выдаются в обратном хронологическом порядке: от последних к более ранним.
 
@@ -235,21 +249,21 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `parameters` | [`OperationHistoryParameters`](../modules/ymTypes.md#operationhistoryparameters) |
+| `parameters?` | [`OperationHistoryParameters`](../modules/index.ymTypes.md#operationhistoryparameters) |
 
 #### Returns
 
-`Promise`<[`OperationHistoryResponse`](../modules/ymTypes.md#operationhistoryresponse)\>
+`Promise`<[`OperationHistoryResponse`](../modules/index.ymTypes.md#operationhistoryresponse)\>
 
 #### Defined in
 
-[src/api.ts:106](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L106)
+dist/cjs/api.d.ts:78
 
 ___
 
 ### processPayment
 
-▸ **processPayment**(`parameters`): `Promise`<[`ProcessPaymentResponse`](../modules/ymTypes.md#processpaymentresponse)\>
+▸ **processPayment**(`parameters`): `Promise`<[`ProcessPaymentResponse`](../modules/index.ymTypes.md#processpaymentresponse)\>
 
 Подтверждение платежа, ранее созданного методом
 [request-payment](https://yoomoney.ru/docs/wallet/process-payments/request-payment).
@@ -263,21 +277,21 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`ProcessPaymentParameters`](../modules/ymTypes.md#processpaymentparameters) | Параметры вызова |
+| `parameters` | [`ProcessPaymentParameters`](../modules/index.ymTypes.md#processpaymentparameters) | Параметры вызова |
 
 #### Returns
 
-`Promise`<[`ProcessPaymentResponse`](../modules/ymTypes.md#processpaymentresponse)\>
+`Promise`<[`ProcessPaymentResponse`](../modules/index.ymTypes.md#processpaymentresponse)\>
 
 #### Defined in
 
-[src/api.ts:165](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L165)
+dist/cjs/api.d.ts:122
 
 ___
 
 ### requestPayment
 
-▸ **requestPayment**(`parameters`): `Promise`<[`RequestPaymentResponse`](../modules/ymTypes.md#requestpaymentresponse)\>
+▸ **requestPayment**(`parameters`): `Promise`<[`RequestPaymentResponse`](../modules/index.ymTypes.md#requestpaymentresponse)\>
 
 Создание платежа, проверка параметров и возможности приема
 платежа магазином или перевода средств на счет пользователя
@@ -299,12 +313,12 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`RequestPaymentParameters`](../modules/ymTypes.md#requestpaymentparameters) | Параметры вызова |
+| `parameters` | [`RequestPaymentParameters`](../modules/index.ymTypes.md#requestpaymentparameters) | Параметры вызова |
 
 #### Returns
 
-`Promise`<[`RequestPaymentResponse`](../modules/ymTypes.md#requestpaymentresponse)\>
+`Promise`<[`RequestPaymentResponse`](../modules/index.ymTypes.md#requestpaymentresponse)\>
 
 #### Defined in
 
-[src/api.ts:148](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.ts#L148)
+dist/cjs/api.d.ts:110

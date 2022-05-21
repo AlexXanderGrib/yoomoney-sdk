@@ -1,27 +1,29 @@
-[yoomoney-sdk](../README.md) / [Exports](../modules.md) / ymTypes
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](index.md) / ymTypes
 
 # Namespace: ymTypes
+
+[index](index.md).ymTypes
 
 ## Table of contents
 
 ### Type aliases
 
-- [AccountInfoResponse](ymTypes.md#accountinforesponse)
-- [IncomingTransferAcceptParameters](ymTypes.md#incomingtransferacceptparameters)
-- [IncomingTransferAcceptResponse](ymTypes.md#incomingtransferacceptresponse)
-- [IncomingTransferRejectParameters](ymTypes.md#incomingtransferrejectparameters)
-- [IncomingTransferRejectResponse](ymTypes.md#incomingtransferrejectresponse)
-- [Operation](ymTypes.md#operation)
-- [OperationDetailsParameters](ymTypes.md#operationdetailsparameters)
-- [OperationHistoryParameters](ymTypes.md#operationhistoryparameters)
-- [OperationHistoryResponse](ymTypes.md#operationhistoryresponse)
-- [P2PPaymentRequest](ymTypes.md#p2ppaymentrequest)
-- [PhoneProviderPaymentRequest](ymTypes.md#phoneproviderpaymentrequest)
-- [ProcessPaymentParameters](ymTypes.md#processpaymentparameters)
-- [ProcessPaymentResponse](ymTypes.md#processpaymentresponse)
-- [RequestPaymentMoneySource](ymTypes.md#requestpaymentmoneysource)
-- [RequestPaymentParameters](ymTypes.md#requestpaymentparameters)
-- [RequestPaymentResponse](ymTypes.md#requestpaymentresponse)
+- [AccountInfoResponse](index.ymTypes.md#accountinforesponse)
+- [IncomingTransferAcceptParameters](index.ymTypes.md#incomingtransferacceptparameters)
+- [IncomingTransferAcceptResponse](index.ymTypes.md#incomingtransferacceptresponse)
+- [IncomingTransferRejectParameters](index.ymTypes.md#incomingtransferrejectparameters)
+- [IncomingTransferRejectResponse](index.ymTypes.md#incomingtransferrejectresponse)
+- [Operation](index.ymTypes.md#operation)
+- [OperationDetailsParameters](index.ymTypes.md#operationdetailsparameters)
+- [OperationHistoryParameters](index.ymTypes.md#operationhistoryparameters)
+- [OperationHistoryResponse](index.ymTypes.md#operationhistoryresponse)
+- [P2PPaymentRequest](index.ymTypes.md#p2ppaymentrequest)
+- [PhoneProviderPaymentRequest](index.ymTypes.md#phoneproviderpaymentrequest)
+- [ProcessPaymentParameters](index.ymTypes.md#processpaymentparameters)
+- [ProcessPaymentResponse](index.ymTypes.md#processpaymentresponse)
+- [RequestPaymentMoneySource](index.ymTypes.md#requestpaymentmoneysource)
+- [RequestPaymentParameters](index.ymTypes.md#requestpaymentparameters)
+- [RequestPaymentResponse](index.ymTypes.md#requestpaymentresponse)
 
 ## Type aliases
 
@@ -41,13 +43,13 @@
 | `account_status` | ``"anonymous"`` \| ``"named"`` \| ``"identified"`` | Статус пользователя. Возможные значения: - `anonymous` — анонимный счет; - `named` — именной счет; - `identified` — идентифицированный счет. |
 | `account_type` | ``"personal"`` \| ``"professional"`` | Тип счета пользователя. Возможные значения: - `personal` — счет пользователя в ЮMoney; - `professional` — профессиональный счет в ЮMoney. |
 | `balance` | `number` | Баланс счета пользователя. |
-| `balance_details` | `AccountBalanceDetails` | [Расширенная информация о балансе](https://yoomoney.ru/page?id=525218). По умолчанию этот блок отсутствует. Блок появляется, если сейчас или когда-либо ранее были зачисления в очереди, задолженности, блокировки средств.  см. [Параметры объекта balance_details](https://yoomoney.ru/docs/wallet/user-account/account-info#response-nested-balance-details) |
-| `cards_linked?` | `AccountLinkedCard`[] | Информация о привязанных банковских картах.  Если к счету не привязано ни одной карты, параметр отсутствует. Если к счету привязана хотя бы одна карта, параметр содержит список данных о привязанных картах.  см. [Параметры объекта cards_linked](https://yoomoney.ru/docs/wallet/user-account/account-info#response-nested-cards-linked) |
+| `balance_details` | [`AccountBalanceDetails`](index._internal_.md#accountbalancedetails) | [Расширенная информация о балансе](https://yoomoney.ru/page?id=525218). По умолчанию этот блок отсутствует. Блок появляется, если сейчас или когда-либо ранее были зачисления в очереди, задолженности, блокировки средств.  см. [Параметры объекта balance_details](https://yoomoney.ru/docs/wallet/user-account/account-info#response-nested-balance-details) |
+| `cards_linked?` | [`AccountLinkedCard`](index._internal_.md#accountlinkedcard)[] | Информация о привязанных банковских картах.  Если к счету не привязано ни одной карты, параметр отсутствует. Если к счету привязана хотя бы одна карта, параметр содержит список данных о привязанных картах.  см. [Параметры объекта cards_linked](https://yoomoney.ru/docs/wallet/user-account/account-info#response-nested-cards-linked) |
 | `currency` | ``"643"`` | Код валюты счета пользователя. Всегда `643` (рубль РФ по стандарту ISO 4217). |
 
 #### Defined in
 
-[src/api.types.ts:45](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L45)
+dist/cjs/api.types.d.ts:42
 
 ___
 
@@ -68,17 +70,17 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:548](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L548)
+dist/cjs/api.types.d.ts:480
 
 ___
 
 ### IncomingTransferAcceptResponse
 
-Ƭ **IncomingTransferAcceptResponse**: `BaseApiErrors` & { `[key: string]`: `any`; `ext_action_uri?`: `string` ; `protection_code_attempts_available?`: `number`  }
+Ƭ **IncomingTransferAcceptResponse**: [`BaseApiErrors`](index._internal_.md#baseapierrors) & { `[key: string]`: `any`; `ext_action_uri?`: `string` ; `protection_code_attempts_available?`: `number`  }
 
 #### Defined in
 
-[src/api.types.ts:560](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L560)
+dist/cjs/api.types.d.ts:491
 
 ___
 
@@ -98,17 +100,17 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:573](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L573)
+dist/cjs/api.types.d.ts:502
 
 ___
 
 ### IncomingTransferRejectResponse
 
-Ƭ **IncomingTransferRejectResponse**: `BaseApiErrors` & { `[key: string]`: `any`;  }
+Ƭ **IncomingTransferRejectResponse**: [`BaseApiErrors`](index._internal_.md#baseapierrors) & { `[key: string]`: `any`;  }
 
 #### Defined in
 
-[src/api.types.ts:581](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L581)
+dist/cjs/api.types.d.ts:509
 
 ___
 
@@ -131,7 +133,7 @@ ___
 | `comment?` | `string` | Комментарий к переводу или пополнению. Присутствует в истории отправителя перевода или получателя пополнения. |
 | `datetime` | `string` | Дата и время совершения операции. |
 | `details?` | `string` | Детальное описание платежа. Строка произвольного формата, может содержать любые символы и переводы строк. Необязательный параметр. |
-| `digital_goods` | `DigitalGoodsDescription` | Данные о цифровом товаре (пин-коды и бонусы игр, iTunes, Xbox, etc.) Поле присутствует при успешном платеже в магазины цифровых товаров. Описание формата |
+| `digital_goods` | [`DigitalGoodsDescription`](index._internal_.md#digitalgoodsdescription) | Данные о цифровом товаре (пин-коды и бонусы игр, iTunes, Xbox, etc.) Поле присутствует при успешном платеже в магазины цифровых товаров. Описание формата |
 | `direction` | ``"in"`` \| ``"out"`` | Направление движения средств. Может принимать значения: - `in` (приход); - `out` (расход). |
 | `expires?` | `string` | Дата и время истечения срока действия кода протекции. Присутствует для входящих и исходящих переводов (от/другим) пользователям, защищенных кодом протекции. |
 | `fee?` | `number` | Сумма комиссии. Присутствует для исходящих переводов другим пользователям. |
@@ -149,7 +151,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:156](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L156)
+dist/cjs/api.types.d.ts:139
 
 ___
 
@@ -169,7 +171,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:277](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L277)
+dist/cjs/api.types.d.ts:250
 
 ___
 
@@ -195,7 +197,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:92](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L92)
+dist/cjs/api.types.d.ts:84
 
 ___
 
@@ -212,23 +214,23 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `next_record` | `string` |
-| `operations` | [`Operation`](ymTypes.md#operation)[] |
+| `operations` | [`Operation`](index.ymTypes.md#operation)[] |
 
 #### Defined in
 
-[src/api.types.ts:271](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L271)
+dist/cjs/api.types.d.ts:245
 
 ___
 
 ### P2PPaymentRequest
 
-Ƭ **P2PPaymentRequest**: `Pick`<[`Operation`](ymTypes.md#operation), ``"amount"`` \| ``"amount_due"`` \| ``"comment"`` \| ``"message"`` \| ``"codepro"``\> & { `[key: string]`: `any`; `expire_period?`: `number` ; `label?`: `string` ; `pattern_id`: ``"p2p"`` ; `to`: `string`  }
+Ƭ **P2PPaymentRequest**: `Pick`<[`Operation`](index.ymTypes.md#operation), ``"amount"`` \| ``"amount_due"`` \| ``"comment"`` \| ``"message"`` \| ``"codepro"``\> & { `[key: string]`: `any`; `expire_period?`: `number` ; `label?`: `string` ; `pattern_id`: ``"p2p"`` ; `to`: `string`  }
 
 Перевод средств на счета других пользователей
 
 #### Defined in
 
-[src/api.types.ts:288](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L288)
+dist/cjs/api.types.d.ts:260
 
 ___
 
@@ -252,7 +254,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:321](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L321)
+dist/cjs/api.types.d.ts:286
 
 ___
 
@@ -276,7 +278,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:439](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L439)
+dist/cjs/api.types.d.ts:389
 
 ___
 
@@ -297,7 +299,7 @@ ___
 | `acs_uri?` | `string` | Адрес страницы аутентификации банковской карты по 3‑D Secure на стороне банка-эмитента. Поле присутствует, если для завершения транзакции с использованием банковской карты требуется аутентификация по 3‑D Secure. |
 | `balance?` | `number` | Текущий баланс счета пользователя. Присутствует при выполнении следующих условий: - метод выполнен успешно; - токен авторизации обладает правом `account-info`. |
 | `credit_amount?` | `number` | Сумма, поступившая на счет получателя. Присутствует при успешном переводе средств на счет другого пользователя ЮMoney. |
-| `digital_goods?` | `DigitalGoodsDescription` | Данные о цифровом товаре (пин-коды и бонусы игр, iTunes, Xbox etc). Поле присутствует при успешном платеже в магазины цифровых товаров. |
+| `digital_goods?` | [`DigitalGoodsDescription`](index._internal_.md#digitalgoodsdescription) | Данные о цифровом товаре (пин-коды и бонусы игр, iTunes, Xbox etc). Поле присутствует при успешном платеже в магазины цифровых товаров. |
 | `error?` | `string` | [Код ошибки](https://yoomoney.ru/docs/wallet/process-payments/request-payment#errors) при проведении платежа (пояснение к полю `status`). Присутствует только при ошибках.  **Фактически: `never`. В случае ошибки, клиент API кидает ошибку `YMApiError`, которая содержит `code` - код ошибки из поля `error` и ответ целиком в поле `response`** |
 | `invoice_id?` | `string` | Номер транзакции магазина в ЮMoney. Присутствует при успешном выполнении платежа в магазин. |
 | `next_retry?` | `number` | Рекомендуемое время, спустя которое следует повторить запрос, в миллисекундах. Поле присутствует при `status=in_progress`. |
@@ -308,7 +310,7 @@ ___
 
 #### Defined in
 
-[src/api.types.ts:472](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L472)
+dist/cjs/api.types.d.ts:416
 
 ___
 
@@ -320,33 +322,33 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `cards` | { `allowed`: `boolean` ; `csc_required`: `boolean` ; `items`: `AccountLinkedCard` & { `id`: `string`  }[]  } |
+| `cards` | { `allowed`: `boolean` ; `csc_required`: `boolean` ; `items`: [`AccountLinkedCard`](index._internal_.md#accountlinkedcard) & { `id`: `string`  }[]  } |
 | `cards.allowed` | `boolean` |
 | `cards.csc_required` | `boolean` |
-| `cards.items` | `AccountLinkedCard` & { `id`: `string`  }[] |
+| `cards.items` | [`AccountLinkedCard`](index._internal_.md#accountlinkedcard) & { `id`: `string`  }[] |
 | `wallet` | { `allowed`: `boolean`  } |
 | `wallet.allowed` | `boolean` |
 
 #### Defined in
 
-[src/api.types.ts:345](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L345)
+dist/cjs/api.types.d.ts:307
 
 ___
 
 ### RequestPaymentParameters
 
-Ƭ **RequestPaymentParameters**: [`P2PPaymentRequest`](ymTypes.md#p2ppaymentrequest) \| [`PhoneProviderPaymentRequest`](ymTypes.md#phoneproviderpaymentrequest) \| { `[key: string]`: `string`; `pattern_id`: `string`  }
+Ƭ **RequestPaymentParameters**: [`P2PPaymentRequest`](index.ymTypes.md#p2ppaymentrequest) \| [`PhoneProviderPaymentRequest`](index.ymTypes.md#phoneproviderpaymentrequest) \| { `[key: string]`: `string`; `pattern_id`: `string`  }
 
 #### Defined in
 
-[src/api.types.ts:340](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L340)
+dist/cjs/api.types.d.ts:303
 
 ___
 
 ### RequestPaymentResponse
 
-Ƭ **RequestPaymentResponse**: `BaseApiErrors` & { `[key: string]`: `any`; `account_unblock_uri?`: `string` ; `balance?`: `number` ; `contract_amount`: `number` ; `ext_action_uri?`: `string` ; `money_source`: [`RequestPaymentMoneySource`](ymTypes.md#requestpaymentmoneysource) ; `protection_code?`: `string` ; `recipient_account_status`: [`AccountInfoResponse`](ymTypes.md#accountinforesponse)[``"account_status"``] ; `recipient_account_type`: [`AccountInfoResponse`](ymTypes.md#accountinforesponse)[``"account_type"``] ; `request_id`: `string`  }
+Ƭ **RequestPaymentResponse**: [`BaseApiErrors`](index._internal_.md#baseapierrors) & { `[key: string]`: `any`; `account_unblock_uri?`: `string` ; `balance?`: `number` ; `contract_amount`: `number` ; `ext_action_uri?`: `string` ; `money_source`: [`RequestPaymentMoneySource`](index.ymTypes.md#requestpaymentmoneysource) ; `protection_code?`: `string` ; `recipient_account_status`: [`AccountInfoResponse`](index.ymTypes.md#accountinforesponse)[``"account_status"``] ; `recipient_account_type`: [`AccountInfoResponse`](index.ymTypes.md#accountinforesponse)[``"account_type"``] ; `request_id`: `string`  }
 
 #### Defined in
 
-[src/api.types.ts:386](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/api.types.ts#L386)
+dist/cjs/api.types.d.ts:345

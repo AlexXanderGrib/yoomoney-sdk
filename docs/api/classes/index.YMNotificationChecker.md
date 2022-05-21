@@ -1,6 +1,8 @@
-[yoomoney-sdk](../README.md) / [Exports](../modules.md) / YMNotificationChecker
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / YMNotificationChecker
 
 # Class: YMNotificationChecker
+
+[index](../modules/index.md).YMNotificationChecker
 
 Класс, который реализует [механизм проверки уведомлений от YooMoney](https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security)
 
@@ -12,12 +14,16 @@
 
 ### Constructors
 
-- [constructor](YMNotificationChecker.md#constructor)
+- [constructor](index.YMNotificationChecker.md#constructor)
+
+### Properties
+
+- [secret](index.YMNotificationChecker.md#secret)
 
 ### Methods
 
-- [check](YMNotificationChecker.md#check)
-- [middleware](YMNotificationChecker.md#middleware)
+- [check](index.YMNotificationChecker.md#check)
+- [middleware](index.YMNotificationChecker.md#middleware)
 
 ## Constructors
 
@@ -37,13 +43,23 @@ Creates an instance of NotificationChecker.
 
 #### Defined in
 
-[src/notifications.ts:141](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/notifications.ts#L141)
+dist/cjs/notifications.d.ts:92
+
+## Properties
+
+### secret
+
+• `Private` `Readonly` **secret**: `any`
+
+#### Defined in
+
+dist/cjs/notifications.d.ts:86
 
 ## Methods
 
 ### check
 
-▸ **check**(`notification`): [`YMNotificationDTO`](../modules.md#ymnotificationdto)
+▸ **check**(`notification`): [`YMNotificationDTO`](../modules/index.md#ymnotificationdto)
 
 Проверяет полученное уведомление и возвращает типизированную версию
 
@@ -55,15 +71,15 @@ Creates an instance of NotificationChecker.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `notification` | `Record`<keyof [`YMNotificationDTO`](../modules.md#ymnotificationdto), `string`\> | Объект уведомления |
+| `notification` | `Record`<keyof [`YMNotificationDTO`](../modules/index.md#ymnotificationdto), `string`\> | Объект уведомления |
 
 #### Returns
 
-[`YMNotificationDTO`](../modules.md#ymnotificationdto)
+[`YMNotificationDTO`](../modules/index.md#ymnotificationdto)
 
 #### Defined in
 
-[src/notifications.ts:151](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/notifications.ts#L151)
+dist/cjs/notifications.d.ts:101
 
 ___
 
@@ -81,9 +97,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `Object` |
+| `options?` | `Object` |
 | `options.memo?` | `boolean` |
-| `actualHandler` | `RequestHandler`<`Record`<`string`, `string`\>, `any`, [`YMNotificationDTO`](../modules.md#ymnotificationdto), `ParsedQs`, `Record`<`string`, `any`\>\> |
+| `actualHandler?` | `RequestHandler`<`Record`<`string`, `string`\>, `any`, [`YMNotificationDTO`](../modules/index.md#ymnotificationdto), `ParsedQs`, `Record`<`string`, `any`\>\> |
 
 #### Returns
 
@@ -120,4 +136,4 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[src/notifications.ts:226](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/5426e16/src/notifications.ts#L226)
+dist/cjs/notifications.d.ts:143

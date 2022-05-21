@@ -33,6 +33,7 @@ export async function fetch(
   return await axios
     .post(url, stringify(parameters), {
       headers: {
+        "User-Agent": process.env.USER_AGENT_STRING || "yoomoney-sdk/test",
         ...headers,
         "Content-Type": "application/x-www-form-urlencoded",
         Accept: "application/json"
