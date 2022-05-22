@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { CardType } from "./shared.types";
+import type { CardType } from "./shared.types";
 
 type AccountBalanceDetails = {
   /**

@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { Agent } from "./fetch";
+import type { Agent } from "./fetch";
 
 /**
  * Имплементация взаимодействия с [API YooKassa](https://yookassa.ru/developers)

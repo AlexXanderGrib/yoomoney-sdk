@@ -6,7 +6,8 @@
     "./api.d.ts",
     "./auth.d.ts",
     "./forms.d.ts",
-    "./notifications.d.ts"
+    "./notifications.d.ts",
+    "./types.d.ts"
   ],
   "exclude": ["src/__test__", "**/node_modules/**"],
   "externalPattern": ["**/node_modules/**"],

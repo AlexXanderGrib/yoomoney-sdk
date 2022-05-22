@@ -1,13 +1,17 @@
 QIWI SDK / [Modules](modules.md)
 
-# YooMoney NodeJS SDK
+# YooMoney SDK
+
+> Типизированный SDK для API YooMoney для NodeJS
 
 <center>
   <img src="docs/assets/logo.svg" alt="YooMoney SDK" />
 </center>
 
+[![Test Status](https://github.com/AlexXanderGrib/yoomoney-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/yoomoney-sdk)
 [![Downloads](https://img.shields.io/npm/dt/yoomoney-sdk.svg)](https://npmjs.com/package/yoomoney-sdk)
 [![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/yoomoney-sdk.svg)](https://github.com/AlexXanderGrib/yoomoney-sdk)
+[![codecov](https://img.shields.io/codecov/c/github/AlexXanderGrib/yoomoney-sdk/main.svg)](https://codecov.io/gh/AlexXanderGrib/yoomoney-sdk)
 [![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/yoomoney-sdk.svg)](https://github.com/AlexXanderGrib/yoomoney-sdk)
 [![yoomoney-sdk](https://snyk.io/advisor/npm-package/yoomoney-sdk/badge.svg)](https://snyk.io/advisor/npm-package/yoomoney-sdk)
 [![Known Vulnerabilities](https://snyk.io/test/npm/yoomoney-sdk/badge.svg)](https://snyk.io/test/npm/yoomoney-sdk)

@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { CountryCode, Currency } from "./shared.types";
+import type { CountryCode, Currency } from "./shared.types";
 
 export type PaymentStatus =
   | "pending"

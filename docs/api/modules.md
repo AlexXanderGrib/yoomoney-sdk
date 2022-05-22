@@ -11,3 +11,4 @@
 - [forms](modules/forms.md)
 - [index](modules/index.md)
 - [notifications](modules/notifications.md)
+- [types](modules/types.md)
