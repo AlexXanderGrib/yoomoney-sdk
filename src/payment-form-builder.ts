@@ -162,7 +162,10 @@ export class PaymentFormBuilder {
    * @return {this}
    */
   setAmount(amount: number | string): this {
-    this.config.sum = Number.parseFloat(amount.toString());
+    this.config.sum = Number.parseFloat(
+      Number.parseFloat(amount.toString()).toFixed(2)
+    );
+
     return this;
   }
 

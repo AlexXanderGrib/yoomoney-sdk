@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { CountryCode, Currency } from "./shared.types";
 
 export type PaymentStatus =

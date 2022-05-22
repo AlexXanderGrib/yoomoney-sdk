@@ -9,7 +9,8 @@ export type AuthScope =
   | "payment"
   | "payment-shop"
   | "payment-p2p"
-  | "money-source";
+  | "money-source"
+  | (string & {});
 
 export const AuthScope: Record<string, AuthScope> = {
   AccountInfo: "account-info",
@@ -61,7 +62,7 @@ export class Auth {
     public clientId: string,
     public redirectUrl: string,
     public clientSecret?: string,
-    public endpoint: string = "https://yoomoney.ru/oauth/",
+    public endpoint: string = "https://yoomoney.ru/oauth",
     public agent?: Agent
   ) {}
 
@@ -97,7 +98,7 @@ export class Auth {
    * @return {string}
    */
   getAuthUrl(scope: AuthScope[], instanceName?: string): string {
-    const url = new URL("/authorize", this.endpoint);
+    const url = new URL(`${this.endpoint}/authorize`);
 
     url.searchParams.set("client_id", this.clientId);
     url.searchParams.set("response_type", "code");

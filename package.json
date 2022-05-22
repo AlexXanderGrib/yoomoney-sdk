@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "⭐ Typed YooMoney Wallet SDK for NodeJS. Supported API's: Auth, Wallet & Notifications",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -61,7 +61,8 @@
   "directories": {
     "lib": "./dist",
     "doc": "./docs",
-    "example": "./examples"
+    "example": "./examples",
+    "test": "./src/__tests__"
   },
   "scripts": {
     "test": "jest",
@@ -80,6 +81,7 @@
     "docs",
     "src",
     "examples",
+    "coverage",
     "README.md",
     "CONTRIBUTING.md",
     "LICENSE.txt",
@@ -134,6 +136,7 @@
     "@types/node-fetch": "^2.6.1",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
+    "dotenv": "^16.0.1",
     "eslint": "^8.16.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",

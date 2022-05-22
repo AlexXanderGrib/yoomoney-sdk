@@ -55,11 +55,6 @@ async function run() {
     _(' 7. Включите "Проверять подлинность приложения (OAuth2 client_secret)"');
     _(' 8. Нажмите "Всё верно" и подтвердите создание приложения');
     _();
-
-    await inquirer.prompt({
-      name: "_",
-      message: "Для продолжения нажмите Enter"
-    });
   } else {
     console.clear();
     _("Обновление приложения (1/2):");
@@ -72,12 +67,12 @@ async function run() {
     _(` 5. В поле "Redirect URI" введите "${redirectUrl}"`);
     _(' 6. Нажмите "Всё верно" и подтвердите действие на телефоне');
     _();
-
-    await inquirer.prompt({
-      name: "_",
-      message: "Для продолжения нажмите Enter"
-    });
   }
+
+  await inquirer.prompt({
+    name: "_",
+    message: "Для продолжения нажмите Enter"
+  });
 
   console.clear();
   _("Получение данных (2/2):");

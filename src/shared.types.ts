@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export type AnyRecord = Record<string, any>;
 
 export type CardType =

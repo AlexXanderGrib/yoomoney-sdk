@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { CardType } from "./shared.types";
 
 type AccountBalanceDetails = {

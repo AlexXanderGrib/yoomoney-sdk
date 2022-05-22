@@ -71,7 +71,9 @@ export class API {
 
     if (data.error) throw new YMApiError(data);
 
+    /* istanbul ignore next */
     if (typeof data === "string" && data.trim() === "") {
+      /* istanbul ignore next */
       throw new YMApiVoidResponseError();
     }
 
@@ -148,6 +150,7 @@ export class API {
   async requestPayment(
     parameters: t.RequestPaymentParameters
   ): Promise<t.RequestPaymentResponse> {
+    /* istanbul ignore next */
     return await this.call("request-payment", parameters);
   }
 
@@ -165,6 +168,7 @@ export class API {
   async processPayment(
     parameters: t.ProcessPaymentParameters
   ): Promise<t.ProcessPaymentResponse> {
+    /* istanbul ignore next */
     return await this.call("process-payment", parameters);
   }
 
@@ -187,6 +191,7 @@ export class API {
   async incomingTransferAccept(
     parameters: t.IncomingTransferAcceptParameters
   ): Promise<t.IncomingTransferAcceptResponse> {
+    /* istanbul ignore next */
     return await this.call("incoming-transfer-accept", parameters);
   }
 
@@ -206,6 +211,7 @@ export class API {
   async incomingTransferReject(
     parameters: t.IncomingTransferRejectParameters
   ): Promise<t.IncomingTransferRejectResponse> {
+    /* istanbul ignore next */
     return await this.call("incoming-transfer-accept", parameters);
   }
 }

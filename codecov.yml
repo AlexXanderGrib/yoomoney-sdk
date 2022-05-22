@@ -1,0 +1,30 @@
+codecov:
+  require_ci_to_pass: true
+
+coverage:
+  precision: 2
+  round: nearest
+  range: 70..100
+
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 5%
+        base: auto
+        if_not_found: success
+        informational: false
+        only_pulls: false
+
+parsers:
+  gcov:
+    branch_detection:
+      conditional: true
+      loop: true
+      method: false
+      macro: false
+
+comment:
+  layout: "reach,diff,flags,files,footer"
+  behavior: default
+  require_changes: true

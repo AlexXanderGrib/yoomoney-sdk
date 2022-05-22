@@ -45,7 +45,7 @@ export async function fetch(
     .then((response) => response.data)
     .catch((error) =>
       axios.isAxiosError(error) && error.response
-        ? error.response
+        ? error.response.data
         : Promise.reject(error)
     );
 }
