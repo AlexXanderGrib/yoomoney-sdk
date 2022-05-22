@@ -1,6 +1,6 @@
 import type * as t from "./api.types";
 import { Agent, fetch, QueryStringifiable } from "./fetch";
-import { AnyRecord } from "./shared.types";
+import type { AnyRecord } from "./shared.types";
 
 /**
  * Ошибка, которую выбрасывает API при ошибочном ответе от сервера

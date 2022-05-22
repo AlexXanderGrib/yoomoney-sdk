@@ -1,6 +1,6 @@
 import { API, YMApiError } from "../api";
 import { config } from "dotenv";
-import { Operation } from "../api.types";
+import type { Operation } from "../api.types";
 
 config();
 
