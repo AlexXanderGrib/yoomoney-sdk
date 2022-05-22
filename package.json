@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "⭐ Typed YooMoney Wallet SDK for NodeJS. Supported API's: Auth, Wallet & Notifications",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -128,7 +128,19 @@
     "nodejs",
     "backend"
   ],
-  "author": "AlexXanderGrib <me@alexxgrib.me> (https://alexxgrib.me)",
+  "author": {
+    "name": "Alexander Gribochkin",
+    "email": "me@alexxgrib.me",
+    "url": "https://alexxgrib.me"
+  },
+  "maintainers": [
+    {
+      "name": "Alexander Gribochkin",
+      "email": "me@alexxgrib.me",
+      "url": "https://alexxgrib.me"
+    }
+  ],
+  "private": false,
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AlexXanderGrib/yoomoney-sdk/issues",

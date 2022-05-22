@@ -97,6 +97,12 @@ const api = new API(process.env.YOOMONEY_TOKEN);
 api.accountInfo().then((info) => console.log(info));
 ```
 
+## Лицензия
+
+Проект распространяется под лицензией MIT. Смотрите [LICENSE.txt](./LICENSE.txt)
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fyoomoney-sdk.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fyoomoney-sdk?ref=badge_large)
+
 ## ❤️ Содействие (Contributing)
 
 _Что делаем?_:
