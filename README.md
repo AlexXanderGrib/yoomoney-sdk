@@ -30,15 +30,15 @@
 
 - **Используя `npm`**
   ```shell
-  npm i qiwi-sdk
+  npm i yoomoney-sdk
   ```
 - **Используя `Yarn`**
   ```shell
-  yarn add qiwi-sdk
+  yarn add yoomoney-sdk
   ```
 - **Используя `pnpm`**
   ```shell
-  pnpm add qiwi-sdk
+  pnpm add yoomoney-sdk
   ```
 
 ## 🛠️ Использование
