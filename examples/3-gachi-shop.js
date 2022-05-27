@@ -14,7 +14,7 @@ const {
 // YOOMONEY_SECRET - Секрет для проверки подлинности из настроек уведомлений
 const notificationChecker = new YMNotificationChecker(process.env.YOOMONEY_SECRET);
 
-const port = parseInt(process.env.PORT);
+const port = parseInt(process.env.PORT, 30);
 
 app.get("/pay", (_req, res) => {
   const builder = new YMPaymentFromBuilder({
