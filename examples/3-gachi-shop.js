@@ -74,7 +74,7 @@ app.post(
   })
 );
 
-app.use((error, req, res, next) => {
+app.use((error, _req, _res, next) => {
   if (error instanceof YMNotificationError) {
     // Кто-то попытался отправить фальшивое уведомление об оплате
     console.log(error);
