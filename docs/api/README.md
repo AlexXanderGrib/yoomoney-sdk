@@ -19,6 +19,7 @@ QIWI SDK / [Modules](modules.md)
 [![npm](https://img.shields.io/npm/v/yoomoney-sdk.svg)](https://npmjs.com/package/yoomoney-sdk)
 [![license MIT](https://img.shields.io/npm/l/yoomoney-sdk.svg)](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/main/LICENSE.txt)
 [![Size](https://img.shields.io/bundlephobia/minzip/yoomoney-sdk)](https://bundlephobia.com/package/yoomoney-sdk)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d8a97f34bcf24d809f31c2603df416a6)](https://www.codacy.com/gh/AlexXanderGrib/yoomoney-sdk/dashboard?utm_source=github.com&utm_medium=referral&utm_content=AlexXanderGrib/yoomoney-sdk&utm_campaign=Badge_Grade)
 
 ## 🍬 Почему именно эта библиотека?
 

@@ -7,6 +7,13 @@ const api = new API(process.env.YM_TOKEN ?? "");
 
 type PayoutMethod = "qiwi" | "yoomoney" | "card" | "mobile";
 
+/**
+ *
+ * @param {PayoutMethod} method
+ * @param {string} account Номер счёта. Только цифры. В случае телефона с кодом страны "79123456789"
+ * @param {number} amount
+ * @returns
+ */
 function getRequest(
   method: PayoutMethod,
   account: string,
@@ -21,14 +28,23 @@ function getRequest(
       };
 
     case "qiwi":
-      // Взято из доков и с https://yoomoney.ru/api/showcase/97186
       return {
-        rapida_param1: account.slice(1),
-        netSum: amount.toString(),
+        // Взято из доков и с https://yoomoney.ru/api/showcase/97186
         pattern_id: "97186",
-        ShopID: "135960",
-        ShowCaseID: "44",
-        ShopArticleID: "434586"
+
+        // Десять цифр после кода +7
+        // Пополнить кошелёк можно только по российскому номеру
+        rapida_param1: account.slice(1),
+
+        // Сумма
+        // Минимальная сумма платежа — 10 ₽. Максимум к оплате с учетом комиссии — 15 000 ₽
+        // 10 - 14563.11 (3% комиссия)
+        netSum: amount.toString(),
+
+        // hidden_fields
+        ShopID: "972463",
+        ShopArticleID: "2030985",
+        ShowCaseID: "44"
       };
 
     case "mobile":
