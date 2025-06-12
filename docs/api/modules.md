@@ -1,14 +1,14 @@
-[QIWI SDK](README.md) / Modules
+[**YooMoney SDK**](README.md)
 
-# QIWI SDK
+***
 
-## Table of contents
+# YooMoney SDK
 
-### Modules
+## Modules
 
-- [api](modules/api.md)
-- [auth](modules/auth.md)
-- [forms](modules/forms.md)
-- [index](modules/index.md)
-- [notifications](modules/notifications.md)
-- [types](modules/types.md)
+- [api](api.md)
+- [api.types](api.types.md)
+- [auth](auth.md)
+- [index](index.md)
+- [notifications](notifications.md)
+- [payment-form-builder](payment-form-builder.md)

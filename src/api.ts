@@ -1,5 +1,5 @@
 import type * as t from "./api.types";
-import { Agent, fetch, QueryStringifiable } from "./fetch";
+import { type Agent, fetch, type QueryStringifiable } from "./fetch";
 import type { AnyRecord } from "./shared.types";
 
 /**

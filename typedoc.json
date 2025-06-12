@@ -1,19 +1,29 @@
 {
-  "name": "QIWI SDK",
+  "name": "YooMoney SDK",
   "out": "./docs/api",
   "entryPoints": [
-    "./index.d.ts",
-    "./api.d.ts",
-    "./auth.d.ts",
-    "./forms.d.ts",
-    "./notifications.d.ts",
-    "./types.d.ts"
+    "./src/index.ts",
+    "./src/payment-form-builder.ts",
+    "./src/api.ts",
+    "./src/auth.ts",
+    "./src/notifications.ts",
+    "./src/api.types.ts"
   ],
-  "exclude": ["src/__test__", "**/node_modules/**"],
-  "externalPattern": ["**/node_modules/**"],
+  "exclude": [
+    "src/__test__",
+    "**/node_modules/**"
+  ],
+  "externalPattern": [
+    "**/node_modules/**"
+  ],
   "excludePrivate": false,
-  "hideGenerator": true,
+  "hideGenerator": false,
   "readme": "README.md",
   "theme": "default",
-  "tsconfig": "./tsconfig.json"
+  "tsconfig": "./tsconfig.json",
+  "plugin": [
+    "typedoc-plugin-markdown"
+  ],
+  "outputFileStrategy": "modules",
+  "cleanOutputDir": true
 }

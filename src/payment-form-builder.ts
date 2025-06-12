@@ -16,18 +16,20 @@ export type FormConfig = {
   /**
    * Возможные значения:
    *
-   * `shop` — для универсальной формы;
+   * `button` — единственное валидной значение;
    *
-   * `small` — для кнопки;
+   * Остальные сохранены для обратной совместимости
    *
-   * `donate` — для «благотворительной» формы.
+   *
    */
-  quickPayForm: "shop" | "small" | "donate";
+  quickPayForm: "shop" | "small" | "donate" | "button";
 
   /**
    * Назначение платежа. (До 150 символов)
+   *
+   * @deprecated **Поле игнорируется YooMoney**
    */
-  targets: string;
+  targets?: string;
 
   /**
    * Способ оплаты. Возможные значения:
@@ -36,7 +38,7 @@ export type FormConfig = {
    *
    * `AC` — с банковской карты;
    *
-   * `MC` — с баланса мобильного.
+   * `MC` — с баланса мобильного. (больше недоступна)
    */
   paymentType: "PC" | "AC" | "MC";
 
@@ -49,28 +51,67 @@ export type FormConfig = {
    * Название перевода в истории отправителя (для переводов из кошелька или с привязанной карты). Отображается в кошельке отправителя.
    *
    * Удобнее всего формировать его из названий магазина и товара. Например: `Мой магазин: валенки белые`
+   *
+   * @deprecated **Поле игнорируется YooMoney**
    */
   formComment?: string;
-  /** Название перевода на странице подтверждения. Рекомендуем делать его таким же, как `formComment`. */
+
+  /**
+   * Название перевода на странице подтверждения. Рекомендуем делать его таким же, как `formComment`.
+   *
+   * @deprecated **Поле игнорируется YooMoney**
+   *
+   */
   shortDest?: string;
   /** Метка, которую сайт или приложение присваивает конкретному переводу. Например, в качестве метки можно указывать код или идентификатор заказа. (До 64 символов) */
   label?: string;
-  /** Поле, в котором можно передать комментарий отправителя перевода. (До 200 символов) */
+
+  /**
+   * Поле, в котором можно передать комментарий отправителя перевода. (До 200 символов)
+   *
+   * @deprecated **Поле игнорируется YooMoney**
+   *
+   */
   comment?: string;
+
   /** URL-адрес для редиректа после совершения перевода. */
   successURL?: string;
-  /** Нужны ФИО отправителя. */
+
+  /**
+   * Нужны ФИО отправителя.
+   *
+   * @deprecated **Поле игнорируется YooMoney**
+   *
+   * */
   needFio?: boolean;
-  /** Нужна электронная почты отправителя. */
+
+  /**
+   *  Нужна электронная почты отправителя.
+   *
+   * @deprecated **Поле игнорируется YooMoney**
+   *
+   **/
   needEmail?: boolean;
-  /** Нужен телефон отправителя. */
+
+  /**
+   * Нужен телефон отправителя.
+   *
+   * @deprecated **Поле игнорируется YooMoney**
+   *
+   * */
   needPhone?: boolean;
-  /** Нужен адрес отправителя. */
+
+  /**
+   * Нужен адрес отправителя.
+   *
+   * @deprecated **Поле игнорируется YooMoney**
+   *
+   * */
   needAddress?: boolean;
 };
 
 type FormQueryObject = Record<
-  "receiver" | "quickpay-form" | "targets" | "paymentType" | "sum",
+  "receiver" | "quickpay-form" | "paymentType" | "sum",
   string
 > &
   Partial<
@@ -83,7 +124,8 @@ type FormQueryObject = Record<
       | "need-fio"
       | "need-email"
       | "need-phone"
-      | "need-address",
+      | "need-address"
+      | "targets",
       string
     >
   >;
@@ -135,8 +177,7 @@ export class PaymentFormBuilder {
       paymentType: "PC",
       receiver: "",
       sum: 100,
-      quickPayForm: "shop",
-      targets: ""
+      quickPayForm: "button"
     }
   ) {}
 

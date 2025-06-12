@@ -34,9 +34,7 @@ export type NotificationDTO = {
   sender: string;
 
   /**
-   * Для переводов из кошелька — перевод защищен кодом протекции.
-   *
-   * Для переводов с произвольной карты — всегда `false`.
+   * Признак того, что перевод защищен кодом протекции. В ЮMoney больше нельзя делать переводы с кодом протекции, поэтому параметр всегда имеет значение `false`.
    */
   codepro: boolean;
 
@@ -56,43 +54,83 @@ export type NotificationDTO = {
    */
   unaccepted: boolean;
 
-  /** Фамилия. */
+  /**
+   * Фамилия.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
+   */
   lastname?: string;
 
-  /** Имя. */
+  /**
+   * Имя.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
+   * */
   firstname?: string;
 
-  /** Отчество. */
+  /**
+   * Отчество.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
+   *  */
   fathersname?: string;
 
   /**
    * Адрес электронной почты отправителя перевода. Если почта не
    * запрашивалась, параметр содержит пустую строку.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
    */
   email?: string;
 
   /**
    * Телефон отправителя перевода. Если телефон не запрашивался,
    * параметр содержит пустую строку.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
    */
   phone?: string;
 
-  /** Город. */
+  /**
+   * Город.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
+   **/
   city?: string;
 
-  /** Улица. */
+  /**
+   * Улица.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
+   *  */
   street?: string;
 
-  /** Дом. */
+  /**
+   * Дом.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
+   *  */
   building?: string;
 
-  /** Корпус. */
+  /**
+   * Корпус.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
+   *  */
   suite?: string;
 
-  /** Квартира. */
+  /**
+   * Квартира.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
+   *  */
   flat?: string;
 
-  /** Индекс. */
+  /**
+   * Индекс.
+   *
+   * @deprecated **Больше не предоставляется ЮMoney**
+   *  */
   zip?: string;
 };
 
@@ -176,7 +214,7 @@ export class NotificationChecker {
         notification.notification_type as NotificationDTO["notification_type"],
       withdraw_amount: Number.parseFloat(notification.withdraw_amount) || 0,
       currency: notification.currency as NotificationDTO["currency"],
-      codepro: Boolean(notification.codepro),
+      codepro: notification.codepro !== "false",
       test_notification: Boolean(notification.test_notification),
       unaccepted: Boolean(notification.unaccepted)
     };

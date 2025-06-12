@@ -1,3 +1,4 @@
+import { test, describe } from "vitest";
 import { PaymentFormBuilder, PaymentType } from "../payment-form-builder";
 import { testHtml } from "./html";
 

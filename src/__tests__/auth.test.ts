@@ -2,6 +2,7 @@ import { Auth, YMAuthError } from "../auth";
 import { testHtml } from "./html";
 import { createMockServer } from "./server";
 import express from "express";
+import { test, describe, expect } from "vitest";
 
 describe(Auth.name, () => {
   test("Instance", () => {
@@ -60,10 +61,12 @@ describe(Auth.name, () => {
       express.urlencoded({ extended: true }),
       (request, response) => {
         if (request.body.code === Code.FAIL) {
-          return response.status(500).json({ error: "error" }).end();
+          response.status(500).json({ error: "error" }).end();
+          return;
         }
 
-        return response.json({ access_token: "123" }).end();
+        response.json({ access_token: "123" }).end();
+        return;
       }
     );
 

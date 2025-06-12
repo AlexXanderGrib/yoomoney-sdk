@@ -5,13 +5,13 @@ export { Auth as YMAuth, Auth, YMAuthError, AuthScope } from "./auth";
 export {
   NotificationChecker as YMNotificationChecker,
   NotificationChecker,
-  NotificationDTO as YMNotificationDTO,
-  NotificationDTO,
+  type NotificationDTO as YMNotificationDTO,
+  type NotificationDTO,
   YMNotificationError
 } from "./notifications";
 export {
-  FormConfig as YMFormConfig,
-  FormConfig,
+  type FormConfig as YMFormConfig,
+  type FormConfig,
   PaymentType as YMFormPaymentType,
   PaymentType as FormPaymentType,
   PaymentType,
