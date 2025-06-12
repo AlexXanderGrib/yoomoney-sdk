@@ -19,9 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Create empty .env
-        run: touch .env
-
       - name: Run jest
         run: npm test -- --coverage
         env:

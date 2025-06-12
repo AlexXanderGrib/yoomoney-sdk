@@ -17,6 +17,9 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - run: npm ci
       - run: npm test
+        env:
+          YOOMONEY_TOKEN: ${{ secrets.YOOMONEY_TOKEN }}
+          YOOMONEY_WALLET: ${{ secrets.YOOMONEY_WALLET }}
       - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
