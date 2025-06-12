@@ -27,13 +27,3 @@ jobs:
         env:
           YOOMONEY_TOKEN: ${{ secrets.YOOMONEY_TOKEN }}
           YOOMONEY_WALLET: ${{ secrets.YOOMONEY_WALLET }}
-
-      - name: Upload coverage to Codecov
-        run: npx codecov
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
-      - name: Upload coverage to Codacy
-        run: bash <(curl -Ls https://coverage.codacy.com/get.sh)
-        env:
-          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
