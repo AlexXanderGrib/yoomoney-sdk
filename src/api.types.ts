@@ -579,6 +579,4 @@ export type IncomingTransferRejectParameters = {
   [key: string]: any;
 };
 
-export type IncomingTransferRejectResponse = BaseApiErrors & {
-  [key: string]: any;
-};
+export type IncomingTransferRejectResponse = BaseApiErrors & Record<string, any>;

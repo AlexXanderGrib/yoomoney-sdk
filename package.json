@@ -7,6 +7,7 @@
   "module": "./dist/index.mjs",
   "type": "commonjs",
   "sideEffects": false,
+  "packageManager": "npm@11.4.3",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -94,6 +95,7 @@
     "@types/express": "^5.0.3",
     "@types/inquirer": "^9.0.8",
     "@types/node": "^24.0.1",
+    "@vitest/coverage-v8": "3.2.3",
     "dotenv": "^16.5.0",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
@@ -118,10 +120,5 @@
   "dependencies": {
     "axios": "^1.9.0",
     "redirect-form-builder": "^1.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run prettify"
-    }
   }
 }

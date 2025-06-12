@@ -6,9 +6,9 @@ export type QueryStringifiable = Record<
   | string
   | number
   | boolean
-  | ReadonlyArray<string>
-  | ReadonlyArray<number>
-  | ReadonlyArray<boolean>
+  | readonly string[]
+  | readonly number[]
+  | readonly boolean[]
   | null
   | undefined
 >;

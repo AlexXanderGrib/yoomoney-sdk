@@ -15,6 +15,7 @@ export class YMApiError extends Error {
   constructor(public response: AnyRecord) {
     super(`API returned error code: ${response.error}`);
     this.code = response.error;
+    this.name = "YMApiError";
   }
 }
 
@@ -24,7 +25,12 @@ export class YMApiError extends Error {
  *
  * @see https://github.com/AlexXanderGrib/yoomoney-sdk/issues/4
  */
-export class YMApiVoidResponseError extends Error {}
+export class YMApiVoidResponseError extends Error {
+  constructor() {
+    super();
+    this.name = "YMApiVoidResponseError";
+  }
+}
 
 /**
  * Имплементирует [основное API YooMoney](https://yoomoney.ru/docs/wallet)
@@ -43,7 +49,7 @@ export class API {
    */
   constructor(
     public token: string,
-    public endpoint: string = "https://yoomoney.ru/api",
+    public endpoint = "https://yoomoney.ru/api",
     public agent?: Agent
   ) {}
 

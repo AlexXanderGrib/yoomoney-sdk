@@ -35,6 +35,7 @@ export class YMAuthError extends Error {
    */
   constructor(public code: string) {
     super(`API returned error: ${code}`);
+    this.name = "YMAuthError";
   }
 }
 
@@ -62,7 +63,7 @@ export class Auth {
     public clientId: string,
     public redirectUrl: string,
     public clientSecret?: string,
-    public endpoint: string = "https://yoomoney.ru/oauth",
+    public endpoint = "https://yoomoney.ru/oauth",
     public agent?: Agent
   ) {}
 

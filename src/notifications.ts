@@ -137,7 +137,12 @@ export type NotificationDTO = {
 /**
  * Ошибка проверки уведомления от YooMoney
  */
-export class YMNotificationError extends Error {}
+export class YMNotificationError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "YMNotificationError";
+  }
+}
 
 /**
  * @template {CallableFunction} T

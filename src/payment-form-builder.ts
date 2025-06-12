@@ -1,4 +1,3 @@
-/* eslint-disable no-invalid-this */
 import { FormBuilder } from "redirect-form-builder";
 import type { URL } from "url";
 
