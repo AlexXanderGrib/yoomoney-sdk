@@ -30,12 +30,12 @@ app.get("/pay", (_req, res) => {
     paymentType: YMFormPaymentType.FromCard,
 
     // Номер кошелька получателя (ваш)
-    receiver: "410016348581848",
+    receiver: "4100117723869225",
 
     // Добавляем метку, чтобы потом вычленить в уведомлении
-    label: "payment-001",
+    label: "payment-001"
 
-    comment: "За ♂️Fisting♂️"
+    // comment: "За ♂️Fisting♂️"
   });
 
   res.writeHead(200, "OK", {

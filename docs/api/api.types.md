@@ -12,7 +12,7 @@
 
 > **AccountInfoResponse** = `object`
 
-Defined in: [src/api.types.ts:46](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L46)
+Defined in: [src/api.types.ts:46](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L46)
 
 #### Indexable
 
@@ -24,7 +24,7 @@ Defined in: [src/api.types.ts:46](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **account**: `string`
 
-Defined in: [src/api.types.ts:50](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L50)
+Defined in: [src/api.types.ts:50](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L50)
 
 Номер счета пользователя.
 
@@ -32,7 +32,7 @@ Defined in: [src/api.types.ts:50](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **account\_status**: `"anonymous"` \| `"named"` \| `"identified"`
 
-Defined in: [src/api.types.ts:65](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L65)
+Defined in: [src/api.types.ts:65](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L65)
 
 Статус пользователя. Возможные значения:
 - `anonymous` — анонимный счет;
@@ -43,7 +43,7 @@ Defined in: [src/api.types.ts:65](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **account\_type**: `"personal"` \| `"professional"`
 
-Defined in: [src/api.types.ts:72](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L72)
+Defined in: [src/api.types.ts:72](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L72)
 
 Тип счета пользователя. Возможные значения:
 - `personal` — счет пользователя в ЮMoney;
@@ -53,7 +53,7 @@ Defined in: [src/api.types.ts:72](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **balance**: `number`
 
-Defined in: [src/api.types.ts:54](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L54)
+Defined in: [src/api.types.ts:54](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L54)
 
 Баланс счета пользователя.
 
@@ -61,7 +61,7 @@ Defined in: [src/api.types.ts:54](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **balance\_details**: `AccountBalanceDetails`
 
-Defined in: [src/api.types.ts:79](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L79)
+Defined in: [src/api.types.ts:79](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L79)
 
 [Расширенная информация о балансе](https://yoomoney.ru/page?id=525218). По умолчанию этот блок отсутствует. Блок появляется, если сейчас или когда-либо ранее были зачисления в очереди, задолженности, блокировки средств.
 
@@ -71,7 +71,7 @@ Defined in: [src/api.types.ts:79](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **cards\_linked**: `AccountLinkedCard`[]
 
-Defined in: [src/api.types.ts:88](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L88)
+Defined in: [src/api.types.ts:88](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L88)
 
 Информация о привязанных банковских картах.
 
@@ -83,7 +83,7 @@ Defined in: [src/api.types.ts:88](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **currency**: `"643"`
 
-Defined in: [src/api.types.ts:58](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L58)
+Defined in: [src/api.types.ts:58](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L58)
 
 Код валюты счета пользователя. Всегда `643` (рубль РФ по стандарту ISO 4217).
 
@@ -93,7 +93,7 @@ Defined in: [src/api.types.ts:58](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **IncomingTransferAcceptParameters** = `object`
 
-Defined in: [src/api.types.ts:549](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L549)
+Defined in: [src/api.types.ts:549](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L549)
 
 #### Indexable
 
@@ -105,7 +105,7 @@ Defined in: [src/api.types.ts:549](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **operation\_id**: `string`
 
-Defined in: [src/api.types.ts:553](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L553)
+Defined in: [src/api.types.ts:553](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L553)
 
 Идентификатор операции, значение параметра `operation_id` ответа метода [operation-history](https://yoomoney.ru/docs/wallet/user-account/operation-history).
 
@@ -113,7 +113,7 @@ Defined in: [src/api.types.ts:553](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **protection\_code**: `string`
 
-Defined in: [src/api.types.ts:557](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L557)
+Defined in: [src/api.types.ts:557](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L557)
 
 Код протекции. Строка из 4-х десятичных цифр. Указывается для входящего перевода, защищенного кодом протекции. Для переводов до востребования отсутствует.
 
@@ -123,7 +123,7 @@ Defined in: [src/api.types.ts:557](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **IncomingTransferAcceptResponse** = `BaseApiErrors` & `object`
 
-Defined in: [src/api.types.ts:561](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L561)
+Defined in: [src/api.types.ts:561](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L561)
 
 #### Type declaration
 
@@ -145,7 +145,7 @@ Defined in: [src/api.types.ts:561](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **IncomingTransferRejectParameters** = `object`
 
-Defined in: [src/api.types.ts:574](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L574)
+Defined in: [src/api.types.ts:574](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L574)
 
 #### Indexable
 
@@ -157,7 +157,7 @@ Defined in: [src/api.types.ts:574](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **operation\_id**: `string`
 
-Defined in: [src/api.types.ts:578](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L578)
+Defined in: [src/api.types.ts:578](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L578)
 
 Идентификатор операции, значение параметра `operation_id` ответа метода [operation-history](https://yoomoney.ru/docs/wallet/user-account/operation-history).
 
@@ -167,7 +167,7 @@ Defined in: [src/api.types.ts:578](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **IncomingTransferRejectResponse** = `BaseApiErrors` & `object`
 
-Defined in: [src/api.types.ts:582](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L582)
+Defined in: [src/api.types.ts:582](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L582)
 
 ***
 
@@ -175,7 +175,7 @@ Defined in: [src/api.types.ts:582](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **Operation** = `object`
 
-Defined in: [src/api.types.ts:157](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L157)
+Defined in: [src/api.types.ts:157](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L157)
 
 #### Indexable
 
@@ -187,7 +187,7 @@ Defined in: [src/api.types.ts:157](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **amount**: `number`
 
-Defined in: [src/api.types.ts:229](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L229)
+Defined in: [src/api.types.ts:229](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L229)
 
 Сумма операции.
 
@@ -195,7 +195,7 @@ Defined in: [src/api.types.ts:229](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **amount\_due**: `number`
 
-Defined in: [src/api.types.ts:237](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L237)
+Defined in: [src/api.types.ts:237](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L237)
 
 Сумма к получению. Присутствует для исходящих переводов другим пользователям.
 
@@ -203,7 +203,7 @@ Defined in: [src/api.types.ts:237](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **answer\_datetime**: `string`
 
-Defined in: [src/api.types.ts:221](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L221)
+Defined in: [src/api.types.ts:221](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L221)
 
 Дата и время приема или отмены перевода, защищенного кодом протекции. Присутствует для входящих и исходящих переводов, защищенных кодом протекции. Если перевод еще не принят или не отвергнут получателем, поле отсутствует.
 
@@ -211,7 +211,7 @@ Defined in: [src/api.types.ts:221](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **codepro**: `boolean`
 
-Defined in: [src/api.types.ts:209](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L209)
+Defined in: [src/api.types.ts:209](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L209)
 
 Перевод защищен кодом протекции. Присутствует для переводов другим пользователям.
 
@@ -219,7 +219,7 @@ Defined in: [src/api.types.ts:209](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **comment**: `string`
 
-Defined in: [src/api.types.ts:205](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L205)
+Defined in: [src/api.types.ts:205](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L205)
 
 Комментарий к переводу или пополнению. Присутствует в истории отправителя перевода или получателя пополнения.
 
@@ -227,7 +227,7 @@ Defined in: [src/api.types.ts:205](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **datetime**: `string`
 
-Defined in: [src/api.types.ts:241](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L241)
+Defined in: [src/api.types.ts:241](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L241)
 
 Дата и время совершения операции.
 
@@ -235,7 +235,7 @@ Defined in: [src/api.types.ts:241](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **details**: `string`
 
-Defined in: [src/api.types.ts:253](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L253)
+Defined in: [src/api.types.ts:253](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L253)
 
 Детальное описание платежа. Строка произвольного формата, может содержать любые символы и переводы строк. Необязательный параметр.
 
@@ -243,7 +243,7 @@ Defined in: [src/api.types.ts:253](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **digital\_goods**: `DigitalGoodsDescription`
 
-Defined in: [src/api.types.ts:245](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L245)
+Defined in: [src/api.types.ts:245](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L245)
 
 Данные о цифровом товаре (пин-коды и бонусы игр, iTunes, Xbox, etc.) Поле присутствует при успешном платеже в магазины цифровых товаров. Описание формата
 
@@ -251,7 +251,7 @@ Defined in: [src/api.types.ts:245](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **direction**: `"in"` \| `"out"`
 
-Defined in: [src/api.types.ts:178](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L178)
+Defined in: [src/api.types.ts:178](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L178)
 
 Направление движения средств. Может принимать значения:
 - `in` (приход);
@@ -261,7 +261,7 @@ Defined in: [src/api.types.ts:178](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **expires**: `string`
 
-Defined in: [src/api.types.ts:217](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L217)
+Defined in: [src/api.types.ts:217](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L217)
 
 Дата и время истечения срока действия кода протекции. Присутствует для входящих и исходящих переводов (от/другим) пользователям, защищенных кодом протекции.
 
@@ -269,7 +269,7 @@ Defined in: [src/api.types.ts:217](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **fee**: `number`
 
-Defined in: [src/api.types.ts:233](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L233)
+Defined in: [src/api.types.ts:233](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L233)
 
 Сумма комиссии. Присутствует для исходящих переводов другим пользователям.
 
@@ -277,7 +277,7 @@ Defined in: [src/api.types.ts:233](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **label**: `string`
 
-Defined in: [src/api.types.ts:183](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L183)
+Defined in: [src/api.types.ts:183](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L183)
 
 Метка платежа. Присутствует для входящих и исходящих переводов другим пользователям ЮMoney, у которых был указан параметр `label` вызова [request-payment](https://yoomoney.ru/docs/wallet/process-payments/request-payment#request-transfer-label).
 
@@ -285,7 +285,7 @@ Defined in: [src/api.types.ts:183](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **message**: `string`
 
-Defined in: [src/api.types.ts:201](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L201)
+Defined in: [src/api.types.ts:201](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L201)
 
 Сообщение получателю перевода. Присутствует для переводов другим пользователям.
 
@@ -293,7 +293,7 @@ Defined in: [src/api.types.ts:201](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **operation\_id**: `string`
 
-Defined in: [src/api.types.ts:161](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L161)
+Defined in: [src/api.types.ts:161](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L161)
 
 Идентификатор операции.
 
@@ -301,7 +301,7 @@ Defined in: [src/api.types.ts:161](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **pattern\_id**: `string`
 
-Defined in: [src/api.types.ts:172](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L172)
+Defined in: [src/api.types.ts:172](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L172)
 
 Идентификатор шаблона, по которому совершен платеж. Присутствует только для платежей.
 
@@ -309,7 +309,7 @@ Defined in: [src/api.types.ts:172](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **protection\_code**: `string`
 
-Defined in: [src/api.types.ts:213](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L213)
+Defined in: [src/api.types.ts:213](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L213)
 
 Код протекции. Присутствует для исходящих переводов, защищенных кодом протекции.
 
@@ -317,7 +317,7 @@ Defined in: [src/api.types.ts:213](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **recipient**: `string`
 
-Defined in: [src/api.types.ts:188](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L188)
+Defined in: [src/api.types.ts:188](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L188)
 
 Идентификатор получателя перевода. Присутствует для исходящих переводов другим пользователям.
 
@@ -325,7 +325,7 @@ Defined in: [src/api.types.ts:188](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **recipient\_type**: `"account"` \| `"phone"` \| `"email"`
 
-Defined in: [src/api.types.ts:197](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L197)
+Defined in: [src/api.types.ts:197](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L197)
 
 Тип идентификатора получателя перевода. Возможные значения:
 - `account` — номер счета получателя в сервисе ЮMoney;
@@ -338,7 +338,7 @@ Defined in: [src/api.types.ts:197](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **sender**: `string`
 
-Defined in: [src/api.types.ts:225](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L225)
+Defined in: [src/api.types.ts:225](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L225)
 
 Номер счета отправителя перевода. Присутствует для входящих переводов от других пользователей.
 
@@ -346,7 +346,7 @@ Defined in: [src/api.types.ts:225](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **status**: `"success"` \| `"refused"` \| `"in_progress"`
 
-Defined in: [src/api.types.ts:168](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L168)
+Defined in: [src/api.types.ts:168](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L168)
 
 Статус платежа (перевода). Может принимать следующие значения:
 - `success` — платеж завершен успешно;
@@ -357,7 +357,7 @@ Defined in: [src/api.types.ts:168](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **title**: `string`
 
-Defined in: [src/api.types.ts:249](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L249)
+Defined in: [src/api.types.ts:249](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L249)
 
 Краткое описание операции (название магазина или источник пополнения).
 
@@ -365,7 +365,7 @@ Defined in: [src/api.types.ts:249](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **type**: `"payment-shop"` \| `"outgoing-transfer"` \| `"deposition"` \| `"incoming-transfer"` \| `"incoming-transfer-protected"`
 
-Defined in: [src/api.types.ts:262](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L262)
+Defined in: [src/api.types.ts:262](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L262)
 
 Тип операции. Возможные значения:
 - `payment-shop` — исходящий платеж в магазин;
@@ -380,7 +380,7 @@ Defined in: [src/api.types.ts:262](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **OperationDetailsParameters** = `object`
 
-Defined in: [src/api.types.ts:278](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L278)
+Defined in: [src/api.types.ts:278](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L278)
 
 #### Indexable
 
@@ -392,7 +392,7 @@ Defined in: [src/api.types.ts:278](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **operation\_id**: `string`
 
-Defined in: [src/api.types.ts:282](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L282)
+Defined in: [src/api.types.ts:282](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L282)
 
 Идентификатор операции. Значение параметра следует указывать как значение параметра `operation_id` ответа метода [operation-history](https://yoomoney.ru/docs/wallet/user-account/operation-history#response) или значение поля `payment_id` ответа метода [process-payment](https://yoomoney.ru/docs/wallet/process-payments/process-payment#response), если запрашивается история счета плательщика.
 
@@ -402,7 +402,7 @@ Defined in: [src/api.types.ts:282](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **OperationHistoryParameters** = `object`
 
-Defined in: [src/api.types.ts:93](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L93)
+Defined in: [src/api.types.ts:93](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L93)
 
 #### Indexable
 
@@ -414,7 +414,7 @@ Defined in: [src/api.types.ts:93](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **details**: `boolean`
 
-Defined in: [src/api.types.ts:133](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L133)
+Defined in: [src/api.types.ts:133](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L133)
 
 Показывать подробные детали операции. По умолчанию `false`. Для отображения деталей операции требуется наличие права `operation-details`.
 
@@ -422,7 +422,7 @@ Defined in: [src/api.types.ts:133](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **from**: `string`
 
-Defined in: [src/api.types.ts:113](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L113)
+Defined in: [src/api.types.ts:113](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L113)
 
 Вывести операции от момента времени (операции, равные `from`, или более поздние). Если параметр отсутствует, выводятся все операции.
 
@@ -430,7 +430,7 @@ Defined in: [src/api.types.ts:113](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **label**: `string`
 
-Defined in: [src/api.types.ts:108](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L108)
+Defined in: [src/api.types.ts:108](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L108)
 
 Отбор платежей по значению метки. Выбираются платежи, у которых указано заданное значение параметра `label` вызова [request-payment](https://yoomoney.ru/docs/wallet/process-payments/request-payment).
 
@@ -438,7 +438,7 @@ Defined in: [src/api.types.ts:108](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **records**: `number`
 
-Defined in: [src/api.types.ts:128](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L128)
+Defined in: [src/api.types.ts:128](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L128)
 
 Количество запрашиваемых записей истории операций. Допустимые значения: от 1 до 100, по умолчанию — 30.
 
@@ -446,7 +446,7 @@ Defined in: [src/api.types.ts:128](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **start\_record**: `string`
 
-Defined in: [src/api.types.ts:123](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L123)
+Defined in: [src/api.types.ts:123](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L123)
 
 Если параметр присутствует, то будут отображены операции, начиная с номера `start_record`. Операции нумеруются с 0. [Подробнее про постраничный вывод списка](https://yoomoney.ru/docs/wallet/user-account/operation-history#filtering-logic)
 
@@ -454,7 +454,7 @@ Defined in: [src/api.types.ts:123](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **till**: `string`
 
-Defined in: [src/api.types.ts:118](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L118)
+Defined in: [src/api.types.ts:118](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L118)
 
 Вывести операции до момента времени (операции более ранние, чем `till`). Если параметр отсутствует, выводятся все операции.
 
@@ -462,7 +462,7 @@ Defined in: [src/api.types.ts:118](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **type**: `string`
 
-Defined in: [src/api.types.ts:103](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L103)
+Defined in: [src/api.types.ts:103](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L103)
 
 Перечень типов операций, которые требуется отобразить. Возможные значения:
 
@@ -478,7 +478,7 @@ Defined in: [src/api.types.ts:103](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **OperationHistoryResponse** = `object`
 
-Defined in: [src/api.types.ts:272](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L272)
+Defined in: [src/api.types.ts:272](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L272)
 
 #### Indexable
 
@@ -490,13 +490,13 @@ Defined in: [src/api.types.ts:272](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **next\_record**: `string`
 
-Defined in: [src/api.types.ts:273](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L273)
+Defined in: [src/api.types.ts:273](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L273)
 
 ##### operations
 
 > **operations**: [`Operation`](#operation)[]
 
-Defined in: [src/api.types.ts:274](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L274)
+Defined in: [src/api.types.ts:274](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L274)
 
 ***
 
@@ -504,7 +504,7 @@ Defined in: [src/api.types.ts:274](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **P2PPaymentRequest** = `Pick`\<[`Operation`](#operation), `"amount"` \| `"amount_due"` \| `"comment"` \| `"message"` \| `"codepro"`\> & `object`
 
-Defined in: [src/api.types.ts:289](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L289)
+Defined in: [src/api.types.ts:289](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L289)
 
 Перевод средств на счета других пользователей
 
@@ -544,7 +544,7 @@ Defined in: [src/api.types.ts:289](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **PhoneProviderPaymentRequest** = `object`
 
-Defined in: [src/api.types.ts:322](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L322)
+Defined in: [src/api.types.ts:322](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L322)
 
 Платеж за сотовую связь
 
@@ -558,7 +558,7 @@ Defined in: [src/api.types.ts:322](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **amount**: `number`
 
-Defined in: [src/api.types.ts:338](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L338)
+Defined in: [src/api.types.ts:338](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L338)
 
 Сумма платежа. С этой суммы может быть взята комиссия, размер комиссии зависит от оператора.
 
@@ -566,7 +566,7 @@ Defined in: [src/api.types.ts:338](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **pattern\_id**: `"phone-topup"`
 
-Defined in: [src/api.types.ts:326](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L326)
+Defined in: [src/api.types.ts:326](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L326)
 
 Фиксированное значение: `phone-topup`
 
@@ -574,7 +574,7 @@ Defined in: [src/api.types.ts:326](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **phone-number**: `string`
 
-Defined in: [src/api.types.ts:333](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L333)
+Defined in: [src/api.types.ts:333](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L333)
 
 Номер телефона в формате [ITU-T E.164](http://www.itu.int/rec/T-REC-E.164), полный номер, начиная с 7.
 
@@ -586,7 +586,7 @@ Defined in: [src/api.types.ts:333](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **ProcessPaymentParameters** = `object`
 
-Defined in: [src/api.types.ts:440](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L440)
+Defined in: [src/api.types.ts:440](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L440)
 
 #### Indexable
 
@@ -598,7 +598,7 @@ Defined in: [src/api.types.ts:440](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **csc**: `string`
 
-Defined in: [src/api.types.ts:458](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L458)
+Defined in: [src/api.types.ts:458](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L458)
 
 Card Security Code, CVV2/CVC2-код привязанной банковской карты пользователя. Параметр следует указывать только при платеже с привязанной банковской карты.
 
@@ -606,7 +606,7 @@ Card Security Code, CVV2/CVC2-код привязанной банковской
 
 > `optional` **ext\_auth\_fail\_uri**: `string`
 
-Defined in: [src/api.types.ts:468](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L468)
+Defined in: [src/api.types.ts:468](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L468)
 
 Адрес страницы возврата при отказе в аутентификации платежа банковской картой по 3‑D Secure. Указывается, если приложение поддерживает аутентификацию по 3‑D Secure. Обязательный параметр для такой аутентификации.
 
@@ -614,7 +614,7 @@ Defined in: [src/api.types.ts:468](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **ext\_auth\_success\_uri**: `string`
 
-Defined in: [src/api.types.ts:463](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L463)
+Defined in: [src/api.types.ts:463](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L463)
 
 Адрес страницы возврата при успехе аутентификации платежа банковской картой по 3‑D Secure. Указывается, если приложение поддерживает аутентификацию по 3‑D Secure. Обязательный параметр для такой аутентификации.
 
@@ -622,7 +622,7 @@ Defined in: [src/api.types.ts:463](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **money\_source**: `string`
 
-Defined in: [src/api.types.ts:453](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L453)
+Defined in: [src/api.types.ts:453](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L453)
 
 Запрашиваемый метод проведения платежа:
 - `wallet` — со счета пользователя
@@ -634,7 +634,7 @@ Defined in: [src/api.types.ts:453](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **request\_id**: `string`
 
-Defined in: [src/api.types.ts:444](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L444)
+Defined in: [src/api.types.ts:444](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L444)
 
 Идентификатор запроса, полученный из ответа метода [request-payment](https://yoomoney.ru/docs/wallet/process-payments/request-payment#response).
 
@@ -644,7 +644,7 @@ Defined in: [src/api.types.ts:444](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **ProcessPaymentResponse** = `object`
 
-Defined in: [src/api.types.ts:473](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L473)
+Defined in: [src/api.types.ts:473](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L473)
 
 #### Indexable
 
@@ -656,7 +656,7 @@ Defined in: [src/api.types.ts:473](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **account\_unblock\_uri**: `string`
 
-Defined in: [src/api.types.ts:526](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L526)
+Defined in: [src/api.types.ts:526](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L526)
 
 Адрес, на который необходимо отправить пользователя для разблокировки счета. Поле присутствует в случае ошибки `account_blocked`.
 
@@ -664,7 +664,7 @@ Defined in: [src/api.types.ts:526](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **acs\_params**: `Record`\<`string`, `string`\>
 
-Defined in: [src/api.types.ts:535](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L535)
+Defined in: [src/api.types.ts:535](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L535)
 
 Параметры аутентификации карты по 3‑D Secure в формате коллекции «имя-значение». Поле присутствует, если для завершения транзакции с использованием банковской карты требуется аутентификация по 3‑D Secure.
 
@@ -672,7 +672,7 @@ Defined in: [src/api.types.ts:535](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **acs\_uri**: `string`
 
-Defined in: [src/api.types.ts:531](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L531)
+Defined in: [src/api.types.ts:531](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L531)
 
 Адрес страницы аутентификации банковской карты по 3‑D Secure на стороне банка-эмитента. Поле присутствует, если для завершения транзакции с использованием банковской карты требуется аутентификация по 3‑D Secure.
 
@@ -680,7 +680,7 @@ Defined in: [src/api.types.ts:531](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **balance**: `number`
 
-Defined in: [src/api.types.ts:501](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L501)
+Defined in: [src/api.types.ts:501](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L501)
 
 Текущий баланс счета пользователя. Присутствует при выполнении следующих условий:
 - метод выполнен успешно;
@@ -690,7 +690,7 @@ Defined in: [src/api.types.ts:501](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **credit\_amount**: `number`
 
-Defined in: [src/api.types.ts:521](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L521)
+Defined in: [src/api.types.ts:521](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L521)
 
 Сумма, поступившая на счет получателя. Присутствует при успешном переводе средств на счет другого пользователя ЮMoney.
 
@@ -698,7 +698,7 @@ Defined in: [src/api.types.ts:521](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **digital\_goods**: `DigitalGoodsDescription`
 
-Defined in: [src/api.types.ts:545](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L545)
+Defined in: [src/api.types.ts:545](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L545)
 
 Данные о цифровом товаре (пин-коды и бонусы игр, iTunes, Xbox etc). Поле присутствует при успешном платеже в магазины цифровых товаров.
 
@@ -706,7 +706,7 @@ Defined in: [src/api.types.ts:545](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **error**: `string`
 
-Defined in: [src/api.types.ts:489](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L489)
+Defined in: [src/api.types.ts:489](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L489)
 
 [Код ошибки](https://yoomoney.ru/docs/wallet/process-payments/request-payment#errors) при проведении платежа (пояснение к полю `status`). Присутствует только при ошибках.
 
@@ -716,7 +716,7 @@ Defined in: [src/api.types.ts:489](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **invoice\_id**: `string`
 
-Defined in: [src/api.types.ts:506](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L506)
+Defined in: [src/api.types.ts:506](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L506)
 
 Номер транзакции магазина в ЮMoney. Присутствует при успешном выполнении платежа в магазин.
 
@@ -724,7 +724,7 @@ Defined in: [src/api.types.ts:506](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **next\_retry**: `number`
 
-Defined in: [src/api.types.ts:540](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L540)
+Defined in: [src/api.types.ts:540](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L540)
 
 Рекомендуемое время, спустя которое следует повторить запрос, в миллисекундах. Поле присутствует при `status=in_progress`.
 
@@ -732,7 +732,7 @@ Defined in: [src/api.types.ts:540](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **payee**: `string`
 
-Defined in: [src/api.types.ts:516](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L516)
+Defined in: [src/api.types.ts:516](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L516)
 
 Номер счета получателя. Присутствует при успешном переводе средств на счет другого пользователя ЮMoney.
 
@@ -740,7 +740,7 @@ Defined in: [src/api.types.ts:516](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **payer**: `string`
 
-Defined in: [src/api.types.ts:511](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L511)
+Defined in: [src/api.types.ts:511](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L511)
 
 Номер счета плательщика. Присутствует при успешном переводе средств на счет другого пользователя ЮMoney.
 
@@ -748,7 +748,7 @@ Defined in: [src/api.types.ts:511](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **payment\_id**: `string`
 
-Defined in: [src/api.types.ts:494](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L494)
+Defined in: [src/api.types.ts:494](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L494)
 
 Идентификатор проведенного платежа. Присутствует только при успешном выполнении метода. Этот параметр соответствует параметру `operation_id` в методах [operation-history](https://yoomoney.ru/docs/wallet/user-account/operation-history) и [operation-details](https://yoomoney.ru/docs/wallet/user-account/operation-details) истории плательщика.
 
@@ -756,7 +756,7 @@ Defined in: [src/api.types.ts:494](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **status**: `"success"` \| `"refused"` \| `"in_progress"` \| `"ext_auth_required"` \| `"*"`
 
-Defined in: [src/api.types.ts:482](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L482)
+Defined in: [src/api.types.ts:482](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L482)
 
 Код результата выполнения операции. Возможные значения:
 - `success` — успешное выполнение (платеж проведен). Это конечное состояние платежа.
@@ -771,7 +771,7 @@ Defined in: [src/api.types.ts:482](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **RequestPaymentMoneySource** = `object`
 
-Defined in: [src/api.types.ts:346](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L346)
+Defined in: [src/api.types.ts:346](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L346)
 
 #### Properties
 
@@ -779,7 +779,7 @@ Defined in: [src/api.types.ts:346](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **cards**: `object`
 
-Defined in: [src/api.types.ts:353](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L353)
+Defined in: [src/api.types.ts:353](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L353)
 
 ###### allowed
 
@@ -801,7 +801,7 @@ Defined in: [src/api.types.ts:353](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **wallet**: `object`
 
-Defined in: [src/api.types.ts:347](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L347)
+Defined in: [src/api.types.ts:347](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L347)
 
 ###### allowed
 
@@ -815,7 +815,7 @@ Defined in: [src/api.types.ts:347](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **RequestPaymentParameters** = [`P2PPaymentRequest`](#p2ppaymentrequest) \| [`PhoneProviderPaymentRequest`](#phoneproviderpaymentrequest) \| \{[`key`: `string`]: `string`; `pattern_id`: `string`; \}
 
-Defined in: [src/api.types.ts:341](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L341)
+Defined in: [src/api.types.ts:341](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L341)
 
 ***
 
@@ -823,7 +823,7 @@ Defined in: [src/api.types.ts:341](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **RequestPaymentResponse** = `BaseApiErrors` & `object`
 
-Defined in: [src/api.types.ts:387](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.types.ts#L387)
+Defined in: [src/api.types.ts:387](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.types.ts#L387)
 
 #### Type declaration
 

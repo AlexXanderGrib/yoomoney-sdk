@@ -16,7 +16,7 @@ describe(API.name, () => {
       expect(instance.endpoint).toBe("https://yoomoney.ru/api");
     });
 
-    test.todo("Account info", async () => {
+    test("Account info", async () => {
       const data = await instance.accountInfo();
 
       expect(data).toMatchObject({
@@ -28,7 +28,7 @@ describe(API.name, () => {
       });
     });
 
-    test.todo("Operation History & Details", async () => {
+    test("Operation History & Details", async () => {
       const data = await instance.operationHistory();
       const operation = data.operations[0] as Operation;
 

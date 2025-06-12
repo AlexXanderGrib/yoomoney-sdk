@@ -10,7 +10,7 @@
 
 ### API
 
-Defined in: [src/api.ts:36](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L36)
+Defined in: [src/api.ts:36](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L36)
 
 Имплементирует [основное API YooMoney](https://yoomoney.ru/docs/wallet)
 
@@ -28,7 +28,7 @@ API
 
 > **new API**(`token`, `endpoint?`, `agent?`): [`API`](#api)
 
-Defined in: [src/api.ts:44](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L44)
+Defined in: [src/api.ts:44](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L44)
 
 Creates an instance of API.
 
@@ -64,13 +64,13 @@ API
 
 > `optional` **agent**: `any`
 
-Defined in: [src/api.ts:47](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L47)
+Defined in: [src/api.ts:47](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L47)
 
 ##### endpoint
 
 > **endpoint**: `string` = `"https://yoomoney.ru/api"`
 
-Defined in: [src/api.ts:46](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L46)
+Defined in: [src/api.ts:46](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L46)
 
 По умолчанию `https://yoomoney.ru/api`
 
@@ -78,7 +78,7 @@ Defined in: [src/api.ts:46](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/
 
 > **token**: `string`
 
-Defined in: [src/api.ts:45](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L45)
+Defined in: [src/api.ts:45](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L45)
 
 Токен авторизации пользователя
 
@@ -88,7 +88,7 @@ Defined in: [src/api.ts:45](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/
 
 > **accountInfo**(): `Promise`\<[`AccountInfoResponse`](api.types.md#accountinforesponse)\>
 
-Defined in: [src/api.ts:93](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L93)
+Defined in: [src/api.ts:93](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L93)
 
 Получение информации о состоянии счета пользователя.
 
@@ -106,7 +106,7 @@ Defined in: [src/api.ts:93](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/
 
 > **call**\<`T`\>(`method`, `parameters`): `Promise`\<`T`\>
 
-Defined in: [src/api.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L62)
+Defined in: [src/api.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L62)
 
 Позволяет совершить вызов произвольного метода API
 
@@ -142,7 +142,7 @@ Defined in: [src/api.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/
 
 > **incomingTransferAccept**(`parameters`): `Promise`\<[`IncomingTransferAcceptResponse`](api.types.md#incomingtransferacceptresponse)\>
 
-Defined in: [src/api.ts:191](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L191)
+Defined in: [src/api.ts:191](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L191)
 
 Прием входящих переводов, защищенных кодом протекции, и
 переводов до востребования.
@@ -173,7 +173,7 @@ Defined in: [src/api.ts:191](https://github.com/AlexXanderGrib/yoomoney-sdk/blob
 
 > **incomingTransferReject**(`parameters`): `Promise`\<[`IncomingTransferRejectResponse`](api.types.md#incomingtransferrejectresponse)\>
 
-Defined in: [src/api.ts:211](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L211)
+Defined in: [src/api.ts:211](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L211)
 
 Отмена входящих переводов, защищенных кодом протекции, и
 переводов до востребования. При отмене перевода он возвращается
@@ -201,7 +201,7 @@ Defined in: [src/api.ts:211](https://github.com/AlexXanderGrib/yoomoney-sdk/blob
 
 > **operationDetails**(`parameters`): `Promise`\<[`Operation`](api.types.md#operation)\>
 
-Defined in: [src/api.ts:125](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L125)
+Defined in: [src/api.ts:125](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L125)
 
 Позволяет получить детальную информацию об операции из истории.
 
@@ -227,7 +227,7 @@ Defined in: [src/api.ts:125](https://github.com/AlexXanderGrib/yoomoney-sdk/blob
 
 > **operationHistory**(`parameters?`): `Promise`\<[`OperationHistoryResponse`](api.types.md#operationhistoryresponse)\>
 
-Defined in: [src/api.ts:108](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L108)
+Defined in: [src/api.ts:108](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L108)
 
 Метод позволяет просматривать историю операций (полностью или частично) в постраничном режиме. Записи истории выдаются в обратном хронологическом порядке: от последних к более ранним.
 
@@ -253,7 +253,7 @@ Defined in: [src/api.ts:108](https://github.com/AlexXanderGrib/yoomoney-sdk/blob
 
 > **processPayment**(`parameters`): `Promise`\<[`ProcessPaymentResponse`](api.types.md#processpaymentresponse)\>
 
-Defined in: [src/api.ts:168](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L168)
+Defined in: [src/api.ts:168](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L168)
 
 Подтверждение платежа, ранее созданного методом
 [request-payment](https://yoomoney.ru/docs/wallet/process-payments/request-payment).
@@ -279,7 +279,7 @@ Defined in: [src/api.ts:168](https://github.com/AlexXanderGrib/yoomoney-sdk/blob
 
 > **requestPayment**(`parameters`): `Promise`\<[`RequestPaymentResponse`](api.types.md#requestpaymentresponse)\>
 
-Defined in: [src/api.ts:150](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L150)
+Defined in: [src/api.ts:150](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L150)
 
 Создание платежа, проверка параметров и возможности приема
 платежа магазином или перевода средств на счет пользователя
@@ -313,7 +313,7 @@ Defined in: [src/api.ts:150](https://github.com/AlexXanderGrib/yoomoney-sdk/blob
 
 ### YMApiError
 
-Defined in: [src/api.ts:8](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L8)
+Defined in: [src/api.ts:8](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L8)
 
 Ошибка, которую выбрасывает API при ошибочном ответе от сервера
 
@@ -327,7 +327,7 @@ Defined in: [src/api.ts:8](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2
 
 > **new YMApiError**(`response`): [`YMApiError`](#ymapierror)
 
-Defined in: [src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L15)
+Defined in: [src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L15)
 
 Объект ответа
 
@@ -351,19 +351,19 @@ Defined in: [src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/
 
 > **code**: `string`
 
-Defined in: [src/api.ts:9](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L9)
+Defined in: [src/api.ts:9](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L9)
 
 ##### response
 
 > **response**: `AnyRecord`
 
-Defined in: [src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L15)
+Defined in: [src/api.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L15)
 
 ***
 
 ### YMApiVoidResponseError
 
-Defined in: [src/api.ts:27](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/api.ts#L27)
+Defined in: [src/api.ts:27](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/api.ts#L27)
 
 Ошибка, если API возвращает пустую строку ответе
 Скорее всего это связано с отсутствием прав токена

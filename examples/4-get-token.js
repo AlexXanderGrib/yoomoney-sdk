@@ -1,6 +1,6 @@
-const inquirer = require("inquirer");
+const inquirer = require("inquirer").default;
 const express = require("express");
-const ngrok = require("ngrok");
+const untun = require("untun");
 const { API, Auth, AuthScope } = require("..");
 const { createServer } = require("http");
 
@@ -25,7 +25,8 @@ async function run() {
   });
 
   const redirectListener = "/ym";
-  const url = await ngrok.connect(port);
+  const tunnel = await untun.startTunnel({ port });
+  const url = await tunnel.getURL();
   const redirectUrl = new URL(redirectListener, url).toString();
 
   console.clear();
@@ -91,7 +92,7 @@ async function run() {
       message: "Идентификатор приложения (client_id)",
       type: "input",
       validate(value) {
-        return /^[A-F0-9]{64}$/.test(value);
+        return /^[A-F\d]{64}$/.test(value);
       }
     },
     {
@@ -99,7 +100,7 @@ async function run() {
       message: "OAuth2 client_secret",
       type: "input",
       validate(value) {
-        return /^[A-F0-9]{128}$/.test(value);
+        return /^[A-F\d]{128}$/.test(value);
       }
     }
   ]);
@@ -113,7 +114,7 @@ async function run() {
 
     const fail = (error) => {
       console.error(error);
-      return res.status(500).end(error.toString());
+      return res.status(500).json({ ok: false, error: error.toString() });
     };
 
     if (query.error) {
@@ -129,8 +130,8 @@ async function run() {
       console.log("Получен код подтверждения:", code);
       const token = await auth.exchangeCode2Token(query.code);
 
-      console.log("Получен токен:", token);
-      return res.status(200).end(token);
+      console.log("\n\n", "Получен токен:", token, "\n\n");
+      return res.status(200).json({ ok: true, token });
     } catch (error) {
       return fail(error);
     }
@@ -174,7 +175,7 @@ async function run() {
         message: "Введите дополнительные права токена через пробел",
         type: "input",
         filter(value) {
-          return value.replace(/\ +/g, " ").split(" ");
+          return value.split(/\s+/);
         },
         when: actions.includes("manual")
       },

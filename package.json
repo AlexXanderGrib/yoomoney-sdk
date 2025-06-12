@@ -2,66 +2,21 @@
   "name": "yoomoney-sdk",
   "version": "2.0.0",
   "description": "⭐ Typed YooMoney Wallet SDK for NodeJS. Supported API's: Auth, Wallet & Notifications",
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "typings": "./index.d.ts",
-  "module": "./index.mjs",
+  "main": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
   "type": "commonjs",
   "sideEffects": false,
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./index.d.ts",
-      "require": "./index.js",
-      "import": "./index.mjs"
-    },
-    "./api": {
-      "types": "./api.d.ts",
-      "require": "./api.js",
-      "import": "./api.mjs"
-    },
-    "./auth": {
-      "types": "./auth.d.ts",
-      "require": "./auth.js",
-      "import": "./auth.mjs"
-    },
-    "./notifications": {
-      "types": "./notifications.d.ts",
-      "require": "./notifications.js",
-      "import": "./notifications.mjs"
-    },
-    "./forms": {
-      "types": "./forms.d.ts",
-      "require": "./forms.js",
-      "import": "./forms.mjs"
-    },
-    "./types": {
-      "types": "./types.d.ts",
-      "require": "./types.js",
-      "import": "./types.mjs"
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.umd.js",
+      "import": "./dist/index.mjs"
     }
   },
   "publishConfig": {
     "access": "public"
-  },
-  "typesVersions": {
-    "*": {
-      "api": [
-        "./api.d.ts"
-      ],
-      "auth": [
-        "./auth.d.ts"
-      ],
-      "notifications": [
-        "./notifications.d.ts"
-      ],
-      "forms": [
-        "./forms.d.ts"
-      ],
-      "types": [
-        "./types.d.ts"
-      ]
-    }
   },
   "engines": {
     "node": ">=10"
@@ -93,19 +48,7 @@
     "README.md",
     "CONTRIBUTING.md",
     "LICENSE.txt",
-    "SECURITY.md",
-    "index.js",
-    "index.mjs",
-    "index.d.ts",
-    "api.js",
-    "api.mjs",
-    "api.d.ts",
-    "auth.js",
-    "auth.mjs",
-    "auth.d.ts",
-    "notifications.js",
-    "notifications.mjs",
-    "notifications.d.ts"
+    "SECURITY.md"
   ],
   "repository": {
     "type": "git",

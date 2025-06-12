@@ -10,7 +10,7 @@
 
 ### PaymentFormBuilder
 
-Defined in: [src/payment-form-builder.ts:162](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L162)
+Defined in: [src/payment-form-builder.ts:162](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L162)
 
 Генерирует HTML формы для переводов
 
@@ -24,7 +24,7 @@ PaymentFormBuilder
 
 > **new PaymentFormBuilder**(`config?`): [`PaymentFormBuilder`](#paymentformbuilder)
 
-Defined in: [src/payment-form-builder.ts:175](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L175)
+Defined in: [src/payment-form-builder.ts:175](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L175)
 
 Creates an instance of PaymentFormBuilder.
 
@@ -50,7 +50,7 @@ PaymentFormBuilder
 
 > `readonly` **config**: [`FormConfig`](#formconfig)
 
-Defined in: [src/payment-form-builder.ts:176](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L176)
+Defined in: [src/payment-form-builder.ts:176](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L176)
 
 Изначальные настройки формы
 
@@ -58,7 +58,7 @@ Defined in: [src/payment-form-builder.ts:176](https://github.com/AlexXanderGrib/
 
 > `readonly` **setComment**: (`value`) => `this`
 
-Defined in: [src/payment-form-builder.ts:244](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L244)
+Defined in: [src/payment-form-builder.ts:244](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L244)
 
 ###### Parameters
 
@@ -74,7 +74,7 @@ Defined in: [src/payment-form-builder.ts:244](https://github.com/AlexXanderGrib/
 
 > `readonly` **setFormComment**: (`value`) => `this`
 
-Defined in: [src/payment-form-builder.ts:241](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L241)
+Defined in: [src/payment-form-builder.ts:241](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L241)
 
 ###### Parameters
 
@@ -90,7 +90,7 @@ Defined in: [src/payment-form-builder.ts:241](https://github.com/AlexXanderGrib/
 
 > `readonly` **setLabel**: (`value`) => `this`
 
-Defined in: [src/payment-form-builder.ts:243](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L243)
+Defined in: [src/payment-form-builder.ts:243](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L243)
 
 ###### Parameters
 
@@ -106,7 +106,7 @@ Defined in: [src/payment-form-builder.ts:243](https://github.com/AlexXanderGrib/
 
 > `readonly` **setPaymentType**: (`value`) => `this`
 
-Defined in: [src/payment-form-builder.ts:238](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L238)
+Defined in: [src/payment-form-builder.ts:238](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L238)
 
 ###### Parameters
 
@@ -122,7 +122,7 @@ Defined in: [src/payment-form-builder.ts:238](https://github.com/AlexXanderGrib/
 
 > `readonly` **setQuickPayForm**: (`value`) => `this`
 
-Defined in: [src/payment-form-builder.ts:239](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L239)
+Defined in: [src/payment-form-builder.ts:239](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L239)
 
 ###### Parameters
 
@@ -138,7 +138,7 @@ Defined in: [src/payment-form-builder.ts:239](https://github.com/AlexXanderGrib/
 
 > `readonly` **setShortDest**: (`value`) => `this`
 
-Defined in: [src/payment-form-builder.ts:242](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L242)
+Defined in: [src/payment-form-builder.ts:242](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L242)
 
 ###### Parameters
 
@@ -154,7 +154,7 @@ Defined in: [src/payment-form-builder.ts:242](https://github.com/AlexXanderGrib/
 
 > `readonly` **setTargets**: (`value`) => `this`
 
-Defined in: [src/payment-form-builder.ts:237](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L237)
+Defined in: [src/payment-form-builder.ts:237](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L237)
 
 ###### Parameters
 
@@ -170,7 +170,7 @@ Defined in: [src/payment-form-builder.ts:237](https://github.com/AlexXanderGrib/
 
 > `readonly` **setType**: (`value`) => `this`
 
-Defined in: [src/payment-form-builder.ts:240](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L240)
+Defined in: [src/payment-form-builder.ts:240](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L240)
 
 ###### Parameters
 
@@ -188,7 +188,7 @@ Defined in: [src/payment-form-builder.ts:240](https://github.com/AlexXanderGrib/
 
 > `private` **\_makeSetter**\<`T`\>(`field`): (`value`) => `this`
 
-Defined in: [src/payment-form-builder.ts:192](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L192)
+Defined in: [src/payment-form-builder.ts:192](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L192)
 
 Генерирует стандартные сеттеры
 
@@ -226,7 +226,7 @@ PaymentFromBuilder
 
 > **buildHtml**(`fullPage?`): `string`
 
-Defined in: [src/payment-form-builder.ts:295](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L295)
+Defined in: [src/payment-form-builder.ts:295](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L295)
 
 Генерирует HTML на основе заданных параметров
 
@@ -248,7 +248,7 @@ PaymentFromBuilder
 
 > **requireAddress**(`doRequire?`): `this`
 
-Defined in: [src/payment-form-builder.ts:263](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L263)
+Defined in: [src/payment-form-builder.ts:263](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L263)
 
 ###### Parameters
 
@@ -268,7 +268,7 @@ PaymentFromBuilder
 
 > **requireEmail**(`doRequire?`): `this`
 
-Defined in: [src/payment-form-builder.ts:274](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L274)
+Defined in: [src/payment-form-builder.ts:274](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L274)
 
 ###### Parameters
 
@@ -288,7 +288,7 @@ PaymentFromBuilder
 
 > **requireFio**(`doRequire?`): `this`
 
-Defined in: [src/payment-form-builder.ts:252](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L252)
+Defined in: [src/payment-form-builder.ts:252](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L252)
 
 ###### Parameters
 
@@ -308,7 +308,7 @@ PaymentFromBuilder
 
 > **requirePhone**(`doRequire?`): `this`
 
-Defined in: [src/payment-form-builder.ts:284](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L284)
+Defined in: [src/payment-form-builder.ts:284](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L284)
 
 ###### Parameters
 
@@ -328,7 +328,7 @@ PaymentFromBuilder
 
 > **setAmount**(`amount`): `this`
 
-Defined in: [src/payment-form-builder.ts:205](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L205)
+Defined in: [src/payment-form-builder.ts:205](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L205)
 
 Задаёт сумму платежа
 
@@ -352,7 +352,7 @@ PaymentFromBuilder
 
 > **setReceiver**(`receiver`): `this`
 
-Defined in: [src/payment-form-builder.ts:220](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L220)
+Defined in: [src/payment-form-builder.ts:220](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L220)
 
 Задаёт получателя платежа
 
@@ -376,7 +376,7 @@ PaymentFromBuilder
 
 > **setSuccessURL**(`url`): `this`
 
-Defined in: [src/payment-form-builder.ts:232](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L232)
+Defined in: [src/payment-form-builder.ts:232](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L232)
 
 Задаёт URL перенаправления после успешного платежа
 
@@ -402,7 +402,7 @@ PaymentFromBuilder
 
 > **FormConfig** = `object`
 
-Defined in: [src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L11)
+Defined in: [src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L11)
 
 #### Properties
 
@@ -410,7 +410,7 @@ Defined in: [src/payment-form-builder.ts:11](https://github.com/AlexXanderGrib/y
 
 > `optional` **comment**: `string`
 
-Defined in: [src/payment-form-builder.ts:75](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L75)
+Defined in: [src/payment-form-builder.ts:75](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L75)
 
 Поле, в котором можно передать комментарий отправителя перевода. (До 200 символов)
 
@@ -422,7 +422,7 @@ Defined in: [src/payment-form-builder.ts:75](https://github.com/AlexXanderGrib/y
 
 > `optional` **formComment**: `string`
 
-Defined in: [src/payment-form-builder.ts:57](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L57)
+Defined in: [src/payment-form-builder.ts:57](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L57)
 
 Название перевода в истории отправителя (для переводов из кошелька или с привязанной карты). Отображается в кошельке отправителя.
 
@@ -436,7 +436,7 @@ Defined in: [src/payment-form-builder.ts:57](https://github.com/AlexXanderGrib/y
 
 > `optional` **label**: `string`
 
-Defined in: [src/payment-form-builder.ts:67](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L67)
+Defined in: [src/payment-form-builder.ts:67](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L67)
 
 Метка, которую сайт или приложение присваивает конкретному переводу. Например, в качестве метки можно указывать код или идентификатор заказа. (До 64 символов)
 
@@ -444,7 +444,7 @@ Defined in: [src/payment-form-builder.ts:67](https://github.com/AlexXanderGrib/y
 
 > `optional` **needAddress**: `boolean`
 
-Defined in: [src/payment-form-builder.ts:110](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L110)
+Defined in: [src/payment-form-builder.ts:110](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L110)
 
 Нужен адрес отправителя.
 
@@ -456,7 +456,7 @@ Defined in: [src/payment-form-builder.ts:110](https://github.com/AlexXanderGrib/
 
 > `optional` **needEmail**: `boolean`
 
-Defined in: [src/payment-form-builder.ts:94](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L94)
+Defined in: [src/payment-form-builder.ts:94](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L94)
 
 Нужна электронная почты отправителя.
 
@@ -468,7 +468,7 @@ Defined in: [src/payment-form-builder.ts:94](https://github.com/AlexXanderGrib/y
 
 > `optional` **needFio**: `boolean`
 
-Defined in: [src/payment-form-builder.ts:86](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L86)
+Defined in: [src/payment-form-builder.ts:86](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L86)
 
 Нужны ФИО отправителя.
 
@@ -480,7 +480,7 @@ Defined in: [src/payment-form-builder.ts:86](https://github.com/AlexXanderGrib/y
 
 > `optional` **needPhone**: `boolean`
 
-Defined in: [src/payment-form-builder.ts:102](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L102)
+Defined in: [src/payment-form-builder.ts:102](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L102)
 
 Нужен телефон отправителя.
 
@@ -492,7 +492,7 @@ Defined in: [src/payment-form-builder.ts:102](https://github.com/AlexXanderGrib/
 
 > **paymentType**: `"PC"` \| `"AC"` \| `"MC"`
 
-Defined in: [src/payment-form-builder.ts:43](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L43)
+Defined in: [src/payment-form-builder.ts:43](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L43)
 
 Способ оплаты. Возможные значения:
 
@@ -506,7 +506,7 @@ Defined in: [src/payment-form-builder.ts:43](https://github.com/AlexXanderGrib/y
 
 > **quickPayForm**: `"shop"` \| `"small"` \| `"donate"` \| `"button"`
 
-Defined in: [src/payment-form-builder.ts:25](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L25)
+Defined in: [src/payment-form-builder.ts:25](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L25)
 
 Возможные значения:
 
@@ -518,7 +518,7 @@ Defined in: [src/payment-form-builder.ts:25](https://github.com/AlexXanderGrib/y
 
 > **receiver**: `string`
 
-Defined in: [src/payment-form-builder.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L15)
+Defined in: [src/payment-form-builder.ts:15](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L15)
 
 Номер кошелька ЮMoney, на который нужно зачислять деньги отправителей.
 
@@ -526,7 +526,7 @@ Defined in: [src/payment-form-builder.ts:15](https://github.com/AlexXanderGrib/y
 
 > `optional` **shortDest**: `string`
 
-Defined in: [src/payment-form-builder.ts:65](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L65)
+Defined in: [src/payment-form-builder.ts:65](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L65)
 
 Название перевода на странице подтверждения. Рекомендуем делать его таким же, как `formComment`.
 
@@ -538,7 +538,7 @@ Defined in: [src/payment-form-builder.ts:65](https://github.com/AlexXanderGrib/y
 
 > `optional` **successURL**: `string`
 
-Defined in: [src/payment-form-builder.ts:78](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L78)
+Defined in: [src/payment-form-builder.ts:78](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L78)
 
 URL-адрес для редиректа после совершения перевода.
 
@@ -546,7 +546,7 @@ URL-адрес для редиректа после совершения пер�
 
 > **sum**: `number`
 
-Defined in: [src/payment-form-builder.ts:48](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L48)
+Defined in: [src/payment-form-builder.ts:48](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L48)
 
 Сумма перевода (спишется с отправителя).
 
@@ -554,7 +554,7 @@ Defined in: [src/payment-form-builder.ts:48](https://github.com/AlexXanderGrib/y
 
 > `optional` **targets**: `string`
 
-Defined in: [src/payment-form-builder.ts:32](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L32)
+Defined in: [src/payment-form-builder.ts:32](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L32)
 
 Назначение платежа. (До 150 символов)
 
@@ -568,7 +568,7 @@ Defined in: [src/payment-form-builder.ts:32](https://github.com/AlexXanderGrib/y
 
 > `const` **PaymentType**: `object`
 
-Defined in: [src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/2e55c01d51d7f7d38a32f3dfa278fe1803b2676d/src/payment-form-builder.ts#L5)
+Defined in: [src/payment-form-builder.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/a9d573df5ea4c9197d8af982182e67a211c56b05/src/payment-form-builder.ts#L5)
 
 #### Type declaration
 
