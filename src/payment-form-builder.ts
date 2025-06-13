@@ -1,11 +1,22 @@
 import { FormBuilder } from "redirect-form-builder";
 import type { URL } from "url";
+import type { AutoComplete } from "./autocomplete";
 
 export const PaymentType = {
   FromCard: "AC",
   FromWallet: "PC",
+
+  /** @deprecated **Вариант игнорируется ЮMoney**. Используйте {@link PaymentType.FromCard} (`"AC"`) */
   FromMobileBalance: "MC"
 } as const;
+
+export type PaymentType = (typeof PaymentType)[keyof typeof PaymentType];
+
+export const QuickPayForm = {
+  Button: "button"
+} as const;
+
+export type QuickPayForm = (typeof QuickPayForm)[keyof typeof QuickPayForm];
 
 export type FormConfig = {
   /**
@@ -21,12 +32,12 @@ export type FormConfig = {
    *
    *
    */
-  quickPayForm: "shop" | "small" | "donate" | "button";
+  quickPayForm?: AutoComplete<QuickPayForm>;
 
   /**
    * Назначение платежа. (До 150 символов)
    *
-   * @deprecated **Поле игнорируется YooMoney**
+   * @deprecated **Поле игнорируется ЮMoney**
    */
   targets?: string;
 
@@ -37,9 +48,8 @@ export type FormConfig = {
    *
    * `AC` — с банковской карты;
    *
-   * `MC` — с баланса мобильного. (больше недоступна)
    */
-  paymentType: "PC" | "AC" | "MC";
+  paymentType?: AutoComplete<PaymentType>;
 
   /**
    * Сумма перевода (спишется с отправителя).
@@ -51,14 +61,14 @@ export type FormConfig = {
    *
    * Удобнее всего формировать его из названий магазина и товара. Например: `Мой магазин: валенки белые`
    *
-   * @deprecated **Поле игнорируется YooMoney**
+   * @deprecated **Поле игнорируется ЮMoney**
    */
   formComment?: string;
 
   /**
    * Название перевода на странице подтверждения. Рекомендуем делать его таким же, как `formComment`.
    *
-   * @deprecated **Поле игнорируется YooMoney**
+   * @deprecated **Поле игнорируется ЮMoney**
    *
    */
   shortDest?: string;
@@ -68,7 +78,7 @@ export type FormConfig = {
   /**
    * Поле, в котором можно передать комментарий отправителя перевода. (До 200 символов)
    *
-   * @deprecated **Поле игнорируется YooMoney**
+   * @deprecated **Поле игнорируется ЮMoney**
    *
    */
   comment?: string;
@@ -79,7 +89,7 @@ export type FormConfig = {
   /**
    * Нужны ФИО отправителя.
    *
-   * @deprecated **Поле игнорируется YooMoney**
+   * @deprecated **Поле игнорируется ЮMoney**
    *
    * */
   needFio?: boolean;
@@ -87,7 +97,7 @@ export type FormConfig = {
   /**
    *  Нужна электронная почты отправителя.
    *
-   * @deprecated **Поле игнорируется YooMoney**
+   * @deprecated **Поле игнорируется ЮMoney**
    *
    **/
   needEmail?: boolean;
@@ -95,7 +105,7 @@ export type FormConfig = {
   /**
    * Нужен телефон отправителя.
    *
-   * @deprecated **Поле игнорируется YooMoney**
+   * @deprecated **Поле игнорируется ЮMoney**
    *
    * */
   needPhone?: boolean;
@@ -103,7 +113,7 @@ export type FormConfig = {
   /**
    * Нужен адрес отправителя.
    *
-   * @deprecated **Поле игнорируется YooMoney**
+   * @deprecated **Поле игнорируется ЮMoney**
    *
    * */
   needAddress?: boolean;
@@ -136,8 +146,8 @@ type FormQueryObject = Record<
  */
 function convert(config: FormConfig): FormQueryObject {
   return {
-    "quickpay-form": config.quickPayForm,
-    paymentType: config.paymentType,
+    "quickpay-form": config.quickPayForm ?? "button",
+    paymentType: config.paymentType ?? PaymentType.FromCard,
     receiver: config.receiver,
     sum: config.sum.toString(),
     targets: config.targets,
@@ -153,32 +163,24 @@ function convert(config: FormConfig): FormQueryObject {
   };
 }
 
+const FORM_ACTION_URL = "https://yoomoney.ru/quickpay/confirm.xml";
+
 /**
  * Генерирует HTML формы для переводов
- * @export
  * @class PaymentFormBuilder
  */
 export class PaymentFormBuilder {
+  static readonly FORM_ACTION_URL = FORM_ACTION_URL;
+
   /**
    *
    * Creates an instance of PaymentFormBuilder.
    * @param {FormConfig} [config={
-   *   paymentType: "PC",
    *   receiver: "",
-   *   sum: 100,
-   *   quickPayForm: "shop",
-   *   targets: ""
+   *   sum: 10,
    * }] Изначальные настройки формы
-   * @memberof PaymentFormBuilder
    */
-  constructor(
-    public readonly config: FormConfig = {
-      paymentType: "PC",
-      receiver: "",
-      sum: 100,
-      quickPayForm: "button"
-    }
-  ) {}
+  constructor(public readonly config: FormConfig = { receiver: "", sum: 10 }) {}
 
   /**
    * Генерирует стандартные сеттеры
@@ -186,7 +188,6 @@ export class PaymentFormBuilder {
    * @param {string} field
    * @return {Function}
    * @private
-   * @memberof PaymentFromBuilder
    */
   private _makeSetter<T extends keyof FormConfig>(
     field: T
@@ -197,7 +198,7 @@ export class PaymentFormBuilder {
   /**
    * Задаёт сумму платежа
    *
-   * @memberof PaymentFromBuilder
+   * @alias {@link setSum}
    * @param {string | number} amount Сумма
    * @return {this}
    */
@@ -210,9 +211,23 @@ export class PaymentFormBuilder {
   }
 
   /**
+   * Задаёт сумму платежа
+   *
+   * @alias {@link setAmount}
+   * @param {string | number} amount Сумма
+   * @return {this}
+   */
+  setSum(amount: number | string): this {
+    this.config.sum = Number.parseFloat(
+      Number.parseFloat(amount.toString()).toFixed(2)
+    );
+
+    return this;
+  }
+
+  /**
    * Задаёт получателя платежа
    *
-   * @memberof PaymentFromBuilder
    * @param {string | number} receiver Получатель
    * @return {this}
    */
@@ -224,7 +239,6 @@ export class PaymentFormBuilder {
   /**
    * Задаёт URL перенаправления после успешного платежа
    *
-   * @memberof PaymentFromBuilder
    * @param {string | URL} url URL
    * @return {this}
    */
@@ -233,18 +247,22 @@ export class PaymentFormBuilder {
     return this;
   }
 
-  readonly setTargets = this._makeSetter("targets");
-  readonly setPaymentType = this._makeSetter("paymentType");
   readonly setQuickPayForm = this._makeSetter("quickPayForm");
-  readonly setType = this._makeSetter("quickPayForm");
-  readonly setFormComment = this._makeSetter("formComment");
-  readonly setShortDest = this._makeSetter("shortDest");
+  readonly setPaymentType = this._makeSetter("paymentType");
   readonly setLabel = this._makeSetter("label");
+
+  /** @deprecated **Поле игнорируется ЮMoney** */
+  readonly setTargets = this._makeSetter("targets");
+  /** @deprecated **Поле игнорируется ЮMoney** */
+  readonly setFormComment = this._makeSetter("formComment");
+  /** @deprecated **Поле игнорируется ЮMoney** */
+  readonly setShortDest = this._makeSetter("shortDest");
+  /** @deprecated **Поле игнорируется ЮMoney** */
   readonly setComment = this._makeSetter("comment");
 
   /**
+   * @deprecated **Поле игнорируется ЮMoney**
    *
-   * @memberof PaymentFromBuilder
    * @param {boolean} [doRequire=true]
    * @return {this}
    */
@@ -254,8 +272,8 @@ export class PaymentFormBuilder {
   }
 
   /**
+   * @deprecated **Поле игнорируется ЮMoney**
    *
-   * @memberof PaymentFromBuilder
    * @param {boolean} [doRequire=true]
    * @return {this}
    */
@@ -265,8 +283,8 @@ export class PaymentFormBuilder {
   }
 
   /**
+   * @deprecated **Поле игнорируется ЮMoney**
    *
-   * @memberof PaymentFromBuilder
    * @param {boolean} [doRequire=true]
    * @return {this}
    */
@@ -276,7 +294,8 @@ export class PaymentFormBuilder {
   }
 
   /**
-   * @memberof PaymentFromBuilder
+   * @deprecated **Поле игнорируется ЮMoney**
+   *
    * @param {boolean} [doRequire=true]
    * @return {this}
    */
@@ -287,15 +306,11 @@ export class PaymentFormBuilder {
 
   /**
    * Генерирует HTML на основе заданных параметров
-   * @memberof PaymentFromBuilder
    * @param {boolean} [fullPage=false]
    * @return {string}
    */
   buildHtml(fullPage = false): string {
-    return new FormBuilder(
-      "https://yoomoney.ru/quickpay/confirm.xml",
-      "POST",
-      convert(this.config)
-    ).buildHtml(fullPage);
+    const fields = convert(this.config);
+    return new FormBuilder(FORM_ACTION_URL, "POST", fields).buildHtml(fullPage);
   }
 }

@@ -168,18 +168,20 @@ function promise<T extends (...parameters: any) => any>(function_: T) {
   ) => ReturnType<T> extends Promise<any> ? ReturnType<T> : Promise<ReturnType<T>>;
 }
 
+const signatureFields =
+  "notification_type&operation_id&amount&currency&datetime&sender&codepro&notification_secret&label".split(
+    "&"
+  );
+
 /**
  * Класс, который реализует [механизм проверки уведомлений от YooMoney](https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security)
  *
  * @see {@link https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security|Описание механизма}
- * @export
- * @class NotificationChecker
  */
 export class NotificationChecker {
   /**
    * Creates an instance of NotificationChecker.
    * @param {string} secret Секретное слово
-   * @memberof NotificationChecker
    */
   constructor(private readonly secret: string) {}
 
@@ -189,7 +191,6 @@ export class NotificationChecker {
    * @throws {YMNotificationError} Если хеш уведомления не совпадает
    * @param {Object} notification Объект уведомления
    * @return {NotificationDTO}
-   * @memberof NotificationChecker
    */
   check(notification: Record<keyof NotificationDTO, string>): NotificationDTO {
     const notificationWithSecret = {
@@ -197,18 +198,17 @@ export class NotificationChecker {
       notification_secret: this.secret
     };
 
-    const pattern =
-      "notification_type&operation_id&amount&currency&datetime&sender&codepro&notification_secret&label";
-    const signature = pattern
-      .split("&")
+    const signature = signatureFields
+
       .map(
         (key) => notificationWithSecret[key as keyof typeof notificationWithSecret]
       )
       .join("&");
 
     const hash = createHash("sha1").update(signature).digest();
+    const original = Buffer.from(notification.sha1_hash, "hex");
 
-    if (!timingSafeEqual(hash, Buffer.from(notification.sha1_hash, "hex"))) {
+    if (!timingSafeEqual(hash, original)) {
       throw new YMNotificationError(`Notification hash mismatch`);
     }
 
@@ -219,9 +219,9 @@ export class NotificationChecker {
         notification.notification_type as NotificationDTO["notification_type"],
       withdraw_amount: Number.parseFloat(notification.withdraw_amount) || 0,
       currency: notification.currency as NotificationDTO["currency"],
-      codepro: notification.codepro !== "false",
-      test_notification: Boolean(notification.test_notification),
-      unaccepted: Boolean(notification.unaccepted)
+      codepro: notification.codepro === "true",
+      test_notification: notification.test_notification === "true",
+      unaccepted: notification.unaccepted === "true"
     };
   }
 
@@ -234,7 +234,6 @@ export class NotificationChecker {
    *
    * @param {Object} [options={}] Параметры обработки запроса
    * @param {boolean} [options.memo=true] Флаг для включения/отключения пропуска повторяющихся запросов, если один из них был успешно обработан
-   * @memberof NotificationChecker
    * @param {RequestHandler<Record<string, string>, any, NotificationDTO>=} actualHandler
    * @return {RequestHandler}
    *

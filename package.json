@@ -1,6 +1,6 @@
 {
   "name": "yoomoney-sdk",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "⭐ Typed YooMoney Wallet SDK for NodeJS. Supported API's: Auth, Wallet & Notifications",
   "main": "./dist/index.umd.js",
   "types": "./dist/index.d.ts",
@@ -34,9 +34,6 @@
     "build:docs": "typedoc",
     "build": "npm run build:dist && npm run build:docs",
     "prepack": "npm run build",
-    "prepublishOnly": "npm run generate-lock-files",
-    "generate-lock-files": "npm i && yarn install",
-    "glf": "npm run generate-lock-files",
     "lint": "eslint src/*",
     "prettify": "prettier --write src/**/*"
   },

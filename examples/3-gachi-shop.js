@@ -18,24 +18,18 @@ const port = parseInt(process.env.PORT, 30);
 
 app.get("/pay", (_req, res) => {
   const builder = new YMPaymentFromBuilder({
-    quickPayForm: "shop",
     // 300 баксов
     sum: (300 * 74.3).toFixed(2),
-
-    // Делаем перенаправление, чтобы пользователь вернулся в магазин
-    // после покупки, обрабатываем на 48 строке
-    successURL: `http://localhost:${port}/success`,
-
-    // Просим деньги с карты, можно передать просто строку "AC"
-    paymentType: YMFormPaymentType.FromCard,
 
     // Номер кошелька получателя (ваш)
     receiver: "4100117723869225",
 
     // Добавляем метку, чтобы потом вычленить в уведомлении
-    label: "payment-001"
+    label: "payment-001",
 
-    // comment: "За ♂️Fisting♂️"
+    // Делаем перенаправление, чтобы пользователь вернулся в магазин
+    // после покупки, обрабатываем на 48 строке
+    successURL: `http://localhost:${port}/success`
   });
 
   res.writeHead(200, "OK", {

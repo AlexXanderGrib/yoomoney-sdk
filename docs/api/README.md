@@ -106,27 +106,7 @@ const api = new API(process.env.YOOMONEY_TOKEN);
 api.accountInfo().then((info) => console.log(info));
 ```
 
-## Лицензия
+## Информация
 
-Проект распространяется под лицензией MIT. Смотрите [LICENSE.txt](_media/LICENSE.txt)
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fyoomoney-sdk.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fyoomoney-sdk?ref=badge_large)
-
-## ❤️ Содействие (Contributing)
-
-_Что делаем?_:
-
-1. ⁉️ Не стесняемся писать [Issue](https://github.com/AlexXanderGrib/yoomoney-sdk/issues/new)
-2. 🛠️ Если хотите что-то поправить следуйте гайду [`CONTRIBUTING.md`](_media/CONTRIBUTING.md)
-3. 💸 Донатим 👉 https://sobe.ru/na/yoomoney_sdk
-4. 🌟 Ставим [звёздочки](https://github.com/AlexXanderGrib/yoomoney-sdk/stargazers), если библиотека понравилась.
-
-## 🙋 Поддержка
-
-Библиотека - маленькая, я отвечаю быстро. Не стесняйтесь писать Issue, даже если кажется что они глупые. Если что, можете писать в
-
-**Telegram: [@AlexXanderGrib](https://t.me/AlexXanderGrib)**
-
-## Интересует приём и отправка P2P платежей по РФ на NodeJS?
-
-У нас есть точно такое-же типизированное SDK для QIWI 👉 [github.com/AlexXanderGrib/node-qiwi-sdk](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+- Лицензия: [MIT](_media/LICENSE.txt)
+- Поддержка: [Telegram - @AlexXanderGrib](https://t.me/AlexXanderGrib)

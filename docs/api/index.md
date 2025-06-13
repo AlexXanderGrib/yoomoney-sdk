@@ -40,7 +40,7 @@ Re-exports [FormConfig](payment-form-builder.md#formconfig)
 
 ### FormPaymentType
 
-Renames and re-exports [PaymentType](payment-form-builder.md#paymenttype-1)
+Renames and re-exports [PaymentType](payment-form-builder.md#paymenttype-2)
 
 ***
 
@@ -118,7 +118,7 @@ Re-exports [PaymentFormBuilder](payment-form-builder.md#paymentformbuilder)
 
 ### PaymentType
 
-Re-exports [PaymentType](payment-form-builder.md#paymenttype-1)
+Re-exports [PaymentType](payment-form-builder.md#paymenttype-2)
 
 ***
 
@@ -196,7 +196,7 @@ Renames and re-exports [FormConfig](payment-form-builder.md#formconfig)
 
 ### YMFormPaymentType
 
-Renames and re-exports [PaymentType](payment-form-builder.md#paymenttype-1)
+Renames and re-exports [PaymentType](payment-form-builder.md#paymenttype-2)
 
 ***
 
@@ -221,15 +221,3 @@ Re-exports [YMNotificationError](notifications.md#ymnotificationerror)
 ### YMPaymentFormBuilder
 
 Renames and re-exports [PaymentFormBuilder](payment-form-builder.md#paymentformbuilder)
-
-***
-
-### YMPaymentFromBuilder
-
-Renames and re-exports [PaymentFormBuilder](payment-form-builder.md#paymentformbuilder)
-
-***
-
-### ymTypes
-
-Renames and re-exports [api.types](api.types.md)

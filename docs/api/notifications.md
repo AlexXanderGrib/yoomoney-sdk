@@ -10,7 +10,7 @@
 
 ### NotificationChecker
 
-Defined in: [notifications.ts:178](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L178)
+Defined in: [notifications.ts:181](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L181)
 
 Класс, который реализует [механизм проверки уведомлений от YooMoney](https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security)
 
@@ -18,17 +18,13 @@ Defined in: [notifications.ts:178](https://github.com/AlexXanderGrib/yoomoney-sd
 
 [механизма](https://yoomoney.ru/docs/wallet/using-api/notification-p2p-incoming#security|Описание)
 
-#### Export
-
-NotificationChecker
-
 #### Constructors
 
 ##### Constructor
 
 > **new NotificationChecker**(`secret`): [`NotificationChecker`](#notificationchecker)
 
-Defined in: [notifications.ts:184](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L184)
+Defined in: [notifications.ts:186](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L186)
 
 Creates an instance of NotificationChecker.
 
@@ -44,17 +40,13 @@ Creates an instance of NotificationChecker.
 
 [`NotificationChecker`](#notificationchecker)
 
-###### Memberof
-
-NotificationChecker
-
 #### Properties
 
 ##### secret
 
 > `private` `readonly` **secret**: `string`
 
-Defined in: [notifications.ts:184](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L184)
+Defined in: [notifications.ts:186](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L186)
 
 Секретное слово
 
@@ -64,7 +56,7 @@ Defined in: [notifications.ts:184](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **check**(`notification`): [`NotificationDTO`](#notificationdto)
 
-Defined in: [notifications.ts:194](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L194)
+Defined in: [notifications.ts:195](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L195)
 
 Проверяет полученное уведомление и возвращает типизированную версию
 
@@ -84,15 +76,11 @@ Defined in: [notifications.ts:194](https://github.com/AlexXanderGrib/yoomoney-sd
 
 Если хеш уведомления не совпадает
 
-###### Memberof
-
-NotificationChecker
-
 ##### ~~middleware()~~
 
 > **middleware**(`options?`, `actualHandler?`): `RequestHandler`
 
-Defined in: [notifications.ts:270](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L270)
+Defined in: [notifications.ts:269](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L269)
 
 Упрощает интеграцию с `express`
 
@@ -151,15 +139,11 @@ app.use((error, request, response, next) => {
 
 - Это middleware кидает ошибки, позаботьтесь об их обработке
 
-###### Memberof
-
-NotificationChecker
-
 ***
 
 ### YMNotificationError
 
-Defined in: [notifications.ts:140](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L140)
+Defined in: [notifications.ts:140](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L140)
 
 Ошибка проверки уведомления от YooMoney
 
@@ -173,7 +157,7 @@ Defined in: [notifications.ts:140](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **new YMNotificationError**(`message`): [`YMNotificationError`](#ymnotificationerror)
 
-Defined in: [notifications.ts:141](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L141)
+Defined in: [notifications.ts:141](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L141)
 
 ###### Parameters
 
@@ -195,7 +179,7 @@ Defined in: [notifications.ts:141](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **NotificationDTO** = `object`
 
-Defined in: [notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L5)
+Defined in: [notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L5)
 
 #### Properties
 
@@ -203,7 +187,7 @@ Defined in: [notifications.ts:5](https://github.com/AlexXanderGrib/yoomoney-sdk/
 
 > **amount**: `number`
 
-Defined in: [notifications.ts:17](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L17)
+Defined in: [notifications.ts:17](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L17)
 
 Сумма, которая зачислена на счет получателя.
 
@@ -211,7 +195,7 @@ Defined in: [notifications.ts:17](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **building**: `string`
 
-Defined in: [notifications.ts:113](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L113)
+Defined in: [notifications.ts:113](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L113)
 
 Дом.
 
@@ -223,7 +207,7 @@ Defined in: [notifications.ts:113](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **city**: `string`
 
-Defined in: [notifications.ts:99](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L99)
+Defined in: [notifications.ts:99](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L99)
 
 Город.
 
@@ -235,7 +219,7 @@ Defined in: [notifications.ts:99](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **codepro**: `boolean`
 
-Defined in: [notifications.ts:39](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L39)
+Defined in: [notifications.ts:39](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L39)
 
 Признак того, что перевод защищен кодом протекции. В ЮMoney больше нельзя делать переводы с кодом протекции, поэтому параметр всегда имеет значение `false`.
 
@@ -243,7 +227,7 @@ Defined in: [notifications.ts:39](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **currency**: `"643"`
 
-Defined in: [notifications.ts:23](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L23)
+Defined in: [notifications.ts:23](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L23)
 
 Код валюты — всегда `643` (рубль РФ согласно ISO 4217).
 
@@ -251,7 +235,7 @@ Defined in: [notifications.ts:23](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **datetime**: `string`
 
-Defined in: [notifications.ts:26](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L26)
+Defined in: [notifications.ts:26](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L26)
 
 Дата и время совершения перевода.
 
@@ -259,7 +243,7 @@ Defined in: [notifications.ts:26](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **email**: `string`
 
-Defined in: [notifications.ts:84](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L84)
+Defined in: [notifications.ts:84](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L84)
 
 Адрес электронной почты отправителя перевода. Если почта не
 запрашивалась, параметр содержит пустую строку.
@@ -272,7 +256,7 @@ Defined in: [notifications.ts:84](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **fathersname**: `string`
 
-Defined in: [notifications.ts:76](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L76)
+Defined in: [notifications.ts:76](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L76)
 
 Отчество.
 
@@ -284,7 +268,7 @@ Defined in: [notifications.ts:76](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **firstname**: `string`
 
-Defined in: [notifications.ts:69](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L69)
+Defined in: [notifications.ts:69](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L69)
 
 Имя.
 
@@ -296,7 +280,7 @@ Defined in: [notifications.ts:69](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **flat**: `string`
 
-Defined in: [notifications.ts:127](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L127)
+Defined in: [notifications.ts:127](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L127)
 
 Квартира.
 
@@ -308,7 +292,7 @@ Defined in: [notifications.ts:127](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **label**: `string`
 
-Defined in: [notifications.ts:44](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L44)
+Defined in: [notifications.ts:44](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L44)
 
 Метка платежа. Если ее нет, параметр содержит пустую строку.
 
@@ -316,7 +300,7 @@ Defined in: [notifications.ts:44](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **lastname**: `string`
 
-Defined in: [notifications.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L62)
+Defined in: [notifications.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L62)
 
 Фамилия.
 
@@ -328,7 +312,7 @@ Defined in: [notifications.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **notification\_type**: `"p2p-incoming"` \| `"card-incoming"`
 
-Defined in: [notifications.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L11)
+Defined in: [notifications.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L11)
 
 Для переводов из кошелька — `p2p-incoming`.
 
@@ -338,7 +322,7 @@ Defined in: [notifications.ts:11](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **operation\_id**: `string`
 
-Defined in: [notifications.ts:14](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L14)
+Defined in: [notifications.ts:14](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L14)
 
 Идентификатор операции в истории счета получателя.
 
@@ -346,7 +330,7 @@ Defined in: [notifications.ts:14](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **phone**: `string`
 
-Defined in: [notifications.ts:92](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L92)
+Defined in: [notifications.ts:92](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L92)
 
 Телефон отправителя перевода. Если телефон не запрашивался,
 параметр содержит пустую строку.
@@ -359,7 +343,7 @@ Defined in: [notifications.ts:92](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **sender**: `string`
 
-Defined in: [notifications.ts:34](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L34)
+Defined in: [notifications.ts:34](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L34)
 
 Для переводов из кошелька — номер кошелька отправителя.
 
@@ -370,7 +354,7 @@ Defined in: [notifications.ts:34](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **sha1\_hash**: `string`
 
-Defined in: [notifications.ts:47](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L47)
+Defined in: [notifications.ts:47](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L47)
 
 SHA-1 hash параметров уведомления.
 
@@ -378,7 +362,7 @@ SHA-1 hash параметров уведомления.
 
 > `optional` **street**: `string`
 
-Defined in: [notifications.ts:106](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L106)
+Defined in: [notifications.ts:106](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L106)
 
 Улица.
 
@@ -390,7 +374,7 @@ Defined in: [notifications.ts:106](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > `optional` **suite**: `string`
 
-Defined in: [notifications.ts:120](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L120)
+Defined in: [notifications.ts:120](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L120)
 
 Корпус.
 
@@ -402,13 +386,13 @@ Defined in: [notifications.ts:120](https://github.com/AlexXanderGrib/yoomoney-sd
 
 > **test\_notification**: `boolean`
 
-Defined in: [notifications.ts:49](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L49)
+Defined in: [notifications.ts:49](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L49)
 
 ##### unaccepted
 
 > **unaccepted**: `boolean`
 
-Defined in: [notifications.ts:55](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L55)
+Defined in: [notifications.ts:55](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L55)
 
 Перевод еще не зачислен. Получателю нужно освободить место
 в кошельке или использовать код протекции (если `codepro=true`).
@@ -417,7 +401,7 @@ Defined in: [notifications.ts:55](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > **withdraw\_amount**: `number`
 
-Defined in: [notifications.ts:20](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L20)
+Defined in: [notifications.ts:20](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L20)
 
 Сумма, которая списана со счета отправителя.
 
@@ -425,7 +409,7 @@ Defined in: [notifications.ts:20](https://github.com/AlexXanderGrib/yoomoney-sdk
 
 > `optional` **zip**: `string`
 
-Defined in: [notifications.ts:134](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/3f22d01285ab94aa36ece60656a052b88824f975/src/notifications.ts#L134)
+Defined in: [notifications.ts:134](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/notifications.ts#L134)
 
 Индекс.
 

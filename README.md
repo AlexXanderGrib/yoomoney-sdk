@@ -105,4 +105,4 @@ api.accountInfo().then((info) => console.log(info));
 ## Информация
 
 - Лицензия: [MIT](./LICENSE.txt)
-- Поддержка: [Telegram - @AlexXanderGrib](ttps://t.me/AlexXanderGrib)
+- Поддержка: [Telegram - @AlexXanderGrib](https://t.me/AlexXanderGrib)

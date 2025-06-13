@@ -27,7 +27,7 @@ export class YMApiError extends Error {
  */
 export class YMApiVoidResponseError extends Error {
   constructor() {
-    super();
+    super("YooMoney returned empty answer: method not allowed");
     this.name = "YMApiVoidResponseError";
   }
 }
@@ -36,7 +36,6 @@ export class YMApiVoidResponseError extends Error {
  * Имплементирует [основное API YooMoney](https://yoomoney.ru/docs/wallet)
  *
  * @see {@link https://yoomoney.ru/docs/wallet|Описание}
- * @export
  * @class API
  */
 export class API {
@@ -45,7 +44,6 @@ export class API {
    * @param {string} token Токен авторизации пользователя
    * @param {string=} [endpoint="https://yoomoney.ru/api"] По умолчанию `https://yoomoney.ru/api`
    * @param {Agent=} [agent]
-   * @memberof API
    */
   constructor(
     public token: string,
@@ -69,9 +67,7 @@ export class API {
     const data = await fetch(
       `${this.endpoint}/${method}`,
       parameters,
-      {
-        Authorization: `Bearer ${this.token}`
-      },
+      { Authorization: `Bearer ${this.token}` },
       this.agent
     );
 

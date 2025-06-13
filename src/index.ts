@@ -1,5 +1,4 @@
-export { API as YMApi, API as API, YMApiError, YMApiVoidResponseError } from "./api";
-export * as ymTypes from "./api.types";
+export { API as YMApi, API, YMApiError, YMApiVoidResponseError } from "./api";
 export * from "./api.types";
 export { Auth as YMAuth, Auth, YMAuthError, AuthScope } from "./auth";
 export {
@@ -15,7 +14,6 @@ export {
   PaymentType as YMFormPaymentType,
   PaymentType as FormPaymentType,
   PaymentType,
-  PaymentFormBuilder as YMPaymentFromBuilder,
   PaymentFormBuilder as YMPaymentFormBuilder,
   PaymentFormBuilder as PaymentFormBuilder
 } from "./payment-form-builder";
