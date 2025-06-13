@@ -15,5 +15,6 @@ export {
   PaymentType as FormPaymentType,
   PaymentType,
   PaymentFormBuilder as YMPaymentFormBuilder,
-  PaymentFormBuilder as PaymentFormBuilder
+  PaymentFormBuilder as PaymentFormBuilder,
+  QuickPayForm
 } from "./payment-form-builder";

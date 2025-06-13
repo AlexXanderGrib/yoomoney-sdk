@@ -170,8 +170,6 @@ const FORM_ACTION_URL = "https://yoomoney.ru/quickpay/confirm.xml";
  * @class PaymentFormBuilder
  */
 export class PaymentFormBuilder {
-  static readonly FORM_ACTION_URL = FORM_ACTION_URL;
-
   /**
    *
    * Creates an instance of PaymentFormBuilder.
@@ -180,7 +178,10 @@ export class PaymentFormBuilder {
    *   sum: 10,
    * }] Изначальные настройки формы
    */
-  constructor(public readonly config: FormConfig = { receiver: "", sum: 10 }) {}
+  constructor(
+    public readonly config: FormConfig = { receiver: "", sum: 10 },
+    public readonly url = FORM_ACTION_URL
+  ) {}
 
   /**
    * Генерирует стандартные сеттеры
@@ -311,6 +312,6 @@ export class PaymentFormBuilder {
    */
   buildHtml(fullPage = false): string {
     const fields = convert(this.config);
-    return new FormBuilder(FORM_ACTION_URL, "POST", fields).buildHtml(fullPage);
+    return new FormBuilder(this.url, "POST", fields).buildHtml(fullPage);
   }
 }
