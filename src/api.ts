@@ -3,9 +3,15 @@ import { type Agent, fetch, type QueryStringifiable } from "./fetch";
 import type { AnyRecord } from "./shared.types";
 
 /**
+ * Базовый класс для ошибок API
+ * Напрямую не инстанциируется, но может использоваться для проверки instanceof
+ */
+export class YMError extends Error {}
+
+/**
  * Ошибка, которую выбрасывает API при ошибочном ответе от сервера
  */
-export class YMApiError extends Error {
+export class YMApiError extends YMError {
   public code: string;
 
   /**
@@ -25,7 +31,7 @@ export class YMApiError extends Error {
  *
  * @see https://github.com/AlexXanderGrib/yoomoney-sdk/issues/4
  */
-export class YMApiVoidResponseError extends Error {
+export class YMApiVoidResponseError extends YMError {
   constructor() {
     super("YooMoney returned empty answer: method not allowed");
     this.name = "YMApiVoidResponseError";
