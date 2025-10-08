@@ -48,6 +48,7 @@ export default tseslint.config(
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/ban-types": "off",
       "new-cap": "off",
+      "unicorn/custom-error-definition": "off",
       "unicorn/prefer-node-protocol": "off",
       "unicorn/prefer-spread": "off",
       "security/detect-non-literal-fs-filename": "off",
