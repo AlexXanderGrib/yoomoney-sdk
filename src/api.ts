@@ -6,7 +6,12 @@ import type { AnyRecord } from "./shared.types";
  * Базовый класс для ошибок API
  * Напрямую не инстанциируется, но может использоваться для проверки instanceof
  */
-export class YMError extends Error {}
+export class YMError extends Error {
+  constructor(message: string, options?: ErrorOptions) {
+    super(message, options);
+    this.name = "YMError";
+  }
+}
 
 /**
  * Ошибка, которую выбрасывает API при ошибочном ответе от сервера
