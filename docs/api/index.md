@@ -140,6 +140,12 @@ Re-exports [ProcessPaymentResponse](api.types.md#processpaymentresponse)
 
 ***
 
+### QuickPayForm
+
+Re-exports [QuickPayForm](payment-form-builder.md#quickpayform-2)
+
+***
+
 ### RequestPaymentMoneySource
 
 Re-exports [RequestPaymentMoneySource](api.types.md#requestpaymentmoneysource)

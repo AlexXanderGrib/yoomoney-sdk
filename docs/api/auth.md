@@ -10,7 +10,7 @@
 
 ### Auth
 
-Defined in: [auth.ts:50](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L50)
+Defined in: [auth.ts:50](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L50)
 
 Реализует всё необходимое для [авторизации через YooMoney](https://yoomoney.ru/docs/wallet/using-api/authorization/basics)
 
@@ -25,7 +25,7 @@ Defined in: [auth.ts:50](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9
 
 > **new Auth**(`clientId`, `redirectUrl`, `clientSecret?`, `endpoint?`, `agent?`): [`Auth`](#auth)
 
-Defined in: [auth.ts:59](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L59)
+Defined in: [auth.ts:59](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L59)
 
 Creates an instance of Auth.
 
@@ -71,7 +71,7 @@ HTTP Agent для использования с Proxy
 
 > `optional` **agent**: `any`
 
-Defined in: [auth.ts:64](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L64)
+Defined in: [auth.ts:64](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L64)
 
 HTTP Agent для использования с Proxy
 
@@ -79,7 +79,7 @@ HTTP Agent для использования с Proxy
 
 > **clientId**: `string`
 
-Defined in: [auth.ts:60](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L60)
+Defined in: [auth.ts:60](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L60)
 
 ID приложения
 
@@ -87,7 +87,7 @@ ID приложения
 
 > `optional` **clientSecret**: `string`
 
-Defined in: [auth.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L62)
+Defined in: [auth.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L62)
 
 Секретное Слово
 
@@ -95,7 +95,7 @@ Defined in: [auth.ts:62](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9
 
 > **endpoint**: `string` = `"https://yoomoney.ru/oauth"`
 
-Defined in: [auth.ts:63](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L63)
+Defined in: [auth.ts:63](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L63)
 
 По умолчанию `https://yoomoney.ru/oauth`
 
@@ -103,7 +103,7 @@ Defined in: [auth.ts:63](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9
 
 > **redirectUrl**: `string`
 
-Defined in: [auth.ts:61](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L61)
+Defined in: [auth.ts:61](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L61)
 
 URL-перенаправления
 
@@ -113,7 +113,7 @@ URL-перенаправления
 
 > **exchangeCode2Token**(`code`): `Promise`\<`string`\>
 
-Defined in: [auth.ts:118](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L118)
+Defined in: [auth.ts:118](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L118)
 
 Обменивает временный токен на постоянный токен авторизации
 
@@ -137,7 +137,7 @@ Defined in: [auth.ts:118](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba
 
 > **getAuthForm**(`scope`, `instanceName?`): `string`
 
-Defined in: [auth.ts:74](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L74)
+Defined in: [auth.ts:74](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L74)
 
 Генерирует html-форму перенаправления пользователя на авторизацию
 
@@ -159,7 +159,7 @@ Defined in: [auth.ts:74](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9
 
 > **getAuthUrl**(`scope`, `instanceName?`): `string`
 
-Defined in: [auth.ts:96](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L96)
+Defined in: [auth.ts:96](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L96)
 
 Генерирует URL для перенаправления пользователя на авторизацию
 
@@ -181,7 +181,7 @@ Defined in: [auth.ts:96](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9
 
 ### YMAuthError
 
-Defined in: [auth.ts:30](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L30)
+Defined in: [auth.ts:30](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L30)
 
 Ошибка в процессе авторизации
  YMAuthError
@@ -196,7 +196,7 @@ Defined in: [auth.ts:30](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9
 
 > **new YMAuthError**(`code`): [`YMAuthError`](#ymautherror)
 
-Defined in: [auth.ts:35](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L35)
+Defined in: [auth.ts:35](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L35)
 
 ###### Parameters
 
@@ -220,7 +220,7 @@ Defined in: [auth.ts:35](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9
 
 > **code**: `string`
 
-Defined in: [auth.ts:35](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L35)
+Defined in: [auth.ts:35](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L35)
 
 Код ошибки
 
@@ -230,7 +230,7 @@ Defined in: [auth.ts:35](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9
 
 > **AuthScope** = `"account-info"` \| `"operation-history"` \| `"operation-details"` \| `"incoming-transfers"` \| `"payment"` \| `"payment-shop"` \| `"payment-p2p"` \| `"money-source"` \| `string` & `object`
 
-Defined in: [auth.ts:4](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L4)
+Defined in: [auth.ts:4](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L4)
 
 ## Variables
 
@@ -238,4 +238,4 @@ Defined in: [auth.ts:4](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e
 
 > **AuthScope**: `Record`\<`string`, [`AuthScope`](#authscope)\>
 
-Defined in: [auth.ts:4](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/ba9e8d4a8ea222b9b722685e2312990bdd73128a/src/auth.ts#L4)
+Defined in: [auth.ts:4](https://github.com/AlexXanderGrib/yoomoney-sdk/blob/049b243fdd91785dd7b9fa1bc08b18c18c979425/src/auth.ts#L4)

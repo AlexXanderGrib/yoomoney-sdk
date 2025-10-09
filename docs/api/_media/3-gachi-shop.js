@@ -3,10 +3,9 @@
 const express = require("express");
 
 const app = express();
-// const { YMPaymentFromBuilder, YMFormPaymentType, YMNotificationChecker, YMNotificationError } = require("yoomoney-sdk");
+// const { YMPaymentFormBuilder, YMNotificationChecker, YMNotificationError } = require("yoomoney-sdk");
 const {
-  YMPaymentFromBuilder,
-  YMFormPaymentType,
+  YMPaymentFormBuilder,
   YMNotificationChecker,
   YMNotificationError
 } = require("..");
@@ -17,7 +16,7 @@ const notificationChecker = new YMNotificationChecker(process.env.YOOMONEY_SECRE
 const port = parseInt(process.env.PORT, 30);
 
 app.get("/pay", (_req, res) => {
-  const builder = new YMPaymentFromBuilder({
+  const builder = new YMPaymentFormBuilder({
     // 300 баксов
     sum: (300 * 74.3).toFixed(2),
 
